@@ -16,7 +16,7 @@ Download the GitHub repository for this course. Using the green button [here](ht
 
 ### Mapping Data 00: Mapping World Population(s)
 #### Premise
-We are interested in creating a map of world countries and cities (and at the same time exploring the QGIS interface). We have a point file for the locations of populated places around the world as well as a polygon file for country boundaries. This map will serve as a basemap to which we can add additional information and layers in order to examine multiple measures of population and the differences between them.
+We want to create a map of cities and countries and ask some questions about population and population distibution. We have a point file for the locations of populated places around the world as well as a polygon file for country boundaries. This map will serve as a basemap to which we can add additional information and layers in order to examine multiple measures of population and the differences between them.
 
 #### Setting up QGIS
 
