@@ -1,18 +1,18 @@
 ## Mapping Data 
 
-With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. After the completion of this set of three Mapping Data exercises, you should have…
+With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. By completing this set of three Mapping Data exercises, you will…
 
-1. become familiar with the QGIS user interface 
-2. learned the components of shapefiles 
-3. created a clear and effective map composition 
-4. critically considered symbology and classification and the differences between mapping qualitative and quantitative information 
-5. created and calculated new fields in an attribute table 
-6. performed a table join to combine additional data to an existing shapefile’s attribute table 
-7. queried a GIS dataset, using both tabular queries and spatial queries 
-8. worked with projections and examined the impacts of projection transformations on spatial analysis
+1. be familiar with the QGIS user interface 
+2. learn the components of shapefiles 
+3. create a clear and effective map composition 
+4. critically considere symbology and classification and the differences between mapping qualitative and quantitative information 
+5. create and calculate new fields in an attribute table 
+6. perform a table join to combine additional data to an existing shapefile’s attribute table 
+7. query a GIS dataset, using both tabular queries and spatial queries 
+8. work with projections and examinemapping the impacts of projection transformations on spatial analysis
 
 #### Part 00
-Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
+Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
 
 ### Mapping Data 00: Mapping World Population(s)
 #### Premise
@@ -22,7 +22,7 @@ We are interested in creating a map of world countries and cities (and at the sa
 
 **Launch** QGIS. Your new blank map project will look like this:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/01_OpenQGIS.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/MappingData01_01.png)
 
 Begin to familiarize yourself with the interface. You can also refer to this [brief description](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/QGIS_InterfaceDescription.md) of the elements of the interface for more information. 
 
