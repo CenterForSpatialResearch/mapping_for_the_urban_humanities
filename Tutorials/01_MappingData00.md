@@ -33,7 +33,7 @@ In order to construct our map within QGIS we will need to add our data layers to
 
 ![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_02.png)
 
-**Navigate** to the MappingData\Shape\ folder. There are a number of different file extensions that may be unfamiliar. The files outlined in blue are all components of the admin_0_countries shapefile, and the ones outlined in magenta are all elements of the populated_places shapefile. It is very important that all of these files stay together in the same folder otherwise QGIS will not be able to load the layer.
+**Navigate** to the MappingData\Shape\ folder. There are a number of different file extensions that may be unfamiliar. The files outlined in blue are components of the admin_0_countries shapefile, and the ones outlined in magenta are elements of the populated_places shapefile. It is very important that all of these files stay together in the same folder otherwise QGIS will not be able to load the layer.
 
 * .shp - The main file that stores the feature geometry (required).
 * .shx - The index file that stores the index of the feature geometry (required).
@@ -44,8 +44,8 @@ In order to construct our map within QGIS we will need to add our data layers to
 
 ![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/02_ElementsofSHP.png)
 
-Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will just be adding these files to the map QGIS still references the other files associated with each layer (.shx,.dbf,.sbn,.prj). 
-Note you can select multiple shapefiles by holding down Command (on Mac) or Ctrl (on Windows) while individually clicking the file names. 
+Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will only add these files to the map, QGIS still references the other files (.shx,.dbf,.sbn,.prj). 
+Note you can select multiple files by holding down Command (on Mac) or Ctrl (on Windows) while clicking the file names. 
 The selected layers will be added in default colors. 
 ![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_03.png)
 
