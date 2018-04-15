@@ -1,6 +1,6 @@
 ## Mapping Data 
 
-With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. By completing this set of three Mapping Data exercises, you will…
+With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. By completing this set of three Mapping Data exercises, you will
 
 1. be familiar with the QGIS user interface 
 2. learn the components of shapefiles 
@@ -44,9 +44,11 @@ In order to construct our map within QGIS we will need to add our data layers to
 
 ![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/02_ElementsofSHP.png)
 
-Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will only add these files to the map, QGIS still references the other files (.shx,.dbf,.sbn,.prj). 
+Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will only add these files to the map, QGIS still references the other files (.shx,.dbf,.sbn,.prj). The selected layers will be added in default colors. 
+
 Note you can select multiple files by holding down Command (on Mac) or Ctrl (on Windows) while clicking the file names. 
-The selected layers will be added in default colors. 
+
+
 ![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_03.png)
 
 **BEGIN TROUBLESHOOTING**
