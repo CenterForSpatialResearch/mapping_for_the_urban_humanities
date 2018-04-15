@@ -51,7 +51,8 @@ Note you can select multiple files by holding down Command (on Mac) or Ctrl (on 
 
 ![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_03.png)
 
-**BEGIN TROUBLESHOOTING**
+**TROUBLESHOOTING**
+
 If you see a long line across the top or just one point appearing, it is probably an issue with the projection. To resolve: 
 
 1. Change the project projection to World_Mollweide
