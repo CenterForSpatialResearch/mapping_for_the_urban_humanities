@@ -94,9 +94,12 @@ When your style settings are finished, **click** `OK` to exit the properties men
 
 ![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_11.png)
 
-**Save** your QGIS project by selecting `Project` > `Save`. Name your project MappingData_Population.qgs and save it in the Tutorials/Exercises folder. QGIS projects are saved as .qgs files. ![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_12.png)
+**Save** your QGIS project by selecting `Project` > `Save`. Name your project MappingData_Population.qgs and save it in the Tutorials/Exercises folder. QGIS projects are saved as .qgs files. 
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_12.png)
 
 **NOTE**
+
 The data layers are not saved with the map project. They are linked to the project. So when you open this project again, the *project* references the data layers in the place they were saved when you made the project. So, if you move (reorganize) the data files, the project will not be able to find them (and therefore will not be able to use them to make this map again). 
 
 
