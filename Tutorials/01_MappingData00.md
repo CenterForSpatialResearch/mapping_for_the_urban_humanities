@@ -1,28 +1,29 @@
 ## Mapping Data 
 
-With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. After the completion of this set of three Mapping Data exercises, you should have…
+With this exercise, you will learn introductory skills involved in using QGIS to map existing spatial datasets. By completing this set of three Mapping Data exercises, you will…
 
-1. become familiar with the QGIS user interface 
-2. learned the components of shapefiles 
-3. created a clear and effective map composition 
-4. critically considered symbology and classification and the differences between mapping qualitative and quantitative information 
-5. created and calculated new fields in an attribute table 
-6. performed a table join to combine additional data to an existing shapefile’s attribute table 
-7. queried a GIS dataset, using both tabular queries and spatial queries 
-8. worked with projections and examined the impacts of projection transformations on spatial analysis
+1. be familiar with the QGIS user interface 
+2. learn the components of shapefiles 
+3. create a clear and effective map composition 
+4. critically considere symbology and classification and the differences between mapping qualitative and quantitative information 
+5. create and calculate new fields in an attribute table 
+6. perform a table join to combine additional data to an existing shapefile’s attribute table 
+7. query a GIS dataset, using both tabular queries and spatial queries 
+8. work with projections and examinemapping the impacts of projection transformations on spatial analysis
 
 #### Part 00
-Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
+Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
 
 ### Mapping Data 00: Mapping World Population(s)
 #### Premise
-We are interested in creating a map of world countries and cities (and at the same time exploring the QGIS interface). We have a point file for the locations of populated places around the world as well as a polygon file for country boundaries. This map will serve as a basemap to which we can add additional information and layers in order to examine multiple measures of population and the differences between them.
+We want to create a map of cities and countries and ask some questions about population and population distibution. We have a point file for the locations of populated places around the world as well as a polygon file for country boundaries. This map will serve as a basemap to which we can add additional information and layers in order to examine multiple measures of population and the differences between them.
+The data we are using is the Gridded Population of the World (GPW). It is compiled from the 2010 round of the Population and Housing Censuses. It is compiled by the NASA Socioeconomic Data and Applicaitons Center (SEDAC), operated by Center for International Earth Science Information Network (CIESIN) at Columbia. 
 
 #### Setting up QGIS
 
 **Launch** QGIS. Your new blank map project will look like this:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/01_OpenQGIS.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_01.png)
 
 Begin to familiarize yourself with the interface. You can also refer to this [brief description](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/QGIS_InterfaceDescription.md) of the elements of the interface for more information. 
 
@@ -30,7 +31,7 @@ Begin to familiarize yourself with the interface. You can also refer to this [br
 
 In order to construct our map within QGIS we will need to add our data layers to the map project. There are several ways to accomplish this however we will begin by using the `Add Vector Layer` button. 
 
-![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/02_Adding_Layers_Vector.png)
+![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_02.png)
 
 **Navigate** to the MappingData\Shape\ folder. You'll notice a number of different file extensions that are likely unfamiliar. The files outlined in blue are all components of the admin_0_countries shapefile, and the ones outlined in magenta are all elements of the populated_places shapefile. It is very important that all of these files stay together in the same folder otherwise QGIS will not be able to load the layer.
 
@@ -46,33 +47,61 @@ In order to construct our map within QGIS we will need to add our data layers to
 Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will just be adding these files to the map QGIS still references the other files associated with each layer (.shx,.dbf,.sbn,.prj). 
 Note you can select multiple shapefiles by holding down Command (on Mac) or Ctrl (on Windows) while individually clicking the file names. 
 The selected layers will be added in default colors. 
-![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/04_LayerOrder.png)
-The cities layer is represented by points and the countries layer is represented by polygons. The order of the layers can be controlled with the `Layers panel` to the left of the Data Frame. 
+![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_03.png)
 
-**Click** and drag the admin_0_countries layer on top of the populated_places layer. The cities points are no longer visible because they are behind the countries polygons (or only visible at the borders of the countries and the oceans). 
+**BEGIN TROUBLESHOOTING**
+If you see a long line across the top or just one point appearing, it is probably an issue with the projection. To resolve: 
 
-![order](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/03_Adding_Layers.png)
+1. Change the project projection to World_Mollweide
+	1.Click on the numbers in the bottom right hand corner.
+	![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_04.png)
 
-We can change this by removing the fill color of the country polygons, leaving only the outline of their boundaries. To do this, we must change the style of the data layer. That is, we will change the way the data is styled or symbolized on the map. The simplest style for any dataset is to apply a single symbol to every feature within the layer. 
+	2. Select World_Mollweide
+	![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_05.png)
+
+2. Change each layer's project
+	1. Double click on the layer name 
+	![layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_06.png)
+	
+	2. Select World_Mollweide
+	![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_07.png)
+	![layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_07.png)
+
+3. For the permanent solution, save the layer with the new projection and reimport the layer. We will cover this further when we discuss projections.
+	
+**END TROUBLESHOOTING**
+
+The cities layer is represented by points and the countries layer is represented by polygons. The order of the layers can be controlled by dragging the layer names up and down in the `Layers panel` to the left of the Data Frame. 
+
+**Click** and drag the admin_0_countries layer on top of the populated_places layer. The cities points are no longer visible because they are behind the countries polygons. 
+
+![order](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_08.png)
+
+We want to be able to see both, so we will remove the country's fill color by changing the style of the data layer. Changing the style changes the way the data is symbolized on the map. The simplest way to style any dataset is to apply a single symbol to every feature in the layer. 
 
 We will display the countries as just borders. To access the `Style Menu` **double-click** on the layer name in the Layers panel, or **right-click** on the layer name and select `Properties.`  There are many different ways to symbolize data on a map through QGIS. For now, we will just use one style for all of the features in the layer. 
 
-![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/05_Properties.png)
+![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_10.png)
 
 Once inside the Layer Properties Menu **select** the `Style` tab. **Select** `Simple Fill` and then in the `Symbol layer type` menu **select** Outline: Single line. 
 
-![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/05_Style.png)
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_09.png)
 
 When your style settings are finished, **click** `OK` to exit the properties menu. You should now be able to see each of the populated places points through the empty country polygons.
 
-![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/06_PopulatedPlaces.png)
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_11.png)
 
-**Save** your QGIS project by selecting `Project` > `Save`. Name your project MappingData_Population.qgs and save it in the Tutorials/Exercises folder. QGIS projects are saved as .qgs files. It is important to note that the data layers are not saved with it the map project but are rather linked to the project.
+**Save** your QGIS project by selecting `Project` > `Save`. Name your project MappingData_Population.qgs and save it in the Tutorials/Exercises folder. QGIS projects are saved as .qgs files. ![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_12.png)
+
+**NOTE**
+The data layers are not saved with the map project. They are linked to the project. So when you open this project again, the *project* references the data layers in the place they were saved when you made the project. So, if you move (reorganize) the data files, the project will not be able to find them (and therefore will not be able to use them to make this map again). 
+
+
 
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, edited by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 
 
