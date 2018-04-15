@@ -12,12 +12,13 @@ With this exercise, you will learn introductory skills involved in using QGIS to
 8. work with projections and examine the impacts of projection transformations on spatial analysis
 
 #### Part 00
-Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
+Download the GitHub repository for this course. Click on the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
 
 ### Mapping Data 00: Mapping World Population(s)
 #### Premise
 We want to create a map of cities and countries and ask some questions about population and population distibution. We have a point file for the locations of populated places around the world and a polygon file for country boundaries. This map will serve as a basemap. We can add additional information and layers to examine multiple measures of population and the differences between them.
-The data we are using is the [Gridded Population of the World (GPW)](http://sedac.ciesin.columbia.edu/data/collection/gpw-v4). It is compiled from the 2010 round of the Population and Housing Censuses. It is compiled by the NASA Socioeconomic Data and Applicaitons Center (SEDAC), operated by Center for International Earth Science Information Network (CIESIN) at Columbia. The stated purpose for this data is to provide "globally consistent and spatially explicit data for use in research, policy-making, and communications." 
+
+The data we are using is the [Gridded Population of the World (GPW)](http://sedac.ciesin.columbia.edu/data/collection/gpw-v4). It is derived from the 2010 round of the Population and Housing Censuses. It is compiled by the NASA Socioeconomic Data and Applicaitons Center (SEDAC), operated by Center for International Earth Science Information Network (CIESIN) at Columbia University. The stated purpose for this data is to provide "globally consistent and spatially explicit data for use in research, policy-making, and communications." 
 
 #### Setting up QGIS
 
@@ -25,11 +26,11 @@ The data we are using is the [Gridded Population of the World (GPW)](http://seda
 
 ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_01.png)
 
-Begin to familiarize yourself with the interface. You can also refer to this [brief description](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/QGIS_InterfaceDescription.md) of the elements of the interface for more information. 
+Begin to familiarize yourself with the interface. For more information, refer to this [brief description](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/QGIS_InterfaceDescription.md) of the elements of the interface. 
 
 #### Adding Layers
 
-In order to construct our map within QGIS we will need to add our data layers to the map project. There are several ways to accomplish this however we will begin by using the `Add Vector Layer` button. 
+In order to construct our map within QGIS we will need to add our data layers to the map project. There are several ways to accomplish this. We will begin by using the `Add Vector Layer` button. 
 
 ![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_02.png)
 
@@ -47,7 +48,6 @@ In order to construct our map within QGIS we will need to add our data layers to
 Add the `populated_places.shp` and `admin_0_countries.shp` files. Even though we will only add these files to the map, QGIS still references the other files (.shx,.dbf,.sbn,.prj). The selected layers will be added in default colors. 
 
 Note you can select multiple files by holding down Command (on Mac) or Ctrl (on Windows) while clicking the file names. 
-
 
 ![layers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_03.png)
 
