@@ -9,7 +9,7 @@ With this exercise, you will learn introductory skills involved in using QGIS to
 5. create and calculate new fields in an attribute table 
 6. perform a table join to combine additional data to an existing shapefile’s attribute table 
 7. query a GIS dataset, using both tabular queries and spatial queries 
-8. work with projections and examinemapping the impacts of projection transformations on spatial analysis
+8. work with projections and examine the impacts of projection transformations on spatial analysis
 
 #### Part 00
 Download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
