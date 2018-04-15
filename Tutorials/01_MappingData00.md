@@ -16,8 +16,8 @@ Download the GitHub repository for this course. Using the green button [here](ht
 
 ### Mapping Data 00: Mapping World Population(s)
 #### Premise
-We want to create a map of cities and countries and ask some questions about population and population distibution. We have a point file for the locations of populated places around the world as well as a polygon file for country boundaries. This map will serve as a basemap to which we can add additional information and layers in order to examine multiple measures of population and the differences between them.
-The data we are using is the Gridded Population of the World (GPW). It is compiled from the 2010 round of the Population and Housing Censuses. It is compiled by the NASA Socioeconomic Data and Applicaitons Center (SEDAC), operated by Center for International Earth Science Information Network (CIESIN) at Columbia. 
+We want to create a map of cities and countries and ask some questions about population and population distibution. We have a point file for the locations of populated places around the world and a polygon file for country boundaries. This map will serve as a basemap. We can add additional information and layers to examine multiple measures of population and the differences between them.
+The data we are using is the [Gridded Population of the World (GPW)](http://sedac.ciesin.columbia.edu/data/collection/gpw-v4). It is compiled from the 2010 round of the Population and Housing Censuses. It is compiled by the NASA Socioeconomic Data and Applicaitons Center (SEDAC), operated by Center for International Earth Science Information Network (CIESIN) at Columbia. The stated purpose for this data is to provide "globally consistent and spatially explicit data for use in research, policy-making, and communications." 
 
 #### Setting up QGIS
 
@@ -33,7 +33,7 @@ In order to construct our map within QGIS we will need to add our data layers to
 
 ![vector](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata01_02.png)
 
-**Navigate** to the MappingData\Shape\ folder. You'll notice a number of different file extensions that are likely unfamiliar. The files outlined in blue are all components of the admin_0_countries shapefile, and the ones outlined in magenta are all elements of the populated_places shapefile. It is very important that all of these files stay together in the same folder otherwise QGIS will not be able to load the layer.
+**Navigate** to the MappingData\Shape\ folder. There are a number of different file extensions that may be unfamiliar. The files outlined in blue are all components of the admin_0_countries shapefile, and the ones outlined in magenta are all elements of the populated_places shapefile. It is very important that all of these files stay together in the same folder otherwise QGIS will not be able to load the layer.
 
 * .shp - The main file that stores the feature geometry (required).
 * .shx - The index file that stores the index of the feature geometry (required).
