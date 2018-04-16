@@ -59,18 +59,17 @@ It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`.
 
 #### Performing a Table Join
 
-To answer questions about world population by country we will join tabular data published by the United Nations to the country polygons we have already mapped. A table join allows GIS users to combine tabular data with vector data based on an identical field in their attribute tables.  
+To answer questions about world population by country we will join the tabular data published by the United Nations to the country polygons we already mapped. A table join allows GIS users to combine tabular data with vector data based on an identical field in their attribute tables.  
 
-We have already cleaned the TotalPopulation_Countries.csv file and removed additional rows included in the original dataset that we will not need for our purposes here. In addition, we have abbreviated the column names and reformatted them so that they can be read by QGIS. In future exercises we will cover in depth how to clean, format, and save data so that it can be read by QGIS.  
+We already cleaned the TotalPopulation_Countries.csv file and removed rows that we will not need. In addition, we abbreviated the column names and reformatted them so they can be read by QGIS. In future exercises, we will cover how to clean, format, and save data for use in QGIS.  
 
-**Right-click** admin_0_countries in the layer menu and select `Open Attribute Table`. The layer’s attribute table will appear. This describes the data associated with each feature in the feature class.
-
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/10_AttributeTable.png)
+**Right-click** admin_0_countries in the layer menu and select `Open Attribute Table`. This describes the data associated with each feature in the feature class.
 
 In order to join attributes from a table to a shapefile the two data sets must share a common attribute field. 
+
 Let's review the fields in the attribute table for the admin_0_countries layer:
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/11_Admin0FieldNames.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_07.png)
 
 They are: 
 * NAME, NAME_LONG: a text name for the admin 0 area or country
@@ -79,22 +78,26 @@ They are:
 * SUBREGION: a text name for the UN designated subregion the country lies within. 
 * Cnt_Code: a unique code assigned to each country, that matches the ISO code but without preceding zeros.
 
-Let’s review the column names in the TotalPopulation_Countries.csv file. **Open** the attribute table in the same way we just opened the attribute table for the admin_0_countries layer.
+Let’s review the column names in the TotalPopulation_Countries.csv file. **Open** the attribute table the same way we opened the attribute table for the admin_0_countries layer.
 * Country_Code: a unique numeric code corresponding to each country
 * Name: text name for the country
 * Pop_2010: estimated population of country in 2010
 
-Note that the Country_Code is identical to the Cnt_Code for each country, and each is unique -- no two countries have the same ISO_N3 number. This unique field common to both datasets is what allows us to join the tabular population data to the vector file describing the geometry of those countries. 
+Note that the **Country_Code** is identical to the **Cnt_Code** for each country, and each is unique -- no two countries have the same ISO_N3 number. This unique field common to both datasets is what allows us to join the tabular population data to the vector file describing the geometry of those countries. 
 
-We always start the join on the file that we are joining to. Here, we are joining the population estimates table to the country boundary shapefile. Thus, Open the Properties for admin_0_countries, and navigate to “Joins” in the left hand menu. Click the “+” icon. Make the following selections in the dialogue box which appears.
+We always start the join on the file that we are joining **to**. Here, we are joining the population estimates table to the country boundary shapefile. Thus, Open the Properties for admin_0_countries. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/12_JoinDialogue.png)
+![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_08.png)
 
-**Select** TotalPopulation_Countries as the “join layer”, Country_Code is the “join field”, and Cnt_Code is the “target field” which matches the join field in the admin_0_countries layer. Select the box next to “Custom field name prefix” and delete the contents of that field (note this is a helpful field if we are joining data from many different tables to one shapefile as it allows you to distinguish the source table). **Click** `OK` to close the join dialogue. Then **Click** `OK` to close the layer properties menu. 
+Navigate to “Joins” in the left hand menu. Click the “+” icon. Make the following selections in the dialogue box which appears.
 
-Open the attribute table for the countries shapefile. You’ll notice two new fields have been joined to the right hand side of the table: `Name` and `Pop_2010.`
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_09.png)
 
-Note: the population estimates data that is joined to the country boundaries is not permanently associated with its attribute table. Instead the relationship only exists within this QGIS project. If we added the admin_0_countries layer to another QGIS project the fields we have joined from the population estimates would not be there. 
+TotalPopulation_Countries is the “join layer”, Country_Code is the “join field”, and Cnt_Code is the “target field” which matches the join field in the admin_0_countries layer. Select the box next to “Custom field name prefix” and delete the contents of that field (this is a helpful field if we are joining data from many tables to one shapefile because it helps you to distinguish the source table). **Click** `OK` to close the join dialogue. Then **Click** `Apply` to apply the join and then `OK` to close the layer properties menu. 
+
+Open the attribute table for the countries shapefile. Two new fields have been joined: `Name` and `Pop_2010.`
+
+Note: this is a temporary join, and only exists within the project, **not** in the files. That is, the population data is not permanently associated with the country boundaries. If we added the admin_0_countries layer to another QGIS project the fields we joined from the population estimates would not be there. 
 
 In order to permanently incorporate the population estimates into a shapefile of world countries we must save a new version of the shapefile. **Right-click** on admin_0_countries in the layers menu and select `Save.` Select `ESRI Shapefile` as the format, and save your file in the MappingData\Shape folder as admin_0_countries_UNPop.shp. 
 
@@ -275,4 +278,5 @@ Include your answer to the following question you answered on your own:
 ______________________________________________________________________________________________________________
 
 Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+
 
