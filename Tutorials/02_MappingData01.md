@@ -8,7 +8,7 @@ We will work with the basemap we made in Mapping Data 00 and add new data to it.
 
 Open your MappingData_Population.qgs map project.
 
-We already mapped the locations of populated places (which contains population estimates collected using [LandScan](http://web.ornl.gov/sci/landscan/)) as well as country polygons. We also have tabular data available for population at the country level from the [United Nations](http://esa.un.org/unpd/wpp/Download/Standard/Population/) which we will join to the country polygons. Finally, we also have a raster layer that describes the world population in a 1km grid created by CEISIN. We will answer questions about the differences between the depictions of population at the city, country, and 1km scales. 
+We already mapped the locations of populated places (which contains population estimates collected using [LandScan](http://web.ornl.gov/sci/landscan/)) as well as country polygons. We also have tabular data available for population at the country level from the [United Nations](http://esa.un.org/unpd/wpp/Download/Standard/Population/), which we will join to the country polygons. Finally, we also have a raster layer that describes the world population in a 1km grid created by CEISIN. We will answer questions about the differences between the depictions of population at the city, country, and 1km scales. 
 
 #### Notes on the data: 
 
@@ -35,20 +35,22 @@ Now we will add the table that describes population by country which we will joi
 
 **Select** the `add delimited layer` button. 
 
-![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Adding_Layers_Delimited.png)
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_02.png)
 
-Then in the dialog box which opens browse to the MappingData\Tabular folder and **select** TotalPopulation_Countries.csv. 
-**Select** `CSV` as the File Format. And **select** `no geometry (attribute table only)` as the Geometry Definition. **Click** OK. 
+Then browse to the MappingData\Tabular folder and **select** `TotalPopulation_Countries.csv`.
 
-![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/MappingData01/08_AddCSV.png)
+**Select** `CSV` as the File Format. And **select** `no geometry (attribute table only)` as the Geometry Definition. Click OK. 
+
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_03.png)
 
 
-You'll notice TotalPopulation_Countries has been added to the Layers menu. Because it is just a table and does not have any geometry it does not show up in our map view. Lets open up its attribute table to see the fields that it contains before we embark on joining it to our country polygons. It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
+TotalPopulation_Countries was added to the Layers menu. Because it is just a table and does not have any geometry it does not show up in our map view. Lets open up its attribute table to see the fields that it contains before we embark on joining it to our country polygons. It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
 
 ![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Attributexls.png)
 
 #### Performing a Table Join
-In order to answer questions about world population by country we will join tabular data published by the United Nations to the country polygons we have already mapped. A table join allows GIS users to combine tabular data with vector data based on an identical field in their attribute tables.  
+
+To answer questions about world population by country we will join tabular data published by the United Nations to the country polygons we have already mapped. A table join allows GIS users to combine tabular data with vector data based on an identical field in their attribute tables.  
 
 We have already cleaned the TotalPopulation_Countries.csv file and removed additional rows included in the original dataset that we will not need for our purposes here. In addition, we have abbreviated the column names and reformatted them so that they can be read by QGIS. In future exercises we will cover in depth how to clean, format, and save data so that it can be read by QGIS.  
 
