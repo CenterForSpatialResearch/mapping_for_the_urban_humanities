@@ -29,9 +29,11 @@ It should still contain the countries polygons and populated places points we ad
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_01.png)
 
-Then in the dialog box which opens browse to the MappingData\Raster folder and select gpw_v4_2010.tif. We will speak about the qualities of raster datasets later, but for now let’s just add it to the map. After you’ve added this layer you can **un-click** the box next to the layer name in int Layers menu in order to toggle the visibility of the layer off. 
+Then browse to the MappingData\Raster folder and select `gpw_v4_2010.tif`. We will speak about the qualities of raster datasets later, but for now just add it to the map. After you’ve added this layer you can **un-click** the box next to the layer name in the Layers menu to toggle the layer visibility off. 
 
-Now we will add the table that describes population by country which we will join to the country polygons in order to be able to examine country level population values spatially. 
+![visibility](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_04.png)
+
+Now we will add the table that describes population by country. We  will join this data to the country polygons to examine country level population values spatially. 
 
 **Select** the `add delimited layer` button. 
 
@@ -44,9 +46,16 @@ Then browse to the MappingData\Tabular folder and **select** `TotalPopulation_Co
 ![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_03.png)
 
 
-TotalPopulation_Countries was added to the Layers menu. Because it is just a table and does not have any geometry it does not show up in our map view. Lets open up its attribute table to see the fields that it contains before we embark on joining it to our country polygons. It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
+TotalPopulation_Countries was added to the Layers menu. Because it is just a table and does not have any geometry, it does not show up in our map view. Open the attribute table to see the fields it contains before we join it to our country polygons. Right click on the layer name and select Attribute Table.
 
-![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Attributexls.png)
+
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_05.png)
+
+
+It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
+
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_06.png)
+
 
 #### Performing a Table Join
 
