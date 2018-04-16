@@ -7,42 +7,42 @@ We will now zoom in to the level of the continent and examine population along h
 
 #### New Downloads Before We Begin
 
-If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
+If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018s), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
 
 #### The Data
 
-We will be working with data created and published by the University of Nebraska Lincoln of historic rail networks in the U.S. We have two shapefiles, one for rail lines built as of 1850, and another for those built as of 1870. We have already included the data in the Mapping Data folder however it is available [here](http://railroads.unl.edu/resources/) for download.  
+We will be working with data created and published by the University of Nebraska Lincoln of historic rail networks in the U.S. We have two shapefiles, one for rail lines built as of 1850, and another for those built as of 1870. The data is in the Mapping Data folder however it is available [here](http://railroads.unl.edu/resources/) for download.  
 
-In addition, we will use historic census information for population by county which has been digitized, aggregated and published by the Minnesota Population Center at the University of Minnesota as part of their [National Historic Geographic Information System (NHGIS)](https://nhgis.org) project. This project is an amazing resource for historical research. We will be using population values for counties from the USA wide agricultural census of 1850 and of 1870 to match with the dates of our rail lines. We have already downloaded the data that we will be using however for future reference we have included brief instructions for how to download data from NHGIS at the beginning of the tutorial. 
+In addition, we will use historic census information on population by county which has been digitized, aggregated and published by the Minnesota Population Center at the University of Minnesota as part of their [National Historic Geographic Information System (NHGIS)](https://nhgis.org) project. This project is an amazing resource for historical research. We will be using population values for counties from the USA wide agricultural census of 1850 and of 1870 to match with the dates of our rail lines. We have already downloaded the data that we will be using. However, brief instructions for how to download data from NHGIS follow. 
 
 #### Downloading Data from NHGIS
-This section is already completed for you and the data is downloaded in the MappingData\Tabular and MappingData\Shape folders respectively however this brief tutorial goes over the basics of downloading data from the NHGIS for future work. 
+This section is already completed for you and the data is downloaded in the MappingData\Tabular and MappingData\Shape folders respectively. This brief tutorial covers the basics of searching for and downloading historical census data and associated GIS boundary files from NHGIS. 
 
-We will go through the steps for searching for and downloading historical census data and associated GIS boundary files. As an example we will download 1850 population by county along with the 1850 country boundary shapefile which we can associate the population information with through a table join.   
+We will download 1850 population by county and the 1850 country boundary shapefiles.
 
-**Navigate** to [https://nhgis.org](https://nhgis.org) using your browser of choice. In the menu on the left choose `Select Data.`
+**Navigate** to [https://nhgis.org](https://nhgis.org). In the menu on the left choose `Select Data.`
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/01_NHGIS.png)
 
-Then use the filters which appear to search for the data you are interested in. First we will filter their archive by geographic level, and will select counties. 
+First we will filter the archive by **geographic level** and select counties. 
 
 Select `Geographic Level` from the filter options. 
 
-A menu will open containing all of the available geographies. Click on `County (by State)`, this will open an information menu which outlines which datasets are available at this level of geography. We can scan this to confirm that the 1850 Agricultural Census is available at the county level. 
+A menu will open containing all of the available geographies. Click on `County (by State)`, this will open an information menu which outlines which datasets are available at this level of geography. Scan this to confirm that the 1850 Agricultural Census is available at the county level. 
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/03_NHGIS_Geography.png)
 
-Once we have confirmed that the information we are interested in is available at the desired geography click the plus icon next to `County (by State)` to add it to our selected geographic level filters. Select Submit. The geographic level filters menu will close and all of the source tables available at the county level will appear. 
+Once we have confirmed that the information we are interested in is available at the desired geography, click the plus icon next to `County (by State)` to add it to the selected geographic level filters. Select Submit. The geographic level filters menu will close and all of the source tables available at the county level will appear. 
 
-Next repeat this process to filter the results to display only the tables available for 1850. Then use the `Topics` filter to select `Total Population.`
+Repeat this process to filter the results and display only the tables available for 1850. Then use the `Topics` filter to select `Total Population.`
 
-Our results will now be narrowed to look like the image below. We have found the Total Population from 1850. You can select the source table name in order to view more information about it. 
+We have found the Total Population from 1850. You can select the source table name to view more information about it. 
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/04_NHGIS_SourceTable.png)
 
-**Select** the plus icon at the left of the Total Population table name to add this dataset to our selections. You’ll notice the `Data Cart` in the upper right hand of the screen reflect this.
+**Select** the plus icon at the left of the Total Population table name to add this dataset to our selections. The `Data Cart` in the upper right hand of the screen reflects this.
 
-We have selected the tabular data for population. You’ll recall that in order to work with this data spatially in GIS we will need to download GIS boundary files of the same geography for the same year. NHGIS makes this very easy. Select the GIS Boundary File tab circled in the image above. You’ll find there are two options for county boundary files for 1850. We want the file whose “Basis” is the `2000 TIGER/Line +` (NHGIS has a helpful explanation for why we are making this choice if you click on one or the other of the two boundary file names). 
+We selected the tabular data for population. To work with this data spatially in GIS, we need to download GIS boundary files of the same geography for the same year. NHGIS makes this very easy. Select the GIS Boundary File tab. There are two options for county boundary files for 1850. We want the file whose “Basis” is the `2000 TIGER/Line +` (NHGIS has a helpful explanation for why we are making this choice if you click on one of the boundary file names). 
 
 Again, **select** the plus icon next to the desired boundary file to add it to the datasets we have selected to download. Select continue on the Data Cart. 
 

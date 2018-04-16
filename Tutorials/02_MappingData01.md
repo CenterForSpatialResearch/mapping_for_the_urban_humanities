@@ -1,14 +1,14 @@
 ## Mapping Data 
 
-### Mapping Data 01: Mapping World Population(s) to understand the difference between multiple methods of measuring world population 
+### Mapping Data 01: Mapping World Population(s)
 
 #### Premise
 
-We will work with the basemap we made in Mapping Data 00 and add new data to it in order to examine multiple measures of world population. If you have not already completed the [Mapping data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/01_MappingData00.md) tutorial please do so before beginning this exercise. We will examine population aggregated to cities and countries and a raster dataset that depicts the distribution of world population at a resolution of approximately 1km. 
+We will work with the basemap we made in Mapping Data 00 and add new data to it. This will allow us  to examine multiple measures of world population. If you have not completed the [Mapping data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/01_MappingData00.md) tutorial, please do so before beginning this exercise. We will first examine population aggregated to cities and countries. Then we will use a raster dataset that depicts the distribution of world population at a resolution of approximately 1km. 
 
 Open your MappingData_Population.qgs map project.
 
-We have already mapped the locations of populated places (which contains population estimates collected using [LandScan](http://web.ornl.gov/sci/landscan/)) as well as country polygons. We also have tabular data available for population at the country level from the [United Nations](http://esa.un.org/unpd/wpp/Download/Standard/Population/) which we will join to the country polygons, as well as a raster layer that describes world population in 1km grid created by CEISIN. We will answer questions about the differences between the depictions of population at the city, country, and 1km scale. 
+We already mapped the locations of populated places (which contains population estimates collected using [LandScan](http://web.ornl.gov/sci/landscan/)) as well as country polygons. We also have tabular data available for population at the country level from the [United Nations](http://esa.un.org/unpd/wpp/Download/Standard/Population/) which we will join to the country polygons. Finally, we also have a raster layer that describes the world population in a 1km grid created by CEISIN. We will answer questions about the differences between the depictions of population at the city, country, and 1km scales. 
 
 #### Notes on the data: 
 
@@ -19,17 +19,17 @@ The data we are using about populated places is aggregated by [Natural Earth v. 
 Country-level population data was published by the [United Nations Population Division](http://esa.un.org/unpd/wpp/Download/Standard/Population/) in 2010. All figures are reported in thousands, i.e., if the population field says 7,000 in the dataset this equals 7,000,000 inhabitants. We have provided a cleaned version of this dataset but the original can be downloaded [here](http://esa.un.org/unpd/wpp/Download/Standard/Population/). 
 
 #### Downloads
-In addition to the data files you have downloaded already you will need to download the Gridded Population of the World raster dataset [here](https://drive.google.com/file/d/0B5KywkNXsT4JYlZGd1lReUVyYVk/view?usp=sharing). Please create a new folder in your Class_Data\MappingData directory called Raster and save the GriddedPop.zip file there. Once it has downloaded unzip the file so that we can use its contents. 
+In addition to the data files you have downloaded already you will need to download the Gridded Population of the World raster dataset [here](https://drive.google.com/file/d/0B5KywkNXsT4JYlZGd1lReUVyYVk/view?usp=sharing). Please **create a new folder** in your Class_Data\MappingData directory called Raster and save the GriddedPop.zip file there. Once it has downloaded unzip the file so that we can use its contents. 
 
 #### Setting up QGIS
 Open your MappingData_Population.qgs file. 
-It should still contain the countries polygons and populated places points we added previously. (*Note* if these layers are not immediately visible then **right click** on the name of either layer in the `Layer` menu and click `Zoom To Layer`). We will first add CEISIN’s Gridded Population of the World to our map project. Then we will add a tabular data file containing population by country for 2010. This is the information we will join to the countries polygons. 
+It should still contain the countries polygons and populated places points we added previously. (*Note* if these layers are not immediately visible, click the `zoom full` button ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata-zoomfull.png). We will first add CEISIN’s Gridded Population of the World to our map project. Then we will add a tabular data file containing population by country for 2010. This is the information we will join to the countries polygons. 
 
 **Select** the `Add raster layer` button in order to add the CEISIN’s Gridded Population of the World raster layer. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Adding_Layers_Raster.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_01.png)
 
-Then in the dialog box which opens browse to the MappingData\Raster folder and select gpw_v4_2010.tif. We will speak about the qualities of raster datasets a bit more later but for now let’s just add it to the map. After you’ve added this layer you can **un-click** the box next to the layer name in int Layers menu in order to toggle the visibility of the layer off. 
+Then in the dialog box which opens browse to the MappingData\Raster folder and select gpw_v4_2010.tif. We will speak about the qualities of raster datasets later, but for now let’s just add it to the map. After you’ve added this layer you can **un-click** the box next to the layer name in int Layers menu in order to toggle the visibility of the layer off. 
 
 Now we will add the table that describes population by country which we will join to the country polygons in order to be able to examine country level population values spatially. 
 
