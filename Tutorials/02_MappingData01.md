@@ -97,34 +97,36 @@ TotalPopulation_Countries is the “join layer”, Country_Code is the “join f
 
 Open the attribute table for the countries shapefile. Two new fields have been joined: `Name` and `Pop_2010.`
 
-Note: this is a temporary join, and only exists within the project, **not** in the files. That is, the population data is not permanently associated with the country boundaries. If we added the admin_0_countries layer to another QGIS project the fields we joined from the population estimates would not be there. 
+Note: this is a temporary join, and only exists within the projects. That is, the population data is not permanently associated with the country boundaries. If we added the admin_0_countries layer to another QGIS project the fields we joined from the population estimates would not be there. 
 
 In order to permanently incorporate the population estimates into a shapefile of world countries we must save a new version of the shapefile. **Right-click** on admin_0_countries in the layers menu and select `Save.` Select `ESRI Shapefile` as the format, and save your file in the MappingData\Shape folder as admin_0_countries_UNPop.shp. 
 
-This new layer will then be added to the map and will contain the population estimates that we joined from the UN tabular data. 
+This new layer will then be added to the map and will contain the population estimates that we joined from the UN tabular data. You may want to remove the fill by changing the style as we did in the last tutorial. This is located in Properties >> Style >> Fill >> Simple Line.
 
 #### Attribute Tables and Data Querying
 
-Now that we have assembled these data layers we can begin to ask a few simple questions about the different measures of world population that each depicts. We will accomplish this by querying the attribute fields of our two vector layers, the populated places and the countries. To do this we will select features using an expression which is sometimes referred to as Select by Attributes. In addition we will use 
+Now that we have assembled these data layers we can ask questions about the different measures of world population that each depicts. We will query the attribute fields of our two vector layers: the populated places and the countries. To do this we will select features using an expression which is sometimes referred to as Select by Attributes. 
 
-We will answer a few questions: 
+Our questions: 
 * How many cities have populations of greater than two million people? 
 * How many countries have populations of less than seven million people? 
 * How many cities with more than two million residents are within countries where the total population is less than seven million?
 
-In order to answer these questions we’ll first select just those cities which have populations of more than two million. Then we will export that as a separate layer. Then we will do the same for countries which have populations of greater than seven million people, and also less than seven million. 
+To answer the questions, first select only the cities which have populations of more than two million. Then we will export that as a separate layer. Then we will do the same for countries which have populations of greater than seven million people, and also less than seven million. 
 
-There are multiple routes to select features within a dataset, either we can open its attribute table and select `select features using an expression` or we can highlight the layer in the layers menu and select the `select features using an expression` button in the main toolbar. 
+There are multiple routes to select features within a dataset, either we can highlight the layer in the layers menu and select the `select features using an expression` button in the main toolbar **or** we can open its attribute table and select `select features using an expression`. 
+
+We will select the cities first, which are in the `Populated Places` layer.
 
 Option 1: 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/13_SelectByExpres.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_10.png)
 
 Option 2:
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/13_SelectByExpression.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_11.png)
 
-Either route will open the `Select by Expression` tool. We can be sure we are selecting features from the correct layer from the header of this dialogue box. We see that the header reads “Select by expression - populated_places” and because we will select the cities first we know we are selecting features from the correct layer. 
+Either route will open the `Select by Expression` tool. We can be sure we are selecting features from the correct layer from the header of this dialogue box. We see that the header reads “Select by expression - populated_places”. 
 
 If we click on any of the terms in the central box (highlighted in magenta) a description of it will appear on the right side (highlighted in blue). We will combine the field name with other operators which we will find in the magenta box in order to build an expression in the green box on the left side. 
 
@@ -143,33 +145,39 @@ To do this we will expand `Fields and Values` and select `max_pop`.
 
 You should notice that some of the populated_places points will turn yellow. In addition at the bottom left corner of your QGIS project the footer will tell you how many features were selected: we see that 215 cities were selected. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/17_SelectOutcome.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_12.png)
 
 We will now save those 215 cities as a separate shapefile, just like we did for the admin_0_countries layer after we joined the UN population estimates to it. 
 
 * **Right-Click** populated_places in the Layers menu, **select** `Save As`. 
-* Then in the dialogue box which opens select `Save only selected features`, and save the shapefile in MappingData\Shape as populated_places_2mil.shp. 
+* Then in the dialogue box, select `Save only selected features`, and save the shapefile in MappingData\Shape as populated_places_2mil.shp. 
+
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_13.png)
+
 * This will then be added to our map as a new layer. In order to see the new layer clear your selection by clicking the `Deselect features from all layers button.`
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/18_Deselect.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_14.png)
 
 #### Select by location
 
 As we outlined above  we are interested in finding out how many countries have fewer than seven million inhabitants, and then how many cities with over two million inhabitants fall within those boundaries.  In order to answer these two questions we will need to perform a spatial query by layering these two datasets rather than merely querying within the attribute table of one dataset. 
 
-* **Open** the attribute table for admin_0_countriesUNPop and select the `select features using an expression` tool. We will again select by expression in order to select the countries with fewer than seven million inhabitants. Use the expression builder as we did above with the populated places in order to select the countries with fewer than seven million inhabitants. Remember the dataset is expressed in thousands thus 7,000,000 will appear in the data as 7000. 
+* **Open** the attribute table for admin_0_countriesUNPop and select the `select features using an expression` tool. Now we want to select the countries with fewer than seven million inhabitants. Use the expression builder as we did with the populated places, this time, select the countries with fewer than seven million inhabitants. Remember the dataset is expressed in thousands thus 7,000,000 will appear in the data as 7000. 
 * Your expression should read:  `"Pop_2010"  < 7000`
 
-The header bar of the attribute table will indicate that 124 of 238 features were selected. 
+The header bar of the attribute table will indicate that 124 features were selected. 
 
 Now, we will use this selection to identify which cities of greater than two million people are within countries with fewer than seven million people. To do this we will use the select by location tool. 
-* On the menu bar navigate to `Vector`>`Research Tools`>`Select By Location`. In the dialogue box that opens make the following selections: 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/19_SelectLocation.png)
+* On the menu bar navigate to `Vector`>`Research Tools`>`Select By Location`. In the dialogue box , choose:
+
+Select features in `populated_places_2mil` that intersect with features in `admin_0_countries_UNPop`
+
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_15.png)
 
 In the bottom left hand corner of your QGIS window you will see that five populated places were selected. Open the populated places attribute table and identify which cities these are by choosing `Show Selected Features` from the dropdown menu at the bottom left of the window. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/20_SelectedFeatures.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_16.png)
 
 #### On Your Own
 Now on your own use select by attributes and select by location to answer the following question: 
@@ -179,62 +187,65 @@ Include the answer as part of your map composition that we will review on Tuesda
 
 #### Symbolizing World Populations
 
-Now that we have these three different layers we can begin to create maps that highlight the differences between these different ways to measure population. We will compose a map that symbolizes each of our three data layers differently. We will use graduated symbols to express city population, a choropleth map for population by country and a classified color ramp for the gridded population. We will then go over cartographic conventions adding a legend and scale bar to the map and exporting as a PDF. 
+Now that we have these three layers we can create maps that highlight the differences between these ways of measuring population. We will compose a map that symbolizes each of our three data layers differently. We will use:
+* graduated symbols to express city population
+* a choropleth map for population by country and 
+* a classified color ramp for the gridded population. 
+We will then go over cartographic conventions adding a legend and scale bar to the map and exporting as a PDF. 
 
 *Follow along as we demo this next section, and then create your map composition on your own. Be ready to discuss it in class next week.*
 
-**Proportional  symbols**
+**Proportional (graduated) symbols**
 
-We will symbolize the cities layer with symbols that are sized proportionally to their population -- a city with a larger population will have a larger circle and visa versa. 
-To do this open the layer properties menu for the populated_places layer and navigate to the Style tab. 
+We will symbolize the cities layer with circles that are proportional in size to the city's population -- a city with a larger population will have a larger circle. 
 
-Choose Graduated Symbols. Select pop_max as the column, and Natural Breaks (Jenks) as the mode. Click Classify and then click Apply. The populated places will now be colored according to their population. Now we’ll adjust them by size. 
+Open the layer properties menu for the populated_places layer and navigate to the Style tab. Choose Graduated Symbols. Select the `pop max` column. In the Method drop-down box, select `Size` and from Mode, select `Natural Breaks (Jenks)`. Click `Classify` and then click `Apply`. The populated places points will now be sized according to their population.
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/21_Graduate.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_17.png)
 
-**Click** on the Advanced dropdown menu in the bottom right and navigate to the `Size scale field` option. Select `pop_max`. **Click** `Apply`. You’ll notice that the circles are huge and fill up the entire screen. Return to the `Size scale field` and now select `expression`. In the expression builder window that opens write the following `“pop_max” / 1000000`. Click `Okay` in the expression builder then click `Apply`. Click Okay to close the Properties window. 
+We want to de-emphasize the smallest places, so we will change the size of their symbols to be even smaller. Return to the Style Menu for the populated_places layer. Change the Size From option to 0.500000.
 
 The outcome of your selections should look something like this:
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/22_Graduated2.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_18.png)
 
 **Raster Classified Color Ramp**
 
-Next we will symbolize our gridded population of the world layer. This layer is different from the ones we have been primarily working with thus far because it is a raster dataset. 
+Next we will symbolize our gridded population of the world layer. This layer is different from the ones we have been  working with thus far because it is a raster dataset. 
 
-As we discussed briefly in the lecture a raster is a data layer that is composed of a grid of cells, or pixels, of a specific size where each cell has a value that represents information. In our case each cell has a value for population. Unlike a vector data layer which has an attribute table and each point, line or polygon can have multiple values associated with it, a raster grid cell can only have one value. Examples of other types of raster datasets include, temperature gradients, satellite images, and scanned historical maps. 
+A raster is a data layer that is composed of a grid of cells, or pixels, of a specific size, where each cell has a value that represents information. In our case, each cell has data about the population in that space.  Whereas a vector data layer which has an attribute table and each feature (point, line or polygon) can have multiple values associated with it, a raster grid cell can only have one value. Examples of other types of raster datasets include temperature gradients, satellite images, and scanned historical maps. 
 
-If it isn’t already check the box next to the gridded population layer, gpw-v4-population-count-2010, to make it visible if it is not the top layer drag it in the Layers menu so that it is the top visible layer. It will largely be black. Now open the properties menu for the gridded population layer. Navigate to the style tab. You’ll notice that this looks different than the style menu we have been working with for our vector layers. Instead of a symbol type we have an option for ‘Render type’ and many options for how to color the bands in our dataset. 
+Make the gridded population layer, gpw-v4-population-count-2010, visible by checking the box next to it. If it is not the top layer, drag it in the Layers menu so that it is the top visible layer. It will be mostly black. Open the properties menu for the gridded population layer. Navigate to the style tab. You’ll notice that this looks different than the style menu we have been working with for our vector layers. Instead of a symbol type we have an option for ‘Render type’ and many options for how to color the bands in our dataset. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/23_RasterSymbol.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_20.png)
 
-Here you will see that the default style is `Singleband gray`, which means that it's only symbolizing in grayscale based on one band (other raster datasets can be made up of multiple bands, some examples of these include satellite images and color historical maps). The color gradient is currently set as `Black to white` but that can be switched to `White to black`. 
+Notice that the default style is `Singleband gray`, which means that it's only symbolizing in grayscale based on one band (other raster datasets can be made up of multiple bands, i.e., satellite images and color historical maps). The color gradient is currently set as `Black to white` but that can be switched to `White to black`. 
 
-And it is symbolizing based on the minimum value, in this case '0' and on the maximum value, '422.56'. Now, that's not actually the maximum value of the raster dataset. If you look at the right-hand panel (`Load min/maxvalues` highlighted in blue), which is where the min and max values come from, you will notice that the min/max values are being calculated based on a `Cumulative count cut`, which is used to get rid of the outliers. The Cumulative count cut means that QGIS is only taking into account the values between 2% and 98%, in the default cases. You could change that and use the option Min / max to use the actual minimum and maximum values. If you choose this one, you have to click on the Load button to load the new values. Do this and click on `Apply` to see how the image changes. Now the minimum is still '0' but the maximum is '140853'. Because of this new maximum value, most of the image appears black.
+It is symbolizing based on the minimum value, in this case '0' and on the maximum value, '422.56'. However, that's not actually the maximum value of the raster dataset. Click on the drop-down arrow next to 'Load min/max values' to show the details about the minimum and maximum values. The `Cumulative count cut` is used to remove the outliers. By default, QGIS symbolizes the values between 2% and 98%. You could change those values or  select the min / max option to use the actual minimum and maximum values. If you make changes, you must click the Load button to load the new values. Select 'Min/Max' and click on `Load` and then `Apply` to see how the image changes. Now the minimum is still '0' but the maximum is '140853'. Because of this new maximum value, most of the image appears nearly solid black.
 
-Now change the `Render type` to `Singleband pseudocolor` to get something similar to a symbology we would do for a vector file. On the right-hand panel you will see the `Mode of classification` (`Continuous` or `Equal Interval`) and below, again, the Load min/max values panel. Click on the `Classify` button to load the values and then hit `Apply` to see it on the map. Now you can see clearly the regions of the world with the highest population density. You can experiment with the style of your map by changing the colors used with the pulldown menu highlighted in blue.
+Now change the `Render type` to `Singleband pseudocolor` to get something similar to a symbology we would do for a vector file. Below this is the Load Min/Max drop down menu, and below again is the `Interpolation` options (`Discrete`, `Linear`, or `Exact`). Click on the `Classify` button to load the values and then hit `Apply` to see it on the map. If you do not see the `Classify` button, scroll down. Now you can see clearly the regions of the world with the highest population density. You can experiment with the style of your map by changing the colors used with the `Edit` button highlighted in blue.
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/24_Pseudo.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_21.png)
 
 
 #### On your Own
 **Choropleth**
 
-Create a choropleth map for population by country, where each country is  colored according to its population size. 
+Create a choropleth map for population by country, where each country is colored according to its population size. We therefore want to symbolize each polygon based on the data in the Pop_2010 column.
 
-**Open** the properties for the admin_0_countriesUNPop layer and navigate to the Style tab. Select Graduated Symbols from the dropdown at the top left, and select Pop_2010 as the Column on which we will color the map. Then in order to change the color of the entire country polygon we will need to change the symbol from an outline to a filled polygon by clicking the Change button next to Symbol and selecting “simple fill.” Next we will break up our data into classes, or ranges of values, and classify the colors for our choropleth map according to these. 
+**Open** the properties menu for the admin_0_countriesUNPop layer and navigate to the Style tab. Select Graduated from the dropdown at the top, and in the Column box, select Pop_2010. Currently our polygons are Symbolized by outlines. We will need to use filled polugons. In the Symbol box, click the `Change`. The Symbol Selector will open. Select Click on the `Simple Line`, and select `Simple Fill` from the options list. Close that dialogue box, and click `Classify` to break the data into classes (or ranges of values). 
 
-Experiment with different modes and numbers of classes. What argument does each option convey? 
+Using the options below the classification box, experiment with different Modes and numbers of classes. What argument does each option convey? 
 
-After selecting each combination **Click** `Classify`.  Click `Apply`. The country polygons will change on the map. 
+After selecting each combination, **Click** `Classify`.  Once you click `Apply`, the color of the country polygons will change on the map. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/22_Choropleth.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_22.png)
 
 
 #### Designing a map
-In order to present these three types of population measures we will now compose a map layout and become familiar with the QGIS map composer. The map composer allows you to add a legend, north arrow and scale bar to the map as well as to export our work as a PDF. 
+To present these three types of population measures we will now compose a map layout using the QGIS map composer. The map composer allows you to add a legend, north arrow and scale bar to the map as well as to export our work as a PDF. 
 
-Create a map composition where all three depictions of world populations are values. You can adjust the transparency of your data layers using the style menu. Experiment with changing the colors of the different layers to become more familiar with the style menus for raster and vector layers. 
+Create a map composition where all three depictions of world populations are values by selecting each of those layers in the layers panel. You can adjust the transparency of your data layers using the style menu. Experiment with changing the colors of the different layers to become more familiar with the style menus for raster and vector layers. 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/26_LayerTransparency.png)
 
