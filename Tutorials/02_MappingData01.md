@@ -281,7 +281,7 @@ Finally use one of the export options circled in blue above to save the map comp
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_29.png)
 
 ### Deliverables: 
-**due Tuesday, May 29, 2017**
+**due Tuesday, May 29, 2018**
 For Tuesday, print out your finished map composition (in color, on 8.5 x 11 paper)
 
 Include your answer to the following question you answered on your own:
@@ -291,6 +291,6 @@ Include your answer to the following question you answered on your own:
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 
