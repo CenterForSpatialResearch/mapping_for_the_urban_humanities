@@ -199,15 +199,18 @@ Calculate population density per square kilometer of each county based on the ne
 * Save this information in a new field called Dens_UTKm. 
 * Be sure to change the output field type to `decimal number (real)`.
 * Set the output field width to 10, and the precision to 3. 
-* And construct the expression shown below. 
+* And construct the expression,  `POP_1870 / ($area /100000)`
+* $area is under the 'Geometry' menu
 * (Note: we have divided the area by 1,000,000 because the units of the UTM projection are square meters). 
 * Click `OK`.
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/14_AreaCalc.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_17.png)
 
-Now click the toggle to exit from editing mode to save the new field. Sort the attribute table by the Albers Equal Area projection population density (do this by clicking on Area_AlbKm) and compare these values with the UTM Zone 10N population density. You’ll notice they’re vastly different.  
+Now click the toggle to exit from editing mode to save the new field. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/16_ToggleEdit.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_18.png)
+
+Sort the attribute table by the Albers Equal Area projection population density (do this by clicking on Area_AlbKm) and compare these values with the UTM Zone 10N population density. You’ll notice they’re vastly different.  
 
 Close the attribute table. 
 
@@ -217,13 +220,17 @@ Close the attribute table.
 
 Next we’ll create two choropleth maps which highlight the differences between these two calculations of population density. One for the Albers population density and the other for the UTM Zone 10 Population Density. 
 
-**Right-click** the US_county_1870_PopJoin_UTAlb layer and select `Duplicate`. Open the properties menu for US_county_1870_PopJoin_UTAlb and in the style tab choose `graduated` as the symbol type and create a choropleth map based on the Dens_AlbKm layer. Choose `natural breaks (jenks)` as the mode and choose 5 as the number of classes into which we will group our data values. 
+**Right-click** the US_county_1870_UTM10_PopJoin layer and select `Duplicate`. Open the properties menu for US_county_1870_UTM10_PopJoin and in the style tab choose `graduated` as the symbol type and create a choropleth map based on the Dens_AlbKm layer. Choose `natural breaks (jenks)` as the mode and choose 6 as the number of classes into which we will group our data values, and 'OrRed' as the color ramp. 
 
-In order to compare the two maps of population density values we will need the classes or buckets into which our data is grouped to be the same. One easy way to do this is to save a layer style based on this symbology.Save the style in your Mapping Data folder as DensityAlbersJenks5
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_19.png)
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/17_Style.png)
+In order to compare the two maps of population density values we will need the classes or buckets into which our data is grouped to be the same. One easy way to do this is to save a layer style based on this symbology. Save the style in your Exercises folder as DensityAlbersJenks6
 
-Next open the properties menu of US_county_1870_UTM10_PopJoin copy, load the layer style we just saved but change the column that is being symbolized to Dens_UTkm. 
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_20.png)
+
+Next open the properties menu of **US_county_1870_UTM10_PopJoin copy**, load the layer style we just saved but change the column that is being symbolized to Dens_UTkm. 
+
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_19.png)
 
 **Save** your map project.
 
