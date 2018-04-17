@@ -30,19 +30,23 @@ Select `Geographic Level` from the filter options.
 
 A menu will open containing all of the available geographies. Click on `County (by State)`, this will open an information menu which outlines which datasets are available at this level of geography. Scan this to confirm that the 1850 Agricultural Census is available at the county level. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/03_NHGIS_Geography.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_02.png)
 
 Once we have confirmed that the information we are interested in is available at the desired geography, click the plus icon next to `County (by State)` to add it to the selected geographic level filters. Select Submit. The geographic level filters menu will close and all of the source tables available at the county level will appear. 
 
-Repeat this process to filter the results and display only the tables available for 1850. Then use the `Topics` filter to select `Total Population.`
+Repeat this process to filter the Year results and display only the tables available for 1850. Then use the `Topics` filter to select `Total Population.`
 
 We have found the Total Population from 1850. You can select the source table name to view more information about it. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/04_NHGIS_SourceTable.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_03.png)
 
 **Select** the plus icon at the left of the Total Population table name to add this dataset to our selections. The `Data Cart` in the upper right hand of the screen reflects this.
 
-We selected the tabular data for population. To work with this data spatially in GIS, we need to download GIS boundary files of the same geography for the same year. NHGIS makes this very easy. Select the GIS Boundary File tab. There are two options for county boundary files for 1850. We want the file whose “Basis” is the `2000 TIGER/Line +` (NHGIS has a helpful explanation for why we are making this choice if you click on one of the boundary file names). 
+We selected the tabular data for population. To work with this data spatially in GIS, we need to download GIS boundary files of the same geography for the same year. NHGIS makes this very easy. Select the GIS Files tab. 
+
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_04.png)
+
+There are two options for county boundary files for 1850. We want the file whose “Basis” is the `2000 TIGER/Line +` (NHGIS has a helpful explanation for why we are making this choice if you click on one of the boundary file names). 
 
 Again, **select** the plus icon next to the desired boundary file to add it to the datasets we have selected to download. Select continue on the Data Cart. 
 
