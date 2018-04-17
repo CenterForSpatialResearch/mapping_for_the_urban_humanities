@@ -22,7 +22,7 @@ We will download 1850 population by county and the 1850 country boundary shapefi
 
 **Navigate** to [https://nhgis.org](https://nhgis.org). Select the `Get Data` option from the Green bar (or `Select Data` from the menu on the left).
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/01_NHGIS.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_01.png)
 
 First we will filter the archive by **geographic level** and select counties. 
 
