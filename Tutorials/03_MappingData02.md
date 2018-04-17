@@ -16,11 +16,11 @@ We will be working with data created and published by the University of Nebraska
 In addition, we will use historic census information on population by county which has been digitized, aggregated and published by the Minnesota Population Center at the University of Minnesota as part of their [National Historic Geographic Information System (NHGIS)](https://nhgis.org) project. This project is an amazing resource for historical research. We will be using population values for counties from the USA wide agricultural census of 1850 and of 1870 to match with the dates of our rail lines. We have already downloaded the data that we will be using. However, brief instructions for how to download data from NHGIS follow. 
 
 #### Downloading Data from NHGIS
-This section is already completed for you and the data is downloaded in the MappingData\Tabular and MappingData\Shape folders respectively. This brief tutorial covers the basics of searching for and downloading historical census data and associated GIS boundary files from NHGIS. 
+This step is **already completed** for you and the data is downloaded in the MappingData\Tabular and MappingData\Shape folders, respectively. This brief tutorial covers the basics of searching for and downloading historical census data and associated GIS boundary files from NHGIS. 
 
 We will download 1850 population by county and the 1850 country boundary shapefiles.
 
-**Navigate** to [https://nhgis.org](https://nhgis.org). In the menu on the left choose `Select Data.`
+**Navigate** to [https://nhgis.org](https://nhgis.org). Select the `Get Data` option from the Green bar (or `Select Data` from the menu on the left).
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/01_NHGIS.png)
 
