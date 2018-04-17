@@ -243,42 +243,45 @@ After selecting each combination, **Click** `Classify`.  Once you click `Apply`,
 
 
 #### Designing a map
-To present these three types of population measures we will now compose a map layout using the QGIS map composer. The map composer allows you to add a legend, north arrow and scale bar to the map as well as to export our work as a PDF. 
 
-Create a map composition where all three depictions of world populations are values by selecting each of those layers in the layers panel. You can adjust the transparency of your data layers using the style menu. Experiment with changing the colors of the different layers to become more familiar with the style menus for raster and vector layers. 
+To present these three types of population measures we will now compose a map layout using the QGIS map composer. The map composer allows you to add a legend, north arrow and scale bar as well as to export our work as a PDF. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/26_LayerTransparency.png)
+Create a map composition in the QGIS Dataframe where all three depictions of world populations are values by selecting each of those layers in the layers panel. You can adjust the transparency of your data layers using the Style menu (under Properties). In the Symbol box, click on `Change`.  Experiment with changing the colors of the different layers to become more familiar with the style menus for raster and vector layers. 
+
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_23.png)
+
+You can reorder the layers based on what you want to appear on top, and adjust the transparency accordingly. 
 
 Once you are pleased with your map composition we will create a new print composer. When prompted you can either name the print composer or not. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/25_PrintComposer.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_24.png)
 
-To add a new map to the composer select the add new map button. Then click once to begin to drag a rectangle over the area on the page that you would like the map to occupy and click again to stop. Whatever is showing in your QGIS map project window as you create this new map in the print composer is what will appear in the new map. 
+To add a new map to the composer select the `add new map` button. Then click once and drag a rectangle over the area that you would like the map to occupy and click again to stop. Whatever is showing in your QGIS map project window when you place this map in the print composer is what will appear in the new map. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/27_PrintComp.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_25.png)
 
-Next we will add a legend. Select Add new legend, and again click to draw a rectangle where you would like to place the legend. An unformatted legend that matches the information from the Layers panel will appear. You can use the options in the Item Properties tab (circled in blue) to change which layers are represented in the legend and to change the labeling of the layers in the legend. Scroll within this tab to familiarize yourself with which properties about the legend you can change. 
+Next, add a legend. Select `Add New Legend`, and again click to draw a rectangle where you would like to place the legend. An unformatted legend that matches the information from the Layers panel will appear. You can use the options in the Item Properties tab (highlighted in blue) to change which layers are represented in the legend and to change the labeling of the layers in the legend. Scroll within this tab to familiarize yourself with which properties about the legend you can change. 
 
-We will format the legend and change the titles of each dataset so they are more descriptive. To do this un-click “Auto update” to make changes, then change the layer names by clicking the “legend item properties” button circled in magenta. 
+Format the legend and change the titles of each dataset so they are more descriptive. Un-click “Auto update” to make changes, then change the layer names by clicking the “legend item properties” button. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/27_PrintComp1.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_26.png)
 
 Next we will add a scale bar. Click the add new scale bar button. Again you will be able to change the properties of the scale bar, including the style, number of segments and size. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/27_PrintComp2.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_27.png)
 
 Last we will add two text boxes, one with a title for the map and another with abbreviated citations for our data sources. Click the add new label button then use the Main properties field to add the text you want, and use the Font button to change the text size and font. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/27_PrintComp3.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_28.png)
 
 Finally use one of the export options circled in blue above to save the map composition as an image file, PDF, or SVG. 
 
 * Make this map composition your own – experiment with changing colors, and symbol sizes and the locations of the text and scale bars. The aim is to create a design that you are pleased with, that is clear, and follows cartographic conventions. 
 
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/Mapping_WorldPopulation.png)
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata02_29.png)
 
 ### Deliverables: 
-**due Tuesday, May 30, 2017**
+**due Tuesday, May 29, 2017**
 For Tuesday, print out your finished map composition (in color, on 8.5 x 11 paper)
 
 Include your answer to the following question you answered on your own:
