@@ -1,6 +1,6 @@
 ## Analyzing Data
 
-Through this exercise you will learn key tools of analysis using QGIS. After completing these exercises you should be able to…
+Through this exercise you will learn key tools of analysis using QGIS. After completing these exercises you will able to…
 
 * Use proximity based measures
 * Understand the principles and applications of boolean operations
@@ -20,12 +20,12 @@ We are interested in looking at libraries in the Bronx as a public resource. We 
 * Where are Bronx Library branches?
 * Which Library branch locations are within areas with a high number of Spanish speaking residents?
 * How many public schools are located within 1/4 mile of a library?
-* Which five Libraries serve the most students? 
+* Which five libraries serve the most students? 
 * What is the nearest library to each school?
 * How many people do these libraries serve?
 
 #### The Strategy
-To evaluate the confluence of Spanish speakers and branch libraries we will first select using an expression and then select by area to identify which libraries fall in census tracts with a high percentage of Spanish speakers. 
+To evaluate the confluence of Spanish speakers and branch libraries, we will first select using an expression and then select by area to identify which libraries fall in census tracts with a high percentage of Spanish speakers. 
 
 Then to evaluate which libraries serve the greatest number of school children we will first create a buffer around each library location of ½ mile (which we will be able to export as its own layer to display on our map). We will then use a spatial join in order to count the number of schools within ½ mile of a library and to determine the number of students enrolled in those schools.
 
@@ -41,7 +41,17 @@ Select the `add vector data` button and navigate to the MappingfortheUrbanHumani
 * Bronx_Schools.shp
 * Bronx_Libraries.shp
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/01_Layers-.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_01_.png)
+
+**TROUBLESHOOTING**
+
+If the map looks a little skewed, make sure the layers and the project are projected in the same CRS. Open the Bronx_Tracts_2014 Properties menu, navigate to General, and then notice which CRS it is projected in. If that **does not** match the project CRS (shown in the lower right hand corner), change the project CRS.
+Click on the number in the lower right corner and search for the appropriate CRS. 
+
+For this tutorial, all layers and the proejct should be projected in `NAD_1983_StatePlane_New_York_East_FIPS_3101_Feet EPSG:102715`
+
+**END TROUBLESHOOTING**
+
 First **open** the attribute tables of each data layer and inspect its contents. 
 
 The field names for `Bronx_Tracts_2014` are: 
@@ -78,13 +88,14 @@ The field names for `Bronx_Schools` are:
 * `GRADES`: the grades within the school
 * `Emrollment`: the number of students enrolled in the school
 * `Raster`: again ignore this field for now
-**Save** your map project as `AnalyzingData01` within the MappingfortheUrbanHumanities\Tutorials section.
+**Save** your map project as `AnalyzingData01` within the MappingfortheUrbanHumanities\Tutorials\Exercises section.
 
 #### Finding libraries near concentrations of Spanish speakers
 
 Now, we want to determine which libraries are located within census tracts where more than 65% of the population speaks Spanish. We are interested in determining which libraries might be well suited to receive additional resources to go towards multilingual programs.
 
-* **Open** the attribute table of the Bronx_Tracts layer and choose the `select using an expression` tool. Select census tracts where more than 65 percent of the population over 5 years old speaks Spanish. Your expression should look like this. Click `Select`. You should see that 56 features were selected. Close the attribute table.
+* **Open** the attribute table of the Bronx_Tracts layer and choose the `select using an expression` tool. Select census tracts where more than 65 percent of the population over 5 years old speaks Spanish. Your expression should read:
+`Pct_Spanish > 65` Click `Select`. You should see that 56 features were selected. Close the attribute table.
 
 ![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/02_SelectExpression.png)
 

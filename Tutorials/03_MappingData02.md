@@ -220,17 +220,17 @@ Close the attribute table.
 
 Next we’ll create two choropleth maps which highlight the differences between these two calculations of population density. One for the Albers population density and the other for the UTM Zone 10 Population Density. 
 
-**Right-click** the US_county_1870_UTM10_PopJoin layer and select `Duplicate`. Open the properties menu for US_county_1870_UTM10_PopJoin and in the style tab choose `graduated` as the symbol type and create a choropleth map based on the Dens_AlbKm layer. Choose `natural breaks (jenks)` as the mode and choose 6 as the number of classes into which we will group our data values, and 'OrRed' as the color ramp. 
+**Right-click** the US_county_1870_UTM10_PopJoin layer and select `Duplicate`. Open the properties menu for US_county_1870_UTM10_PopJoin and in the style tab choose `graduated` as the symbol type and create a choropleth map based on the Dens_AlbKm layer. Choose `natural breaks (jenks)` as the mode and choose 6 as the number of classes into which we will group our data values, and 'OrRed' or 'darkblue' as the color ramp (these both add color to the smallest category). 
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_19.png)
 
 In order to compare the two maps of population density values we will need the classes or buckets into which our data is grouped to be the same. One easy way to do this is to save a layer style based on this symbology. Save the style in your Exercises folder as DensityAlbersJenks6
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_20.png)
+![savestyle](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_20.png)
 
 Next open the properties menu of **US_county_1870_UTM10_PopJoin copy**, load the layer style we just saved but change the column that is being symbolized to Dens_UTkm. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_21.png)
+![load style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_21.png)
 
 **Save** your map project.
 
