@@ -7,7 +7,7 @@ We will now zoom in to the level of the continent and examine population along h
 
 #### New Downloads Before We Begin
 
-If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018s), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
+If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials. 
 
 #### The Data
 
@@ -230,7 +230,7 @@ In order to compare the two maps of population density values we will need the c
 
 Next open the properties menu of **US_county_1870_UTM10_PopJoin copy**, load the layer style we just saved but change the column that is being symbolized to Dens_UTkm. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_19.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_21.png)
 
 **Save** your map project.
 
@@ -240,13 +240,13 @@ Create a new print composer with a legend, scale bar, and titles of the U.S. pop
 
 * Create a compelling map composition that highlights the differences in populations density calculated using these two projection systems. Be ready to present this in class.  
 
-Because we have gone over the basics of using the print composer in Mapping Data 01 we will not go through these steps explicitly. (If you need a refresher on the major functions of the print composer refer to the detailed instructions in [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/2_MappingData01.md)).
+Because we have gone over the basics of using the print composer in Mapping Data 01 we will not go through these steps explicitly. (If you need a refresher on the major functions of the print composer refer to the detailed instructions in [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities2018/).
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/PopulationbyCounty_Albers.png)
+![map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_22.png)
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/PopulationbyCounty_UTM.png)
+![map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata03_23.png)
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 

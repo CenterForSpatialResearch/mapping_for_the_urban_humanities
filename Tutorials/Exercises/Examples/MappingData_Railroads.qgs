@@ -8,25 +8,25 @@
     <layer-tree-layer expanded="1" providerKey="delimitedtext" checked="Qt::Checked" id="nhgis_1850_Population_county20180417150830621" source="file:///Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Tabular/nhgis_1850_Population_county.csv?type=csv&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no" name="nhgis_1850_Population_county">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="RR1850_Albers20180417150728767" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/RR1850_Albers.shp" name="RR1850_Albers">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="RR1850_Albers20180417150728767" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/RR1850_Albers.shp" name="RR1850_Albers">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="RR1870_Albers20180417150728937" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/RR1870_Albers.shp" name="RR1870_Albers">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="RR1870_Albers20180417150728937" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/RR1870_Albers.shp" name="RR1870_Albers">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1850_Albers_PopJoin20180417154953938" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1850_Albers_PopJoin.shp" name="US_county_1850_Albers_PopJoin">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="US_county_1850_Albers_PopJoin20180417154953938" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1850_Albers_PopJoin.shp" name="US_county_1850_Albers_PopJoin">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1850_Albers20180417150728953" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1850_Albers.shp" name="US_county_1850_Albers">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="US_county_1850_Albers20180417150728953" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1850_Albers.shp" name="US_county_1850_Albers">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1870_UTM10_PopJoin20180417164411498" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="US_county_1870_UTM10_PopJoin20180417164411498" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="US_county_1870_UTM10_PopJoin_copy20180417170137706" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin copy">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1870_UTM10_PopJoin_copy20180417170137706" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin copy">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1870_Albers_PopJoin20180417150728958" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_Albers_PopJoin.shp" name="US_county_1870_Albers_PopJoin">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="US_county_1870_Albers_PopJoin20180417150728958" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_Albers_PopJoin.shp" name="US_county_1870_Albers_PopJoin">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -34,10 +34,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-20998.38987124478444457</xmin>
-      <ymin>2420188.95750483218580484</ymin>
-      <xmax>6537804.89522423967719078</xmax>
-      <ymax>7270733.89221459906548262</ymax>
+      <xmin>251215.80505961878225207</xmin>
+      <ymin>3030376.73438982758671045</ymin>
+      <xmax>5180166.25938788056373596</xmax>
+      <ymax>6979581.94181439559906721</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -74,42 +74,270 @@
         <legendlayerfile isInOverview="0" layerid="nhgis_1850_Population_county20180417150830621" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RR1850_Albers" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="RR1850_Albers" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="RR1850_Albers20180417150728767" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="RR1850_Albers20180417150728767" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RR1870_Albers" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="RR1870_Albers" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="RR1870_Albers20180417150728937" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="RR1870_Albers20180417150728937" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="US_county_1850_Albers_PopJoin" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="US_county_1850_Albers_PopJoin" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="US_county_1850_Albers_PopJoin20180417154953938" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="US_county_1850_Albers_PopJoin20180417154953938" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="US_county_1850_Albers" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="US_county_1850_Albers" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="US_county_1850_Albers20180417150728953" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="US_county_1850_Albers20180417150728953" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="US_county_1870_UTM10_PopJoin" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="US_county_1870_UTM10_PopJoin" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="US_county_1870_UTM10_PopJoin20180417164411498" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="US_county_1870_UTM10_PopJoin20180417164411498" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="US_county_1870_UTM10_PopJoin copy" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="US_county_1870_UTM10_PopJoin copy" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="US_county_1870_UTM10_PopJoin_copy20180417170137706" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="US_county_1870_UTM10_PopJoin_copy20180417170137706" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="US_county_1870_Albers_PopJoin" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="US_county_1870_Albers_PopJoin" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="US_county_1870_Albers_PopJoin20180417150728958" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="US_county_1870_Albers_PopJoin20180417150728958" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
+  <Composer title="Composer 1" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="{ca9f75aa-65e6-4c74-8d6c-d92b0ba5e8a4}" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+      <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="joinstyle" v="miter"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Comparing Population Density from 1870" htmlState="0" halign="1">
+        <LabelFont description="Helvetica,24,-1,5,75,0,0,0,0,0" style="Bold"/>
+        <FontColor red="0" blue="0" green="0"/>
+        <ComposerItem pagey="11.875" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="7.5568" y="11.875" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="135.905" outlineWidth="0.3" excludeFromExports="0" uuid="{9a55db47-3a5e-4637-af61-c6c4dc73c0b6}" height="17.2462" itemRotation="0" frame="false" pagex="7.5568">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLabel>
+      <ComposerScaleBar lineCapStyle="square" style="Line Ticks Up" numMapUnitsPerScaleBarUnit="1000" segmentSizeMode="0" alignment="0" numSegments="3" segmentMillimeters="25.0361" lineJoinStyle="miter" minBarWidth="50" numUnitsPerSegment="500000" units="1" labelBarSpace="3" outlineWidth="0.3" numSegmentsLeft="0" maxBarWidth="150" height="3" boxContentSpace="1" mapId="0" unitLabel="km">
+        <scaleBarFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+        <fillColor alpha="255" red="0" blue="0" green="0"/>
+        <fillColor2 alpha="255" red="255" blue="255" green="255"/>
+        <strokeColor alpha="255" red="0" blue="0" green="0"/>
+        <textColor alpha="255" red="0" blue="0" green="0"/>
+        <ComposerItem pagey="189.398" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="4" y="189.398" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="90.3082" outlineWidth="0.3" excludeFromExports="0" uuid="{f18c7e6d-80df-41bc-84f7-2fde40b7e0a9}" height="14.6023" itemRotation="0" frame="false" pagex="4">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerScaleBar>
+      <ComposerLegend symbolWidth="7" title="Albers Equal Area Projection" rasterBorderWidth="0" titleAlignment="1" map="0" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" legendFilterByAtlas="0" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="2" rasterBorder="1">
+        <styles>
+          <style marginBottom="2" name="title">
+            <styleFont description=".SF NS Text,16,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="group">
+            <styleFont description=".SF NS Text,14,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="subgroup">
+            <styleFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="symbol">
+            <styleFont description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" marginLeft="2" name="symbolLabel">
+            <styleFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+        </styles>
+        <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+          <customproperties/>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1870_UTM10_PopJoin_copy20180417170137706" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin copy">
+            <customproperties>
+              <property key="legend/title-label" value="1870 Population Density by County (people/km)"/>
+            </customproperties>
+          </layer-tree-layer>
+        </layer-tree-group>
+        <ComposerItem pagey="32" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="7.5568" y="32" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="92.9047" outlineWidth="0.3" excludeFromExports="0" uuid="{422fe30f-f7d5-4f66-9451-7e2a46c1fb88}" height="53.7313" itemRotation="0" frame="false" pagex="7.5568">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLegend>
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
+        <Extent ymin="3030376.73438982758671045" xmin="-483436.29827578645199537" ymax="6825203.63677548430860043" xmax="5914818.36272328533232212"/>
+        <LayerSet/>
+        <Grid/>
+        <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+        <ComposerItem pagey="32" page="1" id="" lastValidViewScaleFactor="2.77895" positionMode="0" positionLock="false" x="4" y="32" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="290" outlineWidth="0.3" excludeFromExports="0" uuid="{ca9f75aa-65e6-4c74-8d6c-d92b0ba5e8a4}" height="172" itemRotation="0" frame="false" pagex="4">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerMap>
+      <customproperties>
+        <property key="imageCropMarginBottom" value="0"/>
+        <property key="imageCropMarginLeft" value="0"/>
+        <property key="imageCropMarginRight" value="0"/>
+        <property key="imageCropMarginTop" value="0"/>
+        <property key="imageCropToContents" value="false"/>
+      </customproperties>
+    </Composition>
+  </Composer>
+  <Composer title="Composer 1 copy" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="{ca9f75aa-65e6-4c74-8d6c-d92b0ba5e8a4}" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+      <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="joinstyle" v="miter"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <ComposerLabel valign="32" marginX="1" marginY="1" labelText="Comparing Population Density from 1870" htmlState="0" halign="1">
+        <LabelFont description="Helvetica,24,-1,5,75,0,0,0,0,0" style=""/>
+        <FontColor red="0" blue="0" green="0"/>
+        <ComposerItem pagey="11.875" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="7.5568" y="11.875" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="135.905" outlineWidth="0.3" excludeFromExports="0" uuid="{d3d282a6-eee8-49d1-b468-eae0f7957a33}" height="17.2462" itemRotation="0" frame="false" pagex="7.5568">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLabel>
+      <ComposerScaleBar lineCapStyle="square" style="Line Ticks Up" numMapUnitsPerScaleBarUnit="1000" segmentSizeMode="0" alignment="0" numSegments="3" segmentMillimeters="25.0361" lineJoinStyle="miter" minBarWidth="50" numUnitsPerSegment="500000" units="1" labelBarSpace="3" outlineWidth="0.3" numSegmentsLeft="0" maxBarWidth="150" height="3" boxContentSpace="1" mapId="0" unitLabel="km">
+        <scaleBarFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+        <fillColor alpha="255" red="0" blue="0" green="0"/>
+        <fillColor2 alpha="255" red="255" blue="255" green="255"/>
+        <strokeColor alpha="255" red="0" blue="0" green="0"/>
+        <textColor alpha="255" red="0" blue="0" green="0"/>
+        <ComposerItem pagey="189.398" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="4" y="189.398" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="90.3082" outlineWidth="0.3" excludeFromExports="0" uuid="{65862a33-84b9-40d5-8c44-6dbc7a42f6e9}" height="14.6023" itemRotation="0" frame="false" pagex="4">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerScaleBar>
+      <ComposerLegend symbolWidth="7" title="UTM 10 Zone Projection" rasterBorderWidth="0" titleAlignment="1" map="0" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" legendFilterByAtlas="0" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="2" rasterBorder="1">
+        <styles>
+          <style marginBottom="2" name="title">
+            <styleFont description=".SF NS Text,16,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="group">
+            <styleFont description=".SF NS Text,14,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="subgroup">
+            <styleFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="symbol">
+            <styleFont description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" marginLeft="2" name="symbolLabel">
+            <styleFont description=".SF NS Text,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+        </styles>
+        <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+          <customproperties/>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="US_county_1870_UTM10_PopJoin_copy20180417170137706" source="/Users/mam/MappingForTheUrbanHumanities_2018/Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp" name="US_county_1870_UTM10_PopJoin copy">
+            <customproperties>
+              <property key="legend/title-label" value="1870 Population Density by County (people/km)"/>
+            </customproperties>
+          </layer-tree-layer>
+        </layer-tree-group>
+        <ComposerItem pagey="32" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="7.5568" y="32" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="92.9047" outlineWidth="0.3" excludeFromExports="0" uuid="{2f3974f9-dbcb-4911-81f0-713b5f51690f}" height="53.7313" itemRotation="0" frame="false" pagex="7.5568">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLegend>
+      <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
+        <Extent ymin="3030376.73438982758671045" xmin="-483436.29827578645199537" ymax="6825203.63677548430860043" xmax="5914818.36272328533232212"/>
+        <LayerSet/>
+        <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{87537b96-98db-43b2-9488-cae5c50eaf65}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grid 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" clip_to_extent="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+          <annotationFontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+        </ComposerMapGrid>
+        <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+        <ComposerItem pagey="32" page="1" id="" lastValidViewScaleFactor="2.77895" positionMode="0" positionLock="false" x="4" y="32" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="290" outlineWidth="0.3" excludeFromExports="0" uuid="{1ecba902-c47e-4634-b853-ce31672666e3}" height="172" itemRotation="0" frame="false" pagex="4">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerMap>
+      <customproperties>
+        <property key="imageCropMarginBottom" value="0"/>
+        <property key="imageCropMarginLeft" value="0"/>
+        <property key="imageCropMarginRight" value="0"/>
+        <property key="imageCropMarginTop" value="0"/>
+        <property key="imageCropToContents" value="false"/>
+      </customproperties>
+    </Composition>
+  </Composer>
   <projectlayers>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -1268,6 +1496,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>368571.76825791085138917</xmin>
+        <ymin>3124405.4298046980984509</ymin>
+        <xmax>5062810.29618958756327629</xmax>
+        <ymax>6885553.24639952462166548</ymax>
+      </extent>
       <id>US_county_1870_UTM10_PopJoin20180417164411498</id>
       <datasource>../../../Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp</datasource>
       <keywordList>
@@ -1336,17 +1570,18 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="Dens_AlbKm" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
-          <range render="true" symbol="0" lower="0.000000000000000" upper="71.825999999999993" label=" 0 - 72 "/>
-          <range render="true" symbol="1" lower="71.825999999999993" upper="434.360999999999990" label=" 72 - 434 "/>
-          <range render="true" symbol="2" lower="434.360999999999990" upper="1220.924999999999955" label=" 434 - 1221 "/>
-          <range render="true" symbol="3" lower="1220.924999999999955" upper="2781.335999999999785" label=" 1221 - 2781 "/>
-          <range render="true" symbol="4" lower="2781.335999999999785" upper="15846.694999999999709" label=" 2781 - 15847 "/>
+          <range render="true" symbol="0" lower="0.000000000000000" upper="16.901000000000000" label=" 0 - 17 "/>
+          <range render="true" symbol="1" lower="16.901000000000000" upper="90.947999999999993" label=" 17 - 91 "/>
+          <range render="true" symbol="2" lower="90.947999999999993" upper="434.360999999999990" label=" 91 - 434 "/>
+          <range render="true" symbol="3" lower="434.360999999999990" upper="1220.924999999999955" label=" 434 - 1221 "/>
+          <range render="true" symbol="4" lower="1220.924999999999955" upper="2781.335999999999785" label=" 1221 - 2781 "/>
+          <range render="true" symbol="5" lower="2781.335999999999785" upper="15846.694999999999709" label=" 2781 - 15847 "/>
         </ranges>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="247,251,255,255"/>
+              <prop k="color" v="254,240,217,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1361,7 +1596,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="200,221,240,255"/>
+              <prop k="color" v="254,212,154,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1376,7 +1611,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="2">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="115,179,216,255"/>
+              <prop k="color" v="253,166,109,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1391,7 +1626,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="3">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="40,121,185,255"/>
+              <prop k="color" v="242,114,74,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1406,7 +1641,22 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="4">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="8,48,107,255"/>
+              <prop k="color" v="218,59,40,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="179,0,0,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1437,10 +1687,10 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </source-symbol>
         <colorramp type="gradient" name="[source]">
-          <prop k="color1" v="247,251,255,255"/>
-          <prop k="color2" v="8,48,107,255"/>
+          <prop k="color1" v="254,240,217,255"/>
+          <prop k="color2" v="179,0,0,255"/>
           <prop k="discrete" v="0"/>
-          <prop k="stops" v="0.13;222,235,247,255:0.26;198,219,239,255:0.39;158,202,225,255:0.52;107,174,214,255:0.65;66,146,198,255:0.78;33,113,181,255:0.9;8,81,156,255"/>
+          <prop k="stops" v="0.25;253,204,138,255:0.5;252,141,89,255:0.75;227,74,51,255"/>
         </colorramp>
         <invertedcolorramp value="0"/>
         <mode name="jenks"/>
@@ -1728,6 +1978,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "DECADE", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>368571.76825791085138917</xmin>
+        <ymin>3124405.4298046980984509</ymin>
+        <xmax>5062810.29618958756327629</xmax>
+        <ymax>6885553.24639952462166548</ymax>
+      </extent>
       <id>US_county_1870_UTM10_PopJoin_copy20180417170137706</id>
       <datasource>../../../Class_Data/1_MappingData/Shape/US_county_1870_UTM10_PopJoin.shp</datasource>
       <keywordList>
@@ -1794,8 +2050,108 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+      <renderer-v2 attr="Dens_UTkm" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
+        <ranges>
+          <range render="true" symbol="0" lower="0.000000000000000" upper="16.901000000000000" label=" 0 - 17 "/>
+          <range render="true" symbol="1" lower="16.901000000000000" upper="90.947999999999993" label=" 17 - 91 "/>
+          <range render="true" symbol="2" lower="90.947999999999993" upper="434.360999999999990" label=" 91 - 434 "/>
+          <range render="true" symbol="3" lower="434.360999999999990" upper="1220.924999999999955" label=" 434 - 1221 "/>
+          <range render="true" symbol="4" lower="1220.924999999999955" upper="2781.335999999999785" label=" 1221 - 2781 "/>
+          <range render="true" symbol="5" lower="2781.335999999999785" upper="15846.694999999999709" label=" 2781 - 15847 "/>
+        </ranges>
         <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="254,240,217,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="254,212,154,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="2">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="253,166,109,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="3">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="242,114,74,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="4">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="218,59,40,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="179,0,0,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <source-symbol>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1811,12 +2167,163 @@ def my_form_open(dialog, layer, feature):
               <prop k="style" v="solid"/>
             </layer>
           </symbol>
-        </symbols>
+        </source-symbol>
+        <colorramp type="gradient" name="[source]">
+          <prop k="color1" v="254,240,217,255"/>
+          <prop k="color2" v="179,0,0,255"/>
+          <prop k="discrete" v="0"/>
+          <prop k="stops" v="0.25;253,204,138,255:0.5;252,141,89,255:0.75;227,74,51,255"/>
+        </colorramp>
+        <invertedcolorramp value="0"/>
+        <mode name="jenks"/>
         <rotation/>
         <sizescale scalemethod="diameter"/>
+        <labelformat format=" %1 - %2 " trimtrailingzeroes="false" decimalplaces="0"/>
       </renderer-v2>
       <labeling type="simple"/>
-      <customproperties/>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="128"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="false"/>
+        <property key="labeling/dist" value="0"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/drawLabels" value="false"/>
+        <property key="labeling/enabled" value="false"/>
+        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/fitInPolygonOnly" value="false"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value=".SF NS Text"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="13"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="25"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="false"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="4294967295"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/obstacleFactor" value="1"/>
+        <property key="labeling/obstacleType" value="0"/>
+        <property key="labeling/offsetType" value="0"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="1"/>
+        <property key="labeling/placementFlags" value="10"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="0"/>
+        <property key="labeling/textColorG" value="0"/>
+        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/useSubstitutions" value="false"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+        <property key="labeling/zIndex" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
@@ -1842,6 +2349,34 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
+          <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+        </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform>.</annotationform>
       <aliases>
         <alias field="DECADE" index="0" name=""/>
@@ -1876,13 +2411,30 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="Area_AlbKm"/>
           <column width="-1" hidden="0" type="field" name="Dens_AlbKm"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="Dens_UTkm"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
       <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
       <widgets/>
