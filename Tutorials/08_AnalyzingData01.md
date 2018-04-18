@@ -41,7 +41,7 @@ Select the `add vector data` button and navigate to the MappingfortheUrbanHumani
 * Bronx_Schools.shp
 * Bronx_Libraries.shp
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_01_.png)
+![qgis dataframe](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_01.png)
 
 **TROUBLESHOOTING**
 
@@ -94,20 +94,39 @@ The field names for `Bronx_Schools` are:
 
 Now, we want to determine which libraries are located within census tracts where more than 65% of the population speaks Spanish. We are interested in determining which libraries might be well suited to receive additional resources to go towards multilingual programs.
 
-* **Open** the attribute table of the Bronx_Tracts layer and choose the `select using an expression` tool. Select census tracts where more than 65 percent of the population over 5 years old speaks Spanish. Your expression should read:
-`Pct_Spanish > 65` Click `Select`. You should see that 56 features were selected. Close the attribute table.
+* **Open** the attribute table of the Bronx_Tracts_2014 layer and choose the `select using an expression` tool. Select census tracts where more than 65 percent of the population over 5 years old speaks Spanish. Your expression should read:
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/02_SelectExpression.png)
+`Pct_Spanish > 65` 
 
-* Now we will determine which libraries lie within these census tracts by using the select by location tool. **navigate** to the `Vector` > `Research Tools`>`Select by Location’ in the menu bar. Then make the following selections:
+Click `Select`. You should see that 56 features were selected. Close the attribute table. The tracts where greater than 65% of the population speaks Spanish should be highlighted in yellow.
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/03_SelectByLocation.png)
+![select by expression](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_02.png)
 
-* Open the attribute table of the `Bronx_Libraries` layer in order to note which libraries were selected. Four libraries were selected, what are their names? 
+* Now we will determine which libraries lie within these census tracts by using the select by location tool. **navigate** to the `Vector` > `Research Tools`>`Select by Location` in the menu bar. 
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/04_Attribute.png)
+![menu bar](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_03.png)
+
+Then make the following selections:
+
+Select features in: `Bronx_Libraries`
+that intersect features in: `Bronx_Tracts_2014`
+
+* Include input features that intersect the selection features
+* Only selected features
+From the dropdown menu:
+* creating new selection
+
+![select features](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_04.png)
+
+* Open `Bronx_Libraries` layer Attribute Table. Use the Move selection to top button to note which libraries were selected. Four libraries were selected, what are their names? 
+
+![selected features](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_05.png)
 
 This analysis give us a very rough sense of which libraries might already serve a large number of Spanish speakers however we have only selected libraries which are located exactly within census tracts with a large proportion of Spanish speakers. What is there is a library in an adjacent census tract? Our analysis will not have picked up on this. 
+
+Deselect all features from all layers.
+
+![deselect features](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_07.png)
 
 **Save** your map project
 
@@ -119,23 +138,31 @@ Now we will depart from questions about language and instead ask a series of que
 
 To answer the first question, we will create a 1/4 mile buffer around the libraries.
 
-We will be creating a number of new layers during this portion of the exercise so in order to save all of these layers produced in the process of our analysis lets first create a new folder within the MappingfortheUrbanHumanities/Class_Data/3_AnalyzingData folder and name it `Process`. Save all new layers created during this exercise in this folder. 
+We will be creating a number of new layers, to stay organized, we want to save all of the layers produced in the process of our analysis in a new folder named `Process`, within the MappingfortheUrbanHumanities/Class_Data/3_AnalyzingData folder. Save all new layers created during this exercise in this folder. 
+
 ##### Creating Buffers
 * On your menu bar navigate to `Vector`>`Geoprocessing Tools` > `Buffer(s)`.
-![buffer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/05_Buffer.png)
 
-  * Choose Bronx_Libraries as your input vector layer – this sets which layer the buffers are drawn around. 
+![buffer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_06.png)
 
-  * Set the buffer distance to 1320. Note: the values in this field have the same units as the projection of your input datalayer and map project. Our map is projected in the NAD83 New York State Plane (Long Island) projection system whose units are in feet. To confirm this you can open the layer properties and inspect the coordinate reference system for the layer. Thus we choose 1320 feet because this is equivalent to 1/4 mile. 
+  * Choose Bronx_Libraries as your input vector layer. 
+
+  * Set the buffer distance to 1320. Note: the values in this field have the same units as the projection of your input datalayer and map project. Our map is projected in the NAD83 New York State Plane (Long Island)- a projection system whose units are in feet. To confirm this, you can open the layer properties and inspect the coordinate reference system for the layer. Thus we chose 1320 feet to represent 1/4 mile. 
 
   * Browse in order to save the Output shapefile as ‘BX_Library_QuarterMiBuffer` within your 3_AnalyzingData\Process folder. 
 
   * Click `OK`. Then Click `Close`. Your map should look something like the following: 
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/06_Buffer.png)
+![selected features](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_08.png)
 
 * Next we will use the select by location tool to determine which schools fall within ¼ mile of a library. Navigate to `Vector`>`Research Tools`>`Select By Location`
-  * Select features in  `Bronx_Schools` that intersect features in `BX_Library_QuarterMiBuffer`
+
+Select features in:  `Bronx_Schools` 
+that intersect features in: `BX_Library_QuarterMiBuffer`
+* Include input features that intersect the selection features
+* Only selected features
+From the dropdown menu:
+* creating new selection
 
   * Select OK, and then close. 
 
@@ -147,29 +174,37 @@ We will be creating a number of new layers during this portion of the exercise s
 
   * On your menu navigate to `Vector`>`Data Management`>`Join attributes by location`. 
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/07_SpatialJoin.png)
+Make the selections:
 
-  * Just like with a table join the `Target vector layer` is the layer to which we would like to join new information to and the `Join vector layer` is the layer which we are joining to the target layer. In our case BX_Library_QuarteMiBuffer is the `Target vector layer` and Bronx_Schools is the `Join vector layer`
+Target vector layer:  `BX_Library_QuarterMiBuffer` 
+that intersect features in: `Bronx_Schools`
+* Take summary of intersecting features
+	* Sum
+* Keep all records (including non-matching target records)
 
-  * Because there might be multiple features in the join layer within one of the target layer features we need to tell QGIS how we would like to summarize the attributes from the Bronx Schools layer when they are joined to the buffer around the libraries. We can tell QGIS to take the values of the attribute fields for the first school it finds or to compute a summary (either Mean, Min, Max, Sum, or Median) of the values of all features in the schools layer which lie within the target features.
+Select `OK`.
 
-  * We want to know the total number of students enrolled in the schools which are within our ¼ mile buffers and thus we will **select** `Take summary of intersecting features`, and choose `sum`.
+A warning box will appear letting you know that a new layer has been created as a result of this spatial join. Click `OK`. Then close the `Join attributes by location` dialogue box.
 
+![spatial join](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_09.png)
+
+**Details**
+  * QGIS only calculates the first **real number** that it encounters. So, if another real number appears before the one you are interested in, it will not calculate properly. You can check this in the Properties Menu, navigate to `Fields`, and under `Type name`, check for Real Numbers.
+  
+  ![real numbers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_11.png)
+  
+  * Just like with a table join, the `Target vector layer` is the layer to which we want to join new information to and the `Join vector layer` is the layer we are joining to the target layer. 
+  * Because there are many ways to tabulate data, we need to tell QGIS how we would like to summarize the attributes from the Bronx Schools layer when they are joined to the buffer around the libraries. We can tell QGIS to take the values of the attribute fields for the first school it finds or to compute a summary (either Mean, Min, Max, Sum, or Median) of the values of all features in the schools layer which lie within the target features.
   * Save the output shapefile within Class_Data/3_AnalyzingData/Process as ‘Library_QuartMiBuffer_SchoolsJoin`
+  * We selected Keep all records (including non-matching target records) to ensure that even buffers that do not contain a school are kept in our dataset.  
 
-  * In the Output table options select Keep all records (including non-matching target records), this will ensure that the buffers for which there are no schools are kept in our dataset. 
+**End Details**
 
-  * Select `OK`. 
+**Open** the attribute table for this layer. Notice the new field `SUMEnrollment` that has been added on. This field contains the sum of the enrollments for all of the schools within the buffer. 
 
-  * A warning box will appear letting you know that a new layer has been created as a result of this spatial join. Click `OK`. Then close the `Join attributes by location` dialogue box.
+Now we want to know which five libraries serve the greatest number of enrolled school children. Sort the attribute table by SUMEnrollment and identify the top five libraries. 
 
-  * Note that `Library_QuarterMiBuffer_SchoolsJoin` has now been added to your map as a layer. 
-
-  * **Open** the attribute table for this layer. Notice the new field `SUMEnrollment` that has been added on. This field contains the sum of the enrollments for all of the schools within the buffer. 
-
-  * Which five libraries serve the greatest number of enrolled school children. Sort the attribute table by SUMEnrollment and identify the top five libraries. 
-
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/08_Enrollment.png)
+![attribute table](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_10.png)
 
 **Save** your map project
 
@@ -178,8 +213,11 @@ We will be creating a number of new layers during this portion of the exercise s
 *  Now we will move on to answer our third question: which is the nearest library to each public school? 
   *  To answer this question we will again introduce a new tool of analysis, `DistanceMatrix` tool. This tool takes two point layers and computes the linear distance between each feature in both layers.
   *  Navigate on your menu bar to `Vector`>`Analysis Tools`>`DistanceMatrix`
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/08_DistanceMatrix.png)
+![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_13.png)
 
+Make the following selections:
+Input point layer: `Bronx_Schools`
+Input unique ID field: `SCHOOLNAME`
   * Select `Bronx_Schools` as the `Input point layer`. Set `SCHOOLNAME` as the `Input unique ID field`. The input point layer is the layer that the distance of the target point layer will be measured in relation to. 
   * Select `Bronx_Libraries` as the `Target point layer` and `facname` as the `Target unique ID field`.
 
@@ -188,14 +226,17 @@ We will be creating a number of new layers during this portion of the exercise s
   * Browse to save your output distance matrix as `BX_SchoolsNearestLibraries` in the 3_AnalyzingData\Process folder.  
 
   * Select `Okay`. Then select `Close`
+  
+![distance matrix](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_12.png)
 
   * In a finder window navigate to the BX_SchoolsNearestLibraries.csv file within your 3_AnalyzingData\Process folder and open it. It should open in Excel. 
 
   * You will see that we have generated a table where each school is matched with its nearest library and QGIS has computed the distance between them in feet. 
 
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/09_DistanceMatrix.png)
+![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_14.png)
 
 ##### Making Estimates 
+
 We now have gathered information about how many schools are within ¼ mile of each library, as well as the total number of children enrolled in those schools and we have also computed the nearest library to each school. Now we would like to determine more generally how many people live near libraries in the Bronx – i.e. how many people do Bronx libraries serve? 
 
 In order to answer this question we will need to estimate the total population near libraries in the Bronx. We will first use a coarse method of estimation and then we will refine our estimate using a more advanced technique. 
