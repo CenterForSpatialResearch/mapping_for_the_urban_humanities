@@ -177,9 +177,12 @@ From the dropdown menu:
 Make the selections:
 
 Target vector layer:  `BX_Library_QuarterMiBuffer` 
+
 that intersect features in: `Bronx_Schools`
+
 * Take summary of intersecting features
 	* Sum
+	
 * Keep all records (including non-matching target records)
 
 Select `OK`.
@@ -216,9 +219,13 @@ Now we want to know which five libraries serve the greatest number of enrolled s
 ![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_13.png)
 
 Make the following selections:
+
 Input point layer: `Bronx_Schools`
+
 Input unique ID field: `SCHOOLNAME`
+
 Target point layer: `Bronx_Libraries`
+
 Target unique ID field: `facname`
 
 Output matrix type: `Linear (N*kx3) distance matrix` 
@@ -249,9 +256,12 @@ First, how many people live in the census tracts that intersect a ¼ mile buffer
 * Navigate to `Vector`>`Research Tools`>`Select by location`. And make the following selections: 
 
 Select features in: Bronx_Tracts_2014
+
 that intersect features in: BX_Library_QuarterMiBuffer
+
 * Include input features that intersect the selection features
 * Include input features that overlap/cross the selection features
+
 in the dropdown box:
 creating new selection
 
@@ -292,11 +302,16 @@ Note: proportional split estimation assumes that the attribute you are estimatin
 
 Open the Bronx_Tracts_2014 layer attribute table and select the field calculator.
 * Create a new field
-Output field name: `Area`, 
+Output field name: `Area`
+
 Output field type: `Decimal number (real)`
+
 Output field width:`10` 
-Precision: `2`. 
+
+Precision: `2`
+
 Open the Geometry menu and double click on `$area`
+
 Click `OK`
 
 ![new field](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_18.png)
