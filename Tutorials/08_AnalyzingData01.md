@@ -318,44 +318,88 @@ Click `OK`
 
 
 * Scroll to the right in the attribute table for the Bronx census tracts and see the new field that you have added. Now select the `Toggle editing mode` button to exit the editing mode. You will be asked if you want to save your changes, say `yes`. 
-* Note: census tracts extend into the water so the area we are calculating here includes both land area and area of the tract that might be in the water. This introduces some error into our proportional split estimation. One way to be even more precise in our estimate is to clip the census tract polygons by the shoreline prior to embarking on this analysis. 
+* Note: census tracts extend into the water so the area we are calculating here includes both land area and area of the tract that might be in the water. This introduces some error into our proportional split estimation. One way to be even more precise in our estimate is to clip the census tract polygons by the shoreline **befor** starting this analysis. 
+
 **Clipping the census tracts to the ¼ mile buffers**
 * Next we will use the `clip` tool to clip the Bronx census tracts with the ¼ mile buffers around the Bronx libraries. 
 * Navigate to `Vector`>`Geoprocessing Tools`>`Clip`
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/14_Clip.png)
+Make the selections:
 
-* The input vector layer is the layer you will clip (in our case the Bronx census tracts)
-* The Clip layer is the layer you will use to clip the input layer (in our case the ¼ mile buffers around the libraries). 
-* Save the Output shapefile within the 3_AnalyzingData/Process folder as `BXTracts_LibraryQuartMiClip`. 
-* Click `OK` and then `Close`
-* A new layer containing the census tracts clipped to the ¼ mile buffers around the libraries was added to your map. 
-* Toggle the visibility of all of of the layers on your map off except for `BXTracts_LibraryQuartMiClip`. 
-* Use the select tool to click on some of the individual clipped census tract polygons to familiarize yourself with this new layer.
- ![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/15_Clip.png)
+Input vector layer: Bronx_Tracts_2014
+
+Clip layer: BX_Library_QuarterMiBuffer
+
+Add result to canvas
+
+Save the Output shapefile within the 3_AnalyzingData/Process folder as `BXTracts_LibraryQuartMiClip`. 
+
+Click `OK` and then `Close`
+
+![clip](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_19.png)
+
+
+A new layer containing the census tracts clipped to the ¼ mile buffers around the libraries was added to your map. 
+
+Toggle the visibility of all of of the layers on your map off except for `BXTracts_LibraryQuartMiClip`.
+ ![clip](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_20.png)
 
 **Calculating the area of the clipped census tracts**
-* Now we will calculate the area of these new polygons. 
-* Open the attribute table for the clipped Bronx census tracts layer: `BXTracts_LibraryQuartMiClip`.
-* Open the field calculator and again create a new field to calculate the new area of each polygon. 
-* Set the Output field name as `AreaClip`, 
-* Select `Decimal number (real)` as the output field type, Set the output field width as 10 and the precision as 2. Under the geometry menu select `$area`. Click `OK`. 
+
+Now we will calculate the area of these new polygons. Open the attribute table for the clipped Bronx census tracts layer: `BXTracts_LibraryQuartMiClip`, and select the field calculator.
+* Create a new field
+Output field name: `AreaClip`
+
+Output field type: `Decimal number (real)`
+
+Output field width:`10` 
+
+Precision: `2`
+
+Open the Geometry menu and double click on `$area`
+
+Click `OK`
+Open the field calculator and again create a new field to calculate the new area of each polygon. 
+
 * Notice the new field that has been added to the far right of the attribute table called `AreaClip`
-![location](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData01/16_Area.png)
+
+![clip](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_21.png)
+
 **Dividing the the area of the clipped census tracts by their original area**
-* Again open the field calculator and calculate a new field. 
-* Set the Output field name as `Proportion`, 
-* Select `Decimal number (real)` as the output field type, Set the output field width as 10 and the precision as 2.
-* Calculate `”AreaClip” / “Area”` -- i.e. the proportion of the original area that remained after the clip
-* Click `OK`
+
+* Again open the field calculator and create a new field
+Output field name: `Proportion`
+
+Output field type: `Decimal number (real)`
+
+Output field width:`10` 
+
+Precision: `2`
+
+Calculate `”AreaClip” / “Area”` -- i.e. the proportion of the original area that remained after the clip
+
+Click `OK`
+
+![clip](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata08_22.png)
 
 **Multiplying the population by the proportion** 
 
-* Now we will calculate one final field where we’ll multiply the attributes (for us, population in 2014) we wish to estimate by the proportion in order to estimate the proportion of the attribute that falls within the study area. 
-* Set the Output field name as `Pop2014_est`
-* Select `Decimal number (real)` as the output field type, Set the output field width as 10 and the precision as 2.
-* Calculate `"Proportion" * "Pop2014"`
-* Click `OK`
-* End the edit session and say yes to saving the changes. 
+Now we will calculate one final field where we’ll multiply the attributes (for us, population in 2014) we wish to estimate by the proportion in order to estimate the proportion of the attribute that falls within the study area. 
+
+* Again open the field calculator and create a new field
+Output field name: `Pop2014_est`
+
+Output field type: `Decimal number (real)`
+
+Output field width:`10` 
+
+Precision: `2`
+
+Calculate `"Proportion" * "Pop2014"`
+
+Click `OK`
+
+End the edit session and say yes to saving the changes. 
+
 
 Now we will compare the total estimated population within the buffers to the original rough population estimate we made at the beginning of this exercise using the select by location tool. 
 
@@ -365,5 +409,5 @@ Now we will compare the total estimated population within the buffers to the ori
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
