@@ -16,45 +16,68 @@ If you haven't already, download the GitHub repository for this course. Using th
 
 **Launch** QGIS
 
-Select the `add vector layer` button and navigate to MappingfortheUrbanHumanities/Class_Data/3_AnalyzingData and open: 
+Select the `add vector layer` button and navigate to MappingfortheUrbanHumanities/Class_Data/4_AnalyzingData and open: 
 * NYC_Libraries.shp
 * NYC_Schools.shp
 * NYC_Tracts_2014.shp (this is just to provide us with some context).
 * if you would like you can download a shapefile containing the water bodies and rivers for New York [here](http://gis.ny.gov/gisdata/inventories/details.cfm?DSID=928) which will help give greater context to our map. 
 
-![layers]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/01_Layers.png)
+![layers]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_01.png)
 
-In order to create heatmaps of schools and libraries in New York City we will first need to install a plugin. **Navigate** to the Plugins tab in the top menu bar and select Manage and Install Plugins. In the Plugins window that opens select the `All` tab on the left and then search for `Heatmap`. If it is not already installed, install it. Otherwise make sure that the check box next to its name is checked. 
+In order to create heatmaps of schools and libraries in New York City we will first need to install a plugin. **Navigate** to the Plugins tab in the top menu bar and select Manage and Install Plugins. In the Plugins window that opens select the `All` tab on the left and then search for `Heatmap`. If it is not already installed, install it. Otherwise make sure that the check box next to its name is checked (it gets checked in grey - look closely, it's nearly invisible) 
 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/02_Heat.png)
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_02.png)
 
-Once the heatmap plugin is installed you will be able to find it under the Raster tab in your menu bar.
+Once the heatmap plugin is installed you will find it under the Raster tab in your menu bar.
 
-First we will make two density maps: first of libraries and then of schools. These will point out where there are concentrations of these public facilities within New York City. Save all new layers created during this exercise in the **MappingfortheUrbanHumanities/Class_Data/3_AnalyzingData/Process** folder.
+We will make two density maps: first of libraries and then of schools. These will highlight where there are concentrations of these public facilities within New York City. Save all layers created during this exercise in the **MappingfortheUrbanHumanities/Class_Data/3_AnalyzingData/Process** folder.
 
 * On the menu bar **navigate** to `Raster`>`Heatmap`. 
-  * The heatmap plugin allows us to calculate a **kernel density** of all of the point features in your layer. 
-  * This tool can only be used for point features. 
 
-  * In order to compute the density of the point features the plugin fits a smooth curved surface over
-each point – the highest value of the surface is exactly above the point and then the values diminish outwards in all directions from there until it reaches a set radial distance at which point all values go to null. The options in the heatmap dialogue box allow us to manipulate the rate at which the values decrease, the distance of the search radius, whether the points are weighted by a value in their attribute table. 
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_03.png)
+
+  * The heatmap plugin allows us to calculate a **kernel density** of all of the point features in your layer. 
+  * This tool can only be used for **point** features. 
+
+  * In order to compute the density of the point features, the plugin fits a smooth curved surface over each point. The highest value of the surface is represented at that point and then the values diminish outwards until it reaches a set radial distance at which point all values approach/are equal to zero. The options in the heatmap dialogue box allow us to manipulate the rate at which the values decrease, the distance of the search radius, and whether the points are weighted by a value in their attribute table. 
 
 * A few things to note about this dialogue box: 
-  * Radius:  the radius specifies the distance around a point at which the influence of the point will be felt. This is also sometimes called the kernel bandwidth. If you choose a small radius then the radius of the raster layer around each point will be smaller and will show a great deal of variation, if you choose a larger radius the impact of the individual points will likely overlap with one another and thus create a smoother surface. 
-  * Cell size: this value determines the cell size of the output raster – the size in map units of each individual raster cell. 
-  * Kernel shape: this controls the way that the influence of a point decrease as you move away from the point’s location. 
-  * Use radius from field: you can determine the radius of the heatmap from a field in the dataset
+  * Radius:  specifies the distance around a point where the influence of the point is felt. This is also sometimes called the kernel bandwidth. If you choose a small radius, the radius of the raster layer around each point will be smaller and will show a great deal of variation. If you choose a larger radius, the impact of the individual points will likely overlap with one another and thus create a smoother surface. 
+  * Cell size: the size, in map units, of each individual raster cell. 
+  * Kernel shape: controls the way that a point's influence decreases moving away from the point’s location. 
+  * Use radius from field: specifies a field (if any) where radius data for each row is found (useful when each datapoint has its own radius)
   * Use weight from field: allows you to give greater significance to certain features based on their value in the attribute table (we will use this later in the exercise).
-  * Decay ratio: when using Triangular kernels this can be used to determine how the values of the kernel density map decrease as you move away from a point feature, (we will not be using this today however more information is available here.  
-  * Output values: either raw or scaled by kernel size.  
+  * Decay ratio: when using Triangular kernels, this can be used to determine how the values of the kernel density map decrease as you move away from a point feature, (we will not be using this today).  
+  * Output values: either raw or scaled by kernel size. 
+  
+Open the Heatmap Plugin and make the following selections:
 
-* Save your file as `NYC_Libraries-Heat.tif` and make the following selections:
+Input point layer: NYC_Libraries
 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/03_library.png)
+Output raster: Save your file as `NYC_Libraries-Heat.tif`
+
+Output format: GeoTIFF
+
+Radius: 4000 layer units
+
+Add generated file to map
+
+Advanced:
+- Rows: 760 (you only need to fill in this one - the rest will autopopulate)
+- Columns: 773
+- Cell size X: 200
+- Cell size Y: 200
+-Kernel Shape: Quadratic (biweight)
+-Decay ratio: 0.0
+-Output values: Raw values
+
+
+
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_05.png)
 
 * Click `OK`. The result should look somewhat like this:
 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/04_result.png)
+[heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_04.png)
 
 * What narratives about libraries in New York can this map aid you to create? What does it say about the distribution of libraries throughout the five boroughs? 
 
@@ -62,26 +85,75 @@ each point – the highest value of the surface is exactly above the point and t
 Next repeat these steps and use the same parameters but produce a heat map of New York City public schools. 
 
 * On the menu bar **navigate** to `Raster`>`Heatmap`. 
-* Save your file as `NYC_Schools-Heat.tif` and make the same selections as we did for libraries. 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/05.png)
+* Save your file as `NYC_Schools-Heat.tif` and make the same selections as we did for libraries:
+
+Input point layer: NYC_Schools
+
+Output raster: Save your file as `NYC_Schools-Heat.tif`
+
+Output format: GeoTIFF
+
+Radius: 4000 layer units
+
+Add generated file to map
+
+Advanced:
+- Rows: 760 (you only need to fill in this one - the rest will autopopulate)
+- Columns: 773
+- Cell size X: 200
+- Cell size Y: 200
+-Kernel Shape: Quadratic (biweight)
+-Decay ratio: 0.0
+-Output values: Raw values
+
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_06.png)
+
 * Click `OK`. The result will look like the following: 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/06.png)
+
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_07.png)
 
 * What narratives about public schools in New York can this map aid you to create? What does it say about the distribution of schools throughout the five boroughs? Are there clear large clusters? Areas without many schools?
 
 In the next portion of the exercise we will create several additional density maps of schools in New York, each with different parameters, and observe the impact of changing these parameters on the maps we can produce and on the observations which each supports. 
 
-We will first modify our original density map of schools by weighting schools by their levels of enrollment.
-* On the menu bar **navigate** to `Raster`>`Heatmap`. 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/07.png)
+We will first modify our original density map of schools by **weighting schools by their enrollment**.
 
-* Save your file as `NYC_Schools-Heat_Enrollment_4000-200.tif`. Note we have encoded the radius and cell size into the file name so we can keep track of them for each layer in order to make comparisons. 
+* On the menu bar **navigate** to `Raster`>`Heatmap`.
 
-* We will choose the same radius and cell size that we used previously, but this time we will click the check-box next to `use weight from field` and we will select `Enrollment` as the field. Our density map will now be weighted by the values in this field.  
+Make the following selections:
 
-* Click `OK`. The result should look like this: 
 
-![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/AnalyzingData04/08.png)
+Input point layer: NYC_Schools
+
+Output raster: Save your file as `NYC_Schools-Heat_Enrollment_4000-200.tif`
+
+Output format: GeoTIFF
+
+Radius: 4000 layer units
+
+Add generated file to map
+
+Advanced:
+- Rows: 760 (you only need to fill in this one - the rest will autopopulate)
+- Columns: 773
+- Cell size X: 200
+- Cell size Y: 200
+-Kernel Shape: Quadratic (biweight)
+- Use weight from field
+	- Enrollment
+-Decay ratio: 0.0
+-Output values: Raw values
+
+
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_08.png)
+
+Note we encoded the radius and cell size into the file name so we can keep track of them for each layer in order to make comparisons. 
+
+We chose the same radius and cell size as the previous maps, but this time activated `use weight from field` and selected `Enrollment`. Our density map is weighted by the values in this field.  
+
+* Click `OK`, and turn off the other two heatmap layers. The result should look like this: 
+
+![heatmap]( https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata09_09.png)
 
 Toggle the visibility of the `NYC_Schools-Heat_Enrollment_4000-200.tif` layer on and off to see the differences between the weighted density map of schools and the un-weighted one. 
 
