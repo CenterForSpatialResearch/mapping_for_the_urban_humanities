@@ -98,7 +98,7 @@ Click `Apply` then `OK`
 
 Now the `Add feature` tool will automatically snap to another feature’s vertex whenever the cursor comes within 10 meters.
 
-Activate `Editing Mode` and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize22.png). Be careful to keep each vertex as close to the center of the street as possible. The more vertices you add, the smoother the street can be. Right click (or Control+Click) at the middle of the first intersection. This ends a line segment. We can make as many line segments as we want before making a line. To complete a line, `Control`+`Click`.
+Activate `Editing Mode` and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize22.png). Be careful to keep each vertex as close to the center of the street as possible. The more vertices you add, the smoother the street can be. Right click (or Control+Click) at the middle of the first intersection. This ends a line. 
 
 The attributes box will appear. I was digitizing a 'major' path, so I entered:
 
@@ -106,11 +106,9 @@ id: `1`
 
 Path Type: `major`
 
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_12.png)
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_13.png)
 
 Begin the next feature at the endpoint of the first. Make sure the first point ‘snaps’ to the last vertex. In QGIS the cursor will highlight when you get within the snapping tolerance.
-
-![Next Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_13.png)
 
 Continue to digitize until the next intersection. 
 
