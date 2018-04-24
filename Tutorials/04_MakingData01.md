@@ -32,9 +32,10 @@ Also open the `Antebellum Period, Parts 1 and 2, 1843-1860` > `Title List`
 
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_01.png)
 
+
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_02.png)
 
-Looking at this website, we suspect that the data is organized as a table. 
+Looking at this website, we suspect that the data is organized as a table because there are columns, column headers, and all the data in each column lines up nicely. 
 
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_04.png)
 
@@ -55,15 +56,19 @@ In the first cell (cell A1), type the following formula and hit 'Enter':
 
 Let's break that down. Google Sheets has a function, `IMPORT HTML`, which imports and parses content found on websites. For this function to work in our Sheet, anything that is words has to be enclosed in quotes because we  want the Sheet to just match the words, not *evaluate* them. First, we tell it which website we want it to read by giving it the exact url ( for the Readex Jacksonian Era), then tell the function if it should look for a "table" or a "list"; we want a "table". Those are the only types this particular function can work with, but that's enough for us. Finally, which table (or list) it should look for (the first, second, etc.). Once we hit 'Enter', it goes out and reads the website, sees if there is a table where we told it to look and then pulls in the data. 
 
-For more on this function, click on the 'Learn More about IMPORTHTML' link at the bottom of the dialogue box.
+For more on this function, click on the 'Learn More about IMPORTHTML' link at the bottom of the dialogue box. Google sheets also has IMPORT XML (for structured data online), FEED (for RSS feeds), DATA (for data hosted online), or RANGE (for portions of other Google Sheets) for different types of data.
 
 ![google sheet help](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_07.png)
 
-Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-separated values (.csv, current sheet). 
+Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-separated values (.csv, current sheet). Save it in the Class_Data/2_MakingData Folder
 
-![ssve](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_08.png)
+![save](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_08.png)
 
-It also has IMPORT XML (for structured data online), FEED (for RSS feeds), DATA (for data hosted online), or RANGE (for portions of other Google Sheets). 
+Now add another sheet at the bottom of the page (or overwrite the one we just made) and do the same for the newspapers listed on the Antebellum Era website.
+
+#### Cities Data
+
+We now need to find a list of cities. The list we are using is compiled from the census, and 
 
 
 ### Geocoding 
@@ -72,7 +77,7 @@ We are first going to use a table join method to align our newspapers data to th
 
 First add the Newspapers layers
 
-Now add the cities points layer using the `Delimited Text Layer` button, and make the following selections:
+Now add the `cities points layer` using the `Delimited Text Layer` button, and make the following selections:
 - csv
 - point coordinates
 	- X field: 'lng'
