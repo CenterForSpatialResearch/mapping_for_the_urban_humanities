@@ -125,7 +125,9 @@ Your file should look like this now:
 
 ![papers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_19.png)
 
-Download your sheet as a csv file the same way we did before. You can overwrite the 
+Download your sheet as a csv file the same way we did before. Move it to the Class_Data/2_MakingData folder. You can (and should) rename these files.
+
+Repeat this process for the other newspaper file. 
 
 ### Geocoding 
 
@@ -158,6 +160,8 @@ Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and ma
 **TROUBLESHOOTING**
 
 If you only get one point in the middle of the US when you add your cities layer, right click on the cities layer, navigate to Properties >> General. change the Coordinate reference system to `Default CRS WGS 84` EPSG: 4326
+
+![qgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_21.png)
 
 **END TROUBLESHOOTING**
 
