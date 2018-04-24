@@ -4,7 +4,11 @@
 
 #### Premise
 
-In this exercise, you will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation. 
+In this exercise, we will create spatial data from a scanned paper map. As far as a computer program such as QGIS is concerned, a scanned map is an image, and the data that is encoded within it is mostly incomprehensible. So, while we can read a map and through that, gather information, that information is largely inaccessible to our computers. The first thing we need to do to transform a scanned paper map into a map that a computer can read is to georectify it. This means that we will match spots on the image with coordinates on a map. Though we will use a webmap for this (Open Street Maps), it could be down with any map that has coordinate information embedded in it. 
+
+In the second part of this tutorial, we will take this georectified map and digitize some of the features on it to make a new dataset that can then be used with this map or imported into other projects as a shapefile itself. 
+
+In this tutorial, we will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation. 
 
 #### Notes on the data: 
 
