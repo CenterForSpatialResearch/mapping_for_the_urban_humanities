@@ -66,17 +66,18 @@ Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-se
 
 Now add another sheet at the bottom of the page (or overwrite the one we just made) and do the same for the newspapers listed on the Antebellum Era website.
 
-Notice that there are no unique identifiers. Many cities have the same name as other cities in different states, and there is no other identifier. We can make a unique identifier by concatenating the cities and states column, but before we modify this file, let's first inspect our cities data. 
 
 #### Cities Data
 
-We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv, and is in the Class_Data/2_MakingData folder. This is a modern list of US cities, and we may find some discrepancies. However, geographic files that date back to the 1850's are almost exclusively for counties, so we will have to trim this cities list in QGIS. 
+We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/2_MakingData folder. This is a modern list of US cities, and we may find some discrepancies (although none that impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose: many of which reference ancient times as well as modern.
 
-Let's take a look at this data by opening it in any program that can read a csv (i.e., Excel, Google Sheets, Sublime, etc.). We see that there are two **UNIQUE** identifiers: `city_state`, and the `city_ID`. (n.b., I made that 'city_state' column - data rarely arrives with that column, it's actually not that good of a data source since so many town have such different spellings, but it is the best option we have for this dataset). A more scalable approach to matching the cities would be to do a join using a database, but again, that is beyond the scope of this tutorial. However, if you are working with very large datasets and doing multiple types of analysis, you may want a different approach.
+Let's take a look at our cities data by opening it in any program that can read a csv (i.e., Excel, Google Sheets, Sublime, etc.). We see that there are two **UNIQUE** identifiers: `city_state`, and the `city_ID`. I made that 'city_state' column - data rarely arrives with a column that is both redundant and complicated (i.e., it has 2 pieces of information). It's actually not that good of an identifier since so many town have different spellings. However, for the geocoding step, we will need one column that contains the city and state. 
 
-#### Make a Unique Identifier
+This column allows us to do a lookup with our newspapers data, it serves as a sort of dictionary of places, and will allow us to match the place names. 
 
-To make a unique column that matches the uscities, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office or using Python, but those instructions are not included here. First, pick if you are going to use Excel or Google Sheets and open that program and fid your instructions below. 
+#### Make an Address Field 
+
+For the Geocoding, we will need one field that contains **ALL** of the address data. We want to make that BEFORE we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office, for which the process is very similar. 
 
 **EXCEL**
 
@@ -129,25 +130,16 @@ Download your sheet as a csv file the same way we did before. Move it to the Cla
 
 Repeat this process for the other newspaper file. 
 
+
 ### Geocoding 
 
-To align our newspapers data to something spatial, we are going to use a table join method to try to match our cities layer to our newspapers layer. We also want our project to have some boundaries from that time, so we will use the 1850's counties file we used in 03_MappingData2. 
+The newspapers files, as they are written actually do not have any geographic information attached to them. We would like a basemap to begin with, so **FIRST**, add the counties file from the Mapping Data tutorial.  
 
-Before we get started, we want to take a second to consider our project and our data.  We know that we will want the cities, newspapers, and 1850's counties borders. Only the counties file has a projection associated with it. The cities points file is probably "unprojected", meaning it is only latitude and longitude. We want our project to start out in the projection of the counties file so we don't have to worry about it later. 
-
-So **FIRST** add the counties file
-
-Add a vector layer using the `Add Vector Layer` button, and open the `US_county_1850_Albers.shp` file from the Class_Data/1_MappingData/Shape Folder folder. Feel free to add the file we joined the population data to `US_county_1850_Albers_PopJoin.shp` instead, if you want - we won't use it in this tutorial, but if you want to investigate it on your own later, it will save you a step.
+**Click** on the `Add Vector Layer` button, and open the `US_county_1850_Albers.shp` file from the Class_Data/1_MappingData/Shape Folder folder. If you like, you can add the file we joined the population data to `US_county_1850_Albers_PopJoin.shp` instead; we won't use it in this tutorial, but if you want to investigate the relationship with population on your own later, it will save you a step.
 
 If the map of the US comes out very stretched at the top, change the projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
 
 ![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_10.png)
-
-Then, add **both** of the Newspapers layers you just created using the `Delimited Text Layer` button, and make the following selections:
-- csv
-- No geometry (attribute only table)
-
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_09.png)
 
 Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and make the following selections:
 - csv
@@ -165,7 +157,23 @@ If you only get one point in the middle of the US when you add your cities layer
 
 **END TROUBLESHOOTING**
 
+Finally, add **both** of the Newspapers layers you just created using the `Delimited Text Layer` button, and make the following selections:
+- csv
+- No geometry (attribute only table)
 
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_09.png)
+
+Now we have all of our data loaded into QGIS, we need to align the place names in our newspapers with geographic data. There are two ways to go about doing this. The first would be to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, this would be our strategy. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. Instead, we will have to make our own *geocorder* from a *gazetteer*
+
+Table Join **will** work for this data:
+
+![tablejoin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_22.png)
+
+Table Join will **NOT** work for this data:
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_23.png)
+
+The uscities layer will become our gazeteer. Our gazetteer is essentially a "lookup" file. Rather than matching 1:1, QGIS goes through every item in our newspapers file and matches it with an item in the uscities file. For this to work, though, there must be one column in both files that is formatted the exact same way. We already made this: it's our cities_states column. We also need the MMQGIS plugin. 
 
 
 
