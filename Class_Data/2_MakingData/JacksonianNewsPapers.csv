@@ -26,7 +26,7 @@ Bellows Falls Gazette,Bellows Falls,VT,"Bellows Falls, VT",1838-12-01,1842-12-31
 Berks and Schuylkill Journal,Reading,PA,"Reading, PA",1823-11-01,1831-05-14,394
 Berkshire County Whig,Pittsfield,MA,"Pittsfield, MA",1841-03-11,1842-12-29,95
 Berkshire Journal,Lenox,MA,"Lenox, MA",1829-09-03,1831-08-25,101
-Berkshire Star,Stockbridge,MA,"Stockbridge, MA",1823-06-05,1828-01-03,215
+Berkshire Star,Stockbridge,MA,"Pittsfield, MA",1823-06-05,1828-01-03,215
 Berkshire Star and County Republican,Lenox,MA,"Lenox, MA",1828-01-10,1828-12-25,51
 Boston Commercial Gazette,Boston,MA,"Boston, MA",1823-01-02,1840-01-23,906
 Boston Courier,Boston,MA,"Boston, MA",1830-01-04,1842-12-29,930
@@ -75,10 +75,10 @@ Daily Atlas,Boston,MA,"Boston, MA",1835-12-18,1842-12-31,731
 Daily Commercial Bulletin,St. Louis,MO,"St. Louis, MO",1835-05-18,1838-12-31,890
 Daily Constitutionalist,Augusta,GA,"Augusta, GA",1833-03-19,1840-05-14,37
 Daily Herald,New Haven,CT,"New Haven, CT",1836-03-12,1839-12-31,317
-Daily Madisonian,Washington (DC),DC,"Washington (DC), DC",1841-12-15,1842-12-31,240
+Daily Madisonian,Washington,DC,"Washington, DC",1841-12-15,1842-12-31,240
 Daily Missouri Republican,St. Louis,MO,"St. Louis, MO",1841-03-01,1841-12-31,230
-Daily National Intelligencer,Washington (DC),DC,"Washington (DC), DC",1823-01-01,1842-12-31,"6,701"
-Daily National Journal,Washington (DC),DC,"Washington (DC), DC",1826-01-02,1831-12-31,"1,851"
+Daily National Intelligencer,Washington,DC,"Washington, DC",1823-01-01,1842-12-31,"6,701"
+Daily National Journal,Washington,DC,"Washington, DC",1826-01-02,1831-12-31,"1,851"
 Daily Ohio State Journal,Columbus,OH,"Columbus, OH",1839-03-13,1842-11-29,126
 Delaware Gazette and State Journal,Wilmington,DE,"Wilmington, DE",1823-01-17,1831-01-07,122
 Delaware Patriot and American Watchman,Wilmington,DE,"Wilmington, DE",1828-01-25,1828-12-05,84
@@ -93,7 +93,7 @@ Emancipator,New York,NY,"New York, NY",1833-05-18,1842-02-11,416
 Emancipator and Republican,Boston,MA,"Boston, MA",1842-02-17,1842-12-29,46
 Emporium and true american,Trenton,NJ,"Trenton, NJ",1827-06-16,1828-12-13,21
 "Enquirer, The (Richmond, VA)",Richmond,VA,"Richmond, VA",1823-01-02,1838-12-29,"2,366"
-Essex Patriot,Haverhill,MA,"Haverhill, MA",1823-01-04,1823-01-25,4
+Essex Patriot,Haverhill,MA,"North Haverhill, MA",1823-01-04,1823-01-25,4
 Essex Register,Salem,MA,"Salem, MA",1823-01-01,1827-12-31,738
 Evening Post,New York,NY,"New York, NY",1823-01-02,1842-12-30,"5,869"
 Farmer's Cabinet,Amherst,NH,"Amherst, NH",1823-01-04,1842-12-30,"1,336"
@@ -110,7 +110,7 @@ Geneva Palladium,Geneva,NY,"Geneva, NY",1825-01-19,1828-04-30,2
 Georgetown Gazette,Georgetown,SC,"Georgetown, SC",1825-10-18,1826-10-13,101
 Georgia Journal,Milledgeville,GA,"Milledgeville, GA",1823-01-28,1835-09-22,68
 Georgian,Savannah,GA,"Savannah, GA",1823-06-12,1833-01-01,"2,215"
-Globe,Washington (DC),DC,"Washington (DC), DC",1831-12-17,1841-12-11,9
+Globe,Washington,DC,"Washington, DC",1831-12-17,1841-12-11,9
 Gloucester Democrat,Gloucester,MA,"Gloucester, MA",1834-08-19,1838-02-16,375
 Gloucester Telegraph,Gloucester,MA,"Gloucester, MA",1827-01-01,1842-12-31,"1,698"
 Greene County Torch-Light,Xenia,OH,"Xenia, OH",1841-07-01,1842-01-20,14
@@ -123,8 +123,8 @@ Hartford Times,Hartford,CT,"Hartford, CT",1832-02-06,1833-12-09,13
 Haverhill Gazette,Haverhill,MA,"Haverhill, MA",1823-02-01,1841-12-18,996
 Herald of the Valley,Fincastle,VA,"Fincastle, VA",1823-01-04,1823-07-04,28
 Hillsborough Recorder,Hillsborough,NC,"Hillsborough, NC",1824-03-10,1842-09-01,14
-Hudson River Chronicle,Sing-Sing,NY,"Sing-Sing, NY",1837-10-24,1842-12-27,287
-Huntress,Washington (DC),DC,"Washington (DC), DC",1839-06-29,1839-06-29,1
+Hudson River Chronicle,Sing-Sing,NY,"Ossining, NY",1837-10-24,1842-12-27,287
+Huntress,Washington,DC,"Washington, DC",1839-06-29,1839-06-29,1
 Illinois Advocate,Vandalia,IL,"Vandalia, IL",1833-01-05,1835-08-05,9
 Illinois Gazette,Shawneetown,IL,"Shawneetown, IL",1824-01-24,1830-12-11,10
 Independence,Poughkeepsie,NY,"Poughkeepsie, NY",1832-02-08,1834-01-29,96
@@ -136,7 +136,7 @@ Ithaca Herald,Ithaca,NY,"Ithaca, NY",1836-08-31,1837-10-04,58
 Ithaca Journal,Ithaca,NY,"Ithaca, NY",1823-07-16,1831-12-28,238
 Jamestown Journal,Jamestown,NY,"Jamestown, NY",1826-06-21,1842-12-29,659
 Jeffersonian,New Orleans,LA,"New Orleans, LA",1842-05-30,1842-05-30,1
-Jeffersonian,Paris,ME,"Paris, ME",1827-07-11,1831-06-14,7
+Jeffersonian,South Paris,ME,"Paris, ME",1827-07-11,1831-06-14,7
 Jeffersonian,Portland,ME,"Portland, ME",1834-02-24,1836-07-25,128
 Kentucky Gazette,Lexington,KY,"Lexington, KY",1823-08-07,1837-12-28,124
 Liberator,Boston,MA,"Boston, MA",1831-01-01,1842-12-30,627
@@ -146,14 +146,14 @@ Louisiana Advertiser,New Orleans,LA,"New Orleans, LA",1826-09-13,1827-11-03,252
 Louisiana State Gazette,New Orleans,LA,"New Orleans, LA",1825-11-11,1826-12-07,216
 Lowell Mercury,Lowell,MA,"Lowell, MA",1829-11-14,1833-12-27,153
 Lowell Patriot,Lowell,MA,"Lowell, MA",1835-01-02,1837-06-29,75
-Madisonian for the Country,Washington (DC),DC,"Washington (DC), DC",1837-08-16,1842-12-01,642
+Madisonian for the Country,Washington,DC,"Washington, DC",1837-08-16,1842-12-01,642
 Maine Cultivator and Hallowell Gazette,Hallowell,ME,"Hallowell, ME",1839-10-04,1842-12-31,160
 Manufacturers' and Farmers' Journal,Providence,RI,"Providence, RI",1824-02-05,1842-09-05,63
 Maryland Gazette,Annapolis,MD,"Annapolis, MD",1824-03-11,1832-02-16,12
 Massachusetts Spy,Worcester,MA,"Worcester, MA",1823-01-01,1842-12-28,"1,051"
 Mercury,New York,NY,"New York, NY",1831-09-28,1842-02-03,113
-Metropolitan,Georgetown,DC,"Georgetown, DC",1824-01-02,1826-12-18,59
-Metropolitan,Georgetown,DC,"Georgetown, DC",1835-07-22,1835-12-18,5
+Metropolitan,Georgetown,DC,"Washington, DC",1824-01-02,1826-12-18,59
+Metropolitan,Georgetown,DC,"Washington, DC",1835-07-22,1835-12-18,5
 "Microcosm, American and Gazette",Providence,RI,"Providence, RI",1830-04-17,1830-06-05,2
 Middlesex Gazette,Middletown,CT,"Middletown, CT",1823-01-02,1834-01-23,601
 Milwaukee Sentinel,Milwaukee,WI,"Milwaukee, WI",1837-06-27,1842-12-28,211
@@ -186,7 +186,7 @@ Newport Mercury,Newport,RI,"Newport, RI",1823-01-04,1842-12-31,"1,559"
 Norfolk Advertiser,Dedham,MA,"Dedham, MA",1832-07-13,1839-02-02,343
 Norfolk Democrat,Dedham,MA,"Dedham, MA",1839-02-09,1842-12-30,204
 North American,Philadelphia,PA,"Philadelphia, PA",1839-03-26,1842-12-31,"1,173"
-North Carolina Sentinel,Newbern,NC,"Newbern, NC",1827-01-13,1836-12-21,148
+North Carolina Sentinel,Newbern,NC,"New Bern, NC",1827-01-13,1836-12-21,148
 North Star,Danville,VT,"Danville, VT",1823-01-02,1841-03-26,219
 Norwich Aurora,Norwich,CT,"Norwich, CT",1839-05-15,1842-10-12,24
 Norwich Courier,Norwich,CT,"Norwich, CT",1823-01-01,1842-12-28,"1,214"
@@ -198,7 +198,7 @@ Ohio Statesman,Columbus,OH,"Columbus, OH",1837-09-05,1842-12-31,885
 Oracle of Dauphin,Harrisburg,PA,"Harrisburg, PA",1823-01-25,1825-04-23,60
 Painesville Telegraph,Painesville,OH,"Painesville, OH",1823-01-29,1842-12-28,187
 Patriot and Eagle,Hartford,CT,"Hartford, CT",1835-03-07,1837-12-30,148
-Paul Pry,Washington (DC),DC,"Washington (DC), DC",1835-02-14,1836-10-22,11
+Paul Pry,Washington,DC,"Washington, DC",1835-02-14,1836-10-22,11
 Pennsylvania Freeman,Philadelphia,PA,"Philadelphia, PA",1836-08-03,1841-12-29,101
 Pensacola Gazette,Pensacola,FL,"Pensacola, FL",1824-05-15,1840-12-26,248
 People's Advocate,New London,CT,"New London, CT",1840-08-26,1842-12-28,123
@@ -222,7 +222,7 @@ Republican Advocate,Batavia,NY,"Batavia, NY",1824-05-14,1827-11-23,24
 Republican Advocate,New London,CT,"New London, CT",1823-01-01,1828-12-10,46
 Republican Citizen and State Advertiser,Frederick,MD,"Frederick, MD",1823-08-29,1831-12-30,33
 Republican Farmer,Bridgeport,CT,"Bridgeport, CT",1823-08-06,1842-12-27,194
-Republican Gazette and General Advertiser,Fredericktown,MD,"Fredericktown, MD",1823-01-04,1826-09-28,80
+Republican Gazette and General Advertiser,Fredericktown,MD,"Baltimore, MD",1823-01-04,1826-09-28,80
 Republican Star,Easton,MD,"Easton, MD",1823-01-07,1832-06-12,525
 Reservoir and Public Reflector,Frederick,MD,"Frederick, MD",1826-07-25,1829-07-28,150
 Rhode Island Religious Intelligencer,Providence,RI,"Providence, RI",1823-01-03,1824-05-14,72
@@ -271,14 +271,14 @@ Texas Republican,Brazoria,TX,"Brazoria, TX",1834-07-05,1835-10-17,29
 Times,Oxford,NY,"Oxford, NY",1838-10-10,1839-12-25,61
 Times,Hartford,CT,"Hartford, CT",1823-01-07,1840-12-26,864
 Times and Weekly Advertiser,Hartford,CT,"Hartford, CT",1829-01-12,1829-12-28,45
-Torch Light,Hagers-Town,MD,"Hagers-Town, MD",1826-01-03,1837-10-12,441
+Torch Light,Hagers-Town,MD,"Hagerstown, MD",1826-01-03,1837-10-12,441
 Trenton Federalist,Trenton,NJ,"Trenton, NJ",1823-01-06,1824-12-27,105
 Troy Post,Troy,NY,"Troy, NY",1823-03-18,1823-03-18,1
 True American,Rockville,MD,"Rockville, MD",1824-03-10,1824-03-10,1
 Trumpet and Universalist Magazine,Boston,MA,"Boston, MA",1828-07-05,1834-06-28,313
 Ulster Republican,Kingston,NY,"Kingston, NY",1836-01-06,1836-11-18,22
 Union Herald,Cazenovia,NY,"Cazenovia, NY",1838-05-11,1840-04-11,100
-United States Telegraph,Washington (DC),DC,"Washington (DC), DC",1827-05-21,1829-11-17,274
+United States Telegraph,Washington,DC,"Washington, DC",1827-05-21,1829-11-17,274
 Universalist Magazine,Boston,MA,"Boston, MA",1825-04-07,1828-01-12,111
 Universalist Union,New York,NY,"New York, NY",1837-11-04,1838-11-03,52
 Vermont Centinel,Burlington,VT,"Burlington, VT",1824-02-06,1842-11-25,85

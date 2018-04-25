@@ -77,7 +77,7 @@ This column allows us to do a lookup with our newspapers data, it serves as a so
 
 #### Make an Address Field 
 
-For the Geocoding, we will need one field that contains **ALL** of the address data. We want to make that BEFORE we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office, for which the process is very similar. 
+For the Geocoding, we will need one field that contains **ALL** of the address data. We want to make that BEFORE we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office, the process is similar, though there are no images here.
 
 **EXCEL**
 
@@ -131,13 +131,16 @@ Download your sheet as a csv file the same way we did before. Move it to the Cla
 Repeat this process for the other newspaper file. 
 
 
-### Geocoding 
+### Set Up
 
-The newspapers files, as they are written actually do not have any geographic information attached to them. We would like a basemap to begin with, so **FIRST**, add the counties file from the Mapping Data tutorial.  
+Open a new QGIS project.
+
+
+As written, the newspapers files fo not have any geographic information attached to them, we will have to add it. But before we get started, we would like a basemap, so **FIRST**, add the counties file from the Mapping Data tutorial.  
 
 **Click** on the `Add Vector Layer` button, and open the `US_county_1850_Albers.shp` file from the Class_Data/1_MappingData/Shape Folder folder. If you like, you can add the file we joined the population data to `US_county_1850_Albers_PopJoin.shp` instead; we won't use it in this tutorial, but if you want to investigate the relationship with population on your own later, it will save you a step.
 
-If the map of the US comes out very stretched at the top, change the projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
+If the map of the US comes out very stretched at the top, change the *project** projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
 
 ![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_10.png)
 
@@ -148,6 +151,8 @@ Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and ma
 	- Y Field: 'lat'
 
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_03.png)
+
+The uscities layer will be essential for matching the cities in our newspapers files with geolocated places.
 
 **TROUBLESHOOTING**
 
@@ -163,7 +168,21 @@ Finally, add **both** of the Newspapers layers you just created using the `Delim
 
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_09.png)
 
-Now we have all of our data loaded into QGIS, we need to align the place names in our newspapers with geographic data. There are two ways to go about doing this. The first would be to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, this would be our strategy. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. Instead, we will have to make our own *geocorder* from a *gazetteer*
+Finally, we will need another plugin - actually a group of plugins. Install the MMQGIS plugin. Navigate to Plugins >> Manage and Install Plugins
+
+![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_24.png)
+
+Search for MMQGIS and Select `Install Plugin`
+
+![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_25.png)
+
+SAVE your project in the Tutorials/Exercises folder.
+
+### Geocoding 
+
+Now that we have all of our data loaded into QGIS, we need to align the place names in our newspapers with geographic data. I am going to start with the Antebellum file, you will do the same set of steps for the Jacksonian files. HINT: we will have to fix our Antebellum file and reimport it. The problem will exist in the Jacksonian file, too... You may want to fix the problem *before* doing all of these steps. 
+
+Generally, there are two ways to go about geocoding. The first is to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, and each city only appeared once. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. This is our situations, so we will have to make our own *geocorder* from a *gazetteer*
 
 Table Join **will** work for this data:
 
@@ -173,9 +192,105 @@ Table Join will **NOT** work for this data:
 
 ![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_23.png)
 
-The uscities layer will become our gazeteer. Our gazetteer is essentially a "lookup" file. Rather than matching 1:1, QGIS goes through every item in our newspapers file and matches it with an item in the uscities file. For this to work, though, there must be one column in both files that is formatted the exact same way. We already made this: it's our cities_states column. We also need the MMQGIS plugin. 
+The uscities layer will become our gazeteer. A gazetteer is essentially a "lookup" file, kind of a geographic dictionary. Rather than matching columns 1:1, QGIS goes through every item in our newspapers file and matches it with an item in the uscities file. For this to work, though, there must be one column in both files that is formatted the exact same way. We already made this: it's our cities_states column. 
+
+Let's get started with the Antebellum Newspapers
+
+Navigate to MMQGIS >> Geocode >> Street Address Join
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_26.png)
+
+Make the following selections:
+
+- Input CSV File: AntebellumNewspapers.csv
+- CSV File Address Field: city_state
+- Shape Layer: uscities
+- Shape Layer Address Field: city_state
+- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
+- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
+
+Click `OK` and wait... This is a long process.
+
+Once it is complete, a new layer will appear in your layers pane. Open the Attribute table for this layer. Each row should have both the geographic information and the newspaper information. 
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_28.png)
+
+Now let's go check our 'not found layer and see what problems arose. In not found, we have three categories of problems:
+
+Washington, DC was formatted in a strange way, and some cities did not appear. 
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_30.png)
+
+Since this is a relatively small dataset, we will fix these problems in the original dataset (this is why we saved a set of files in the `Originals` Folder) and then re-do the geocoding. 
+
+First, let's fix the Washington, DC problem. Open the `uscities Attribute Table`, and sort by `city` to find how Washington, DC is formatted in the `city_state column`. Now open the **AntebellumNewspapers.csv** file (in either Excel or Google Sheets). Find and Replace 'Washington (DC)' with 'Washington'. Save this file. 
+
+In Excel:
+![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_32.png)
+
+In Google Sheets:
+![sheets](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_33.png)
+
+Now on to the other problems. I did a web search for each place to get more information about where it is located and other names it may be called. This works because our dataset is small. Your data management strategy always depends on your project. 
+
+**May's Landing** is an unincorporated community and census-designated place located within Hamilton Township. In the AntebellumNewspapers file, change the city_state column to say 'Hamilton, NJ'. However,  keep May's Landing in the city column, because we don't want to lose that information. This column now has unique information in it.
+
+**Sing-Sing** likely refers to the prison (which did have a printing press in the mid-1800's). Sing Sing Correctional Facility is in the village of Ossining, NY. We will fix this entry in the AntebellumNewspapers file the same way we fixed May's Landing.
+
+**Rondout** was originally a maritime village serving the nearby city of Kingston, NY, Rondout merged with Kingston in 1872. We will fix this entry in the AntebellumNewspapers file the same way we fixed May's Landing.
+
+That is all of the problems. Save this file (or Download, if using Google Sheets). 
+
+Return to QGIS. Remove the AntebellumNewspapers layer (both the delimited text file and the points layer). Right-click and select `Remove`. Upload your corrected AntebellumNewspapers.csv file as a `Delimited Text Layer` with no geometry, and complete the geocoding steps again.
+
+Navigate to MMQGIS >> Geocode >> Street Address Join
+Make the following selections (overwrite the files you made before):
+
+- Input CSV File: AntebellumNewspapers.csv
+- CSV File Address Field: city_state
+- Shape Layer: uscities
+- Shape Layer Address Field: city_state
+- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
+- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
+
+Click `OK`.
+
+Once it finishes loading, check the AntebellumNotFound.csv file one last time to make sure everything is ok.
+
+Follow the same steps for the JacksonianNewspapers file. Start with the corrections you know are problems before running it for the first time. 
+
+Once the Antebellum layer loads, remove and upload the new JacksonianNewspapers.csv file and geocode it using the same steps. 
+
+Once that completes, open the JacksonianNotFound file and make the necessary changes to the JacksonianNewspapers.csv (you may have to cross reference with the uscities file and internet searches to understand what is going on, and there may be some issues with alternative spellings). 
+
+Geocode the JacksonianNewspapers.csv file again.
 
 
+#### Cleaning the results
+
+We want to remove some of the layers either because they are redundant or because they do not align to our time period.
+
+Open the Attribute table for the AntebellumStreetAddressJoin layer.
+
+Click on the `Edit` button, and select the `Delete Field` button. Then, delete the following fields:
+
+- county_fip  (because the historic county names are different from these modern county names)
+- county_nam
+- \*State\* (because this field is redundant. Note that \*City\* is not redundant)
+- city_stat2
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+
+
+Save your changes. 
+
+Do the same for the JacksonianStreetAddressJoin layer.
+
+### Visualizing the results
 
 
 
