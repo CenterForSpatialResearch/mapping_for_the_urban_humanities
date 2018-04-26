@@ -292,7 +292,54 @@ Do the same for the JacksonianStreetAddressJoin layer.
 
 ### Visualizing the results
 
+Turn off the uscities layer if it is still on. We will style the points so they are a bit easier to see, and make the county boundaries slightly less obtrusive. 
+
+First select properties of the US_county_1850 layer. Select `Style`. Click on the `Simple Line`, and change the color to a dark grey and/or change the line width to .200.
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_35.png)
+
+Now click on the Jacksonian points layer, and select Properties >> Style
+
+Click on `Marker`, and change the color to something brighter (I've used pink), and the size to something larger (I've used 3.00 mm).
+
+Repeat with the Antebellum layer.
+
+Process to use the print composer (as we did in the Mapping Data Tutorials) to make two maps: 
+- one of the Jacksonian Era Newspapers (1823-1842, before the expansion of the railroads and the invention of the rotary printing press)
+- one of the Antebellum Era Newspapers (1843-1860, after the expansion of the railroads and the invention of the rotary printing press).
+
+Note: These maps are not very good: it's almost impossible to tell how many newspapers exist in the northeast, but it is a good first pass.
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_37.png)
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_38.png)
 
 
+
+#### Optional Next Steps
+
+**If you want a tally of how many papers appeared in each city:**
+
+Use the GroupStats plugin. First install the plugin by navigating to Plugins >> Manage and Install Plugins. Search for the `GroupStats` plugin.
+
+It will be in the `Vector` menu.
+
+Navigate to Vector >> GroupStats >> GroupStats. Select the Antebellum layer. 
+
+From the fields list, drag the city_states field into the "rows" box. Also drag the city_states field into the "value" box.
+
+Drag the "count" option into the "value" box (below the field you put in there).
+Click "calculate" and a table will appear on the left. To save the output, navigate to Data >> Save all to CSV File. Name your file AntebellumNewspaperCounts.
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+
+
+**If you want to know how many papers were in each county** (maybe to make a chloropleth map)
+
+Use the Vector >> Analysis Tools >> Points in Polygon AS WE DID IN TUTORIAL XXXXX
 	
+
+______________________________________________________________________________________________________________
+
+Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 	
