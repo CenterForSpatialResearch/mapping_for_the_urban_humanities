@@ -3,7 +3,7 @@
 ### Making Data 01: Geocoding historic data
 
 #### Premise
-In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States (if you want to take this to the next level, you could combine this project with the rairoads data from Tutorial [03_MappingData02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/03_MappingData02.md)).
+In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States.
 
 By the end of this tutorial, you will be able to:
 - identify the types of data that can be used
@@ -306,7 +306,7 @@ Repeat with the Antebellum layer.
 
 Process to use the print composer (as we did in the Mapping Data Tutorials) to make two maps: 
 - one of the Jacksonian Era Newspapers (1823-1842, before the expansion of the railroads and the invention of the rotary printing press)
-- one of the Antebellum Era Newspapers (1843-1860, after the expansion of the railroads and the invention of the rotary printing press).
+- one of the Antebellum Era Newspapers (1843-1860, before the expansion of the railroads and after the invention of the rotary printing press).
 
 Note: These maps are not very good: it's almost impossible to tell how many newspapers exist in the northeast, but it is a good first pass.
 
