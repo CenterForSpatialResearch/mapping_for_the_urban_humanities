@@ -1,147 +1,150 @@
-## Making Data 
+## Making Data
 
-### Making Data 03: Geocoding coordinates and street addresses
+### Making Data 01: Georeferencing a scanned paper map
 
 #### Premise
 
-In this exercise you are going to map locations related to music in the borough of the Bronx by geocoding – converting tabular data into spatial mapping files. First, you will take geographic coordinates and display them visually.  Then you will take a list of street addresses and locate them by using a geolocation service, matching up the addresses against a database of locations.
+In this exercise, we will create spatial data from a scanned paper map. As far as a computer program such as QGIS is concerned, a scanned map is an image, and the data that is encoded within it is mostly incomprehensible. So, while we can read a map and through that, gather information, that information is largely inaccessible to our computers. The first thing we need to do to transform a scanned paper map into a map that a computer can read is to georectify it. This means that we will match spots on the image with coordinates on a map. Though we will use a webmap for this (Open Street Maps), it could be down with any map that has coordinate information embedded in it.
 
-#### Notes on the data: 
+In the second part of this tutorial, we will take this georectified map and digitize some of the features on it to make a new dataset that can then be used with this map or imported into other projects as a shapefile itself.
 
-You will be using a table of business locations that you will download from the ReferenceUSA business directory. There is a sample dataset from ReferenceUSA in the course data directory.  You will locate the businessses with the geocoding services from OpenStreetMap and Google. 
+In this tutorial, we will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation.
 
-### Geocoding Exercise
+#### Notes on the data:
 
-First, you will find businesses in the music industry located throughout the Bronx.  You are going to use the ReferenceUSA business directory to identify these businesses.  ReferenceUSA is a comprehensive database of business locations throughout the US.  Columbia Libraries maintains a subscription to this service. 
+The map you will be using for this exercise is one sheet of six from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" published in 1902.  This map is from the Columbia Map collection and is an exceptionally detailed, large scale (1:7,200) series made shortly after the area east of the Bronx River was annexed from Westchester to the Bronx, and the Bronx was consolidated into New York City and New York County. The library catalog record for the map can be found [here](https://clio.columbia.edu/catalog/9282162). If you would like to see the entire map, there is another copy (in a lower resolution) in the New York Public Libraries digital collections [here](http://digitalcollections.nypl.org/items/dc910ee0-4682-0131-4759-58d385a7bbd0)
 
-Go to the CU Libraries’ homepage and search for “ReferenceUSA” in the quicksearch bar:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode1.png)
+You are going to use [OpenStreetMap](https://www.openstreetmap.org/about) (OSM)  as reference data for the georeferencing process. OSM provides a free, open-source map of the world from public domain and volunteered data.
 
-The first result should provide a link to ReferenceUSA:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode2.png)
+#### Before you begin
+If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials.
 
-Open the database and click on the “U.S. Businesses/ Employers” database: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode3.png)
+#### Setting up QGIS
 
-Click on the advanced search tab.  Here, you have a variety of tools to limit the business search.  First you will limit by geography.  Check “county” in the geography list and select “New York.”  Add “Bronx, NY” to the search selections: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode4.png)
+Open QGIS:
 
-Next, you will search by business type.  Choose the “Keyword/SIC/NACIS” option under business type. Select “search all NACIS” (a business classification system created by the census department).  All of the businesses in the directory will have at least one of these classifications.  You can search for classification entries by keyword and add them to your search limits.  Below I have added all of the NACIS classifications including the terms “Musical,” “Music,” and “Sound.”  When I click on “Update Count” on the right it finds 129 entries:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode5.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_01.png)
 
-You may opt to use a somewhat different list of classifications, but if so, try not to use a search that finds more than 200 results as there are some limitations to how many results ReferenceUSA allows to be downloaded at once.  Once finished click on “View Results”:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode6.png)
+You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM basemap service is QGIS through the OpenLayers plugin.  This plugin does not come pre-installed with QGIS, so you will probably need to add it.  Under the plugins menu, select “Manage and Install Plugins…”
+![option](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_02.png)
 
-The results screen only shows 25 results per page.  To download all results, you will have to check each entry. You can select the whole page by using the topmost selection box by “company name,” but you will have to toggle thorough all 6 pages to do them all:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode7.png)
+The plugins dialog will open.  Search for “Openlayers Plugin.”  Highlight it, and click “Install plugin”:
 
-Once all the businesses have been selected, click on “download.”  Select comma delimited as the file format.  Under level of detail select “custom,” ReferenceUSA provides a wealth of detail for each business, actually too much for our purposes, so you will select the attributes manually. You should be given the company name and address information by default, be sure to add the “latitude” and “longitude” fields at a minimum: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode8.png)
+![plugin dialogue](![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_03.png))
 
-Feel free to add any more attributes that interest you.  Once finished, download the file.  Save it as MusicBusinessesBronx.csv in your project directory.  If you open it, you can see that the results should be very clean, with delimited address fields and coordinates in decimal degrees: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode9.png)
+It may take a few seconds to install.  Close the plugins menu when finished.  The OpenLayers tools should now appear under the Web menu:
 
-Next, open QGIS: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode10.png)
+![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_04.png)
 
-You are once again going to use OpenStreetMap as our reference data for the geocoding process.   You can access the OpenStreetMap service through the MMQGIS plugin.  This plugin does not come pre-installed with QGIS, so you will likely need to install it.  Under the plugins menu, select  “Manage and Install Plugins…” 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode11.png)
+This plugin will allow you to view a number of basemap services and steam them directly into your QGIS workspace.  Choose the OpenStreetMap > OpenStreetMap option.
 
-The plugins dialog opens.  Search for “MMQGIS”, highlight it, and click “Install plugin”: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode12.png)
+![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_05.png)
 
-It may take a few seconds to install.  
+Since you are working in a new QGIS project, the map should show the entire earth as the default:
+![qgis osm ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_06.png)
 
-You will also install the OpenLayers plugin.    OpenLayers will allow you to view and navigate through several different basemap services including OpenStreetMap, Google Maps, Bing Maps, and MapQuest. Find the OpenLayers plugin and install it in the same fashion:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode13.png)
+Use the zoom in tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png) and zoom into the Central Bronx in the area around The Botanical Garden:
 
-Close the plugins menu when finished. 
+![garden zoom ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_07.png)
+Now you will access the georeferencing tools and match the scanned map to the OSM map.  
 
-The OpenLayers tools should now appear under the Web menu.  Expand it and open the OpenStreetMap layer:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode14.png)
+Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
+![georeferencer ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_08.png)
 
-Use the zoom tools ![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode15.png)to zoom in to the Bronx area: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode16.png)
+The Georeferencer screen will open:
+![georeferencer window](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_09.png)
 
-Now you are going to map the Bronx business locations you downloaded from ReferenceUSA.  First you will use the latitude and longitude coordinates that Reference USA provides. 
+Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.  
 
-In QGIS, add the table you downloaded by clicking on the “Add Delimited Text” tool ![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode17.png). Navigate to your table.  Choose csv as file format, point coordinates as your geometry, and “longitude” and “latitude” as your X and Y fields (these may all be selected by default, as QGIS tries to guess the right entries, but make sure that the settings are correct).  Click OK: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode18.png)
+It will appear in the georeferencer window:
+![georeferencer window with map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_10.png)
 
-Choose WGS 84 as the coordinate system: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode19.png)
+This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner.  The area to the east of the Bronx Park area is still largely undeveloped at this point.  
 
-Your locations should map on top of the Bronx: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode20.png)
+Historical maps can be difficult to georeference, and this sheet poses a number of complications.  The map projection is unclear and there are no ground control points or coordinates specified.  Because of this, you will georeference by matching physical features represented on the map with their current counterparts (and their known coordinates).  However, most of the features in this map have changed or no longer exist (or were never actually built in the first place).  Thus, you will need to be very careful to choose locations that you are confident match up well with their contemporary counterparts.   Fortunately, there are a number of good candidates, particularly on the western half of the map where many streets and buildings still exist in the same location.  You will use those to georeferenced the map.
 
-The points that you have displayed are being stored temporarily “on the fly” in computer memory.  If you are happy with the results, it is a good idea to save the data immediately in a spatial format.  An easy way to do this is to right-click on the MusicBusinessesBronx layer in the layers panel and clicking “Save as..”: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode21.png)
+The QGIS georeferencer does not allow you to view both the scanned map and the workspace at the same time, so you will have to inspect both maps in turn and choose carefully to select locations to add georeferencing control points.
+One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration.  Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png) to zoom to the conservatory structure in the southwest corner of the park:
 
-Save the file as an ESRI Shapefile in your project directory with the name “MusicBusinessesXY”: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode22.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png)
 
-The new layer should add to the map over the first.  Now you can turn off the first Business layer by unchecking it in the layers panel: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode23.png)
+Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) When you do so, the Enter map coordinates window appears:
 
-Exactly how ReferenceUSA derives the coordinates for these businesses is something of a mystery; it isn’t described in the website or documentation.  Also, in other circumstances you won’t have coordinates for your locations.  Next, you will geocode the business locations using a street address locator.
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
 
-The QGIS address location tools are in the MMQGIS plugin you installed earlier. The MMQGIS tools should now appear under a new MMQGIS menu: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode24.png)
+If you knew the coordinates of this location, you could now add them manually, but since you do not, you must select them from the OSM data in the main QGIS window.  Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.  
+You may want to use the QGIS zoom tools to zoom in very closely to the conservatory.
 
-MMQGIS provides a disparate set of tools, but you will only be using the ‘geocode’ toolset.  The geocode toolset presently includes three functions. “Geocode from street layer” allows you to build your own geocoding service based off of an addressable street layer database.  "Street Address Join" allows you to locate a single-field location against a gazatteer table. “Geocode CSV with Google/ Open Street Map” allows you to geocode a list of locations against the geocoding services available through either Google or OpenStreetMap (OSM).   For this exercise you will be use the OSM geocoder.  The OSM geocoding service, like all of the OSM data, is open source and transparent.  We know, for example, that OSM uses the LION street locations from the NYC Planning Department for its New York address locator, so you can expect very good results.
+![conservatory](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_11.png))
 
-Since ReferenceUSA provides address locations in a very clean, appropriately delimited format, this will be an easy process for you that won’t require any data cleaning.  Choose “geocode CSV with Google / OpenStreetMap” from the MMQGIS menu: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode25.png)
+Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again.  Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.  
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
 
-Navigate to your business table and input “Address” as the address field, “City” as the city field, and “State” as the state field.  There is not an appropriate country field here, so leave that blank.   Choose OpenStreetMap as your web service.  Save the Output as “MusicBusinessesOSM” and save an output list as “NotFoundOSM” in your project directory. The not found output will create a table of any locations that cannot be located (there may not be any for this exercise). Click OK:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode26.png)
+At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png)
+If satisfied, click the OK button and the point will be assigned and appear on the map.  
 
-This may take a couple of minutes to run.  When it is finished the new layer should be added to the map (you may want to change the color or size of the locations in the layer properties if the two layers look too similar or small): 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode27.png)
+A link table entry will be generated on the bottom of the window:
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
 
-It is likely that the two business location layers will be significantly different.  In the example above, most of the locations seem to be offset by a few feet, but in other cases by quite a bit more.  
+To add a second point, repeat the same process.  It is a good idea to choose another point in a different portion of the map.  A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.  
 
-In some cases, it is not clear if there what the corresponding location is between the two layers: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode28.png)
+Here, I have zoomed in to the northwestern most potion of the map where I add a ground control point at the very center of the intersection of Gun Hill Road and Tryon Ave:
 
-You can measure how much discrepancy there is using QGIS tools. One option is to look for the nearest neighbor for each feature.  We can test this quickly by using the built in Distance Matrix tool:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode29.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef23.png)
 
-Distance Matrix will take the points in one layer and find the closest point in another layer and return the distance between the two.  Open the tool and use MusicBusinessXY as the input and MusicBusinessesOSM as the target layer. Use the company name as the ID field and be sure to check “use only nearest target points.”  Save the output as DistanceMatrix. Click OK:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode30.png)
+Repeat the same stepsto select the center of the same intersection from the OSM map and add the locations to the link table:
 
-Navigate to the output table and open it: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode31.png)
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef24.png)
 
-Note that the distance measurements are given in decimal degrees (because of the polar coordinate system that the data is currently on) so the distances themselves are not particularly meaningful.  What is important is to note that the distances vary quite a bit.  Furthermore, in many cases the nearest neighbor is not the same business!  In some cases this is because the locations in the area are significantly different.  In other cases it is because OSM was unable to find the business at all. 
+You must add a minimum of four points to complete the georeferencing (although more is generally better). Generate at least two more points on your own and add them to the link table.
 
-Open the NotFoundOSM table in your project directory.  In my example there were 31 addresses that were not found: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode32.png)
+Be careful to make sure that the control points you add match.  This can be quite tricky as many of the features have changed or were not actually built as planned.  
 
-This particular geocoding toolset does not give the user much control over the way in which the tools work.  Nor is there any indication of how “close” the locator was to finding a location or what the reason might be for not identifying a location.  Possibilities include bad zip codes, misspelled or alternative street names, confusing apartment numbers or post office boxes.  The OSM service seems to be somewhat conservative in its estimation of these locations.  If you like, you can investigate this table, edit it and geocode it again to see if the OSM geocoder might find the businesses.
+Normally it is a good idea to choose control points from throughout the map.  However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
 
-It might be interesting to try the Google geocoder and see if it has different results.  The Google geocoder includes a number of additional location services, although it is all proprietary and obscure – a “black box.”  Also, it is a proprietary service and Google only allows a small number of searches free of charge (approximately 2,000 or so a day) although this should not be a problem with your small dataset.  Run the geocoding tools as above only this time choose the Google Maps web service.  Save the output files as MusicBusinessesGoogle.shp and NotFoundGoogle.csv: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode33.png)
+In this example, I selected six control points:
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
 
-Click OK, it may run for a couple of minutes.  The new layer should add to the map automatically: 
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode34.png)
+It is good practice to save the table of control points at this stage. Choose “Save GCP points as” under the file menu and save it in the .points format in the same location as the image. This will allow you to later recreate the work you have done:
 
-You are likely to find that the locations are again very different!
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef26.png)
 
-In most cases, the different locators will find very similar but different locations.  For these two businesses on Tremont Ave. the three locations are all approximately the same building:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode35.png)
+Next, you will “transform” the image and create a georeferenced version of the scanned map image. In the georeferencer window, select transformation settings under the settings window:
 
-In other cases the discrepancies are likely to be much larger.  Spend a few minutes comparing the three layers and how and where they differ.  One big difference you are likely to see between OSM and Google is in the number of results.  The Google geocoder is somewhat liberal in returning results.  Look in your NotFoundGoogle file and see if there are any unfound locations.
+![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef27.png)
 
-In my example there were no unfound locations. Take a look at some of the locations that Google found that OSM did not. In my addresses there was a PO box number that OSM predictably did not find.  Google did, however:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode36.png)
+Make the following selections:
 
-I looked at this location on the map to see if it identified a post office.  It actually appears to be a co-op development over two miles from the post office:
-![GeocodingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData02/Geocode37.png)
+Transformation type: Polynomial 1
 
-Looking at the attribute table in the Google results, there is an “addrolocat” field which gives some indication of how Google identified the location.  In most cases this is indicated as “street_address” but there are other entries like “premise” and “subpremise.”  For the PO Box, the entry is “administrative_area_level_2” which is a bit mysterious.  On closer inspection, it does not even seem to be in the 10451 zip code.  After some investigation, this turns out to be the location that Google uses as “The Bronx,” it is apparently a centroid calculation for the entire county and a location that is used for locations that cannot be identified at a more granular level.
+Resampling Method: Cubic (usually used for images and photos)
+
+Output Raster: *save this in the same folder you are working in*
+
+Spatial reference system: EPSG:3857 *the pseudo Mercator projection used in the OSM data.**  
+
+You can also opt to have the georeferenced layer added to QGIS when finished:
+
+![save as](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_12.png)
+
+Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png).
+
+After the transformation finishes, you should see the map appear in the QGIS workspace:
+![georeferenced map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_13.png)
+
+You can make the scanned map layer partially transparent in the layer properties.  Right click on the map in the layer panel and select properties:
+![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_14.png)
+
+On the left panel in the properties dialog, select Transparency, here you can adjust the global transparency with a slider:
+![transparency](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_15.png)
+
+Compare the georeferenced map with the Open Street Map layer.  Make sure that features appear to match up closely:
+![review](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_16.png)
+
+In the next exercise you will be using the sheet you georeferenced here and digitizing some of the features from it.
+
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
-
+Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).

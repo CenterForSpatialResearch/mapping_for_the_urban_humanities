@@ -1,146 +1,346 @@
 ## Making Data
 
-### Making Data 01: Georeferencing a scanned paper map
+### Making Data 01: Geocoding historic data
 
 #### Premise
+In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States.
 
-In this exercise, you will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation.
-
-#### Notes on the data:
-
-The map you will be using for this exercise is one sheet of six from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" published in 1902.  This map is from the Columbia Map collection and is an exceptionally detailed, large scale (1:7,200) series made shortly after the area east of the Bronx River was annexed from Westchester to the Bronx, and the Bronx was consolidated into New York City and New York County. The library catalog record for the map can be found [here](https://clio.columbia.edu/catalog/9282162). If you would like to see the entire map, there is another copy (in a lower resolution) in the New York Public Libraries digital collections [here](http://digitalcollections.nypl.org/items/dc910ee0-4682-0131-4759-58d385a7bbd0)
-
-You are going to use [OpenStreetMap](https://www.openstreetmap.org/about) (OSM)  as reference data for the georeferencing process. OSM provides a free, open-source map of the world from public domain and volunteered data.
+By the end of this tutorial, you will be able to:
+- identify the types of data that can be used
+- transform data you find in a table into a csv file that can be used in QGIS
+- align that data to geographic locations using a gazetteer
+- query the data you collected to answer a research question
 
 #### Before you begin
 If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials.
 
-#### Setting up QGIS
+### Data
 
-Open QGIS:
+One of the primary hurdles that researchers encounter is finding appropriate datasets (for QGIS and otherwise). For more on this, see the [Finding Spatial Data](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Resources/FindingSpatialData.md) page in the Resources.  
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_01.png)
+This problem is compounded when working with historic data as it may not necessarily have spatial data attached or it may only have place names attached that may or may not represent modern place names. Ultimately, finding data and transforming data are separate issues. As far as finding data is concerned, Columbia keeps a list of [Spatial Data on the Internet](http://library.columbia.edu/locations/dssc/data/spatialdata.html), as well as [Lehman Library's Map Collection](http://library.columbia.edu/locations/maps.html) and [CIESIN](http://sedac.ciesin.columbia.edu/data/sets/browse), the [NYPL Maps Division](https://www.nypl.org/about/divisions/map-division) the [US Census](https://www.census.gov/data.html), [NHGIS](https://www.nhgis.org/), or the [AAG Databases](http://www.aag.org/cs/projects_and_programs/historical_gis_clearinghouse/hgis_databases) are a good place to start (this list is obviously not comprehensive, but illustrative that data is in a lot of places). If none of these have the data you are looking for, you may need to turn to repositories on the Internet.
 
-You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM basemap service is QGIS through the OpenLayers plugin.  This plugin does not come pre-installed with QGIS, so you will probably need to add it.  Under the plugins menu, select “Manage and Install Plugins…”
-![option](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_02.png)
+Sometimes the library may have data available, or you may find it through a web search. Assuming that you are not able to find shapefiles, you will want your data to be in a format that QGIS can parse. This includes .csv (comma separated values), .txt (plain text), or some form of database. Formats such as .pdf may pose insurmountable problems.
 
-The plugins dialog will open.  Search for “Openlayers Plugin.”  Highlight it, and click “Install plugin”:
+We will go through the process of turning data that we find through an internet search into data we can use in a mapping project. This is not the only way to get data, and at Columbia, the librarians may be more helpful than the internet in this regard.  
 
-![plugin dialogue](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_03.png)
+### Making the Data
 
-It may take a few seconds to install.  Close the plugins menu when finished.  The OpenLayers tools should now appear under the Web menu:
+We are going to use data from [Readex](https://www.readex.com/who-we-are-what-we-do), a company that sells primary source collections to institutions. We want the names of newspapers, the location of publication, and the year they were established. We are not interested in reading the papers right now. Readex offers these lists in a variety of organizations: by region, decade, or era. We will use the 'By Era' breakdown, and look at the pre- and post-1842 eras.
 
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_04.png)
+Open a web browser (Google Chrome, Firefox, or Safari are OK, please do not use Internet Explorer), and navigate to [www.readex.com](www.readex.com). Hover over the 'Collections' link in the Navigation bar and click on 'By Era'. Then select the `Jacksonian Era, Parts 1 and 2, 1823-1842` > `Title List` it will open in a new tab.
 
-This plugin will allow you to view a number of basemap services and steam them directly into your QGIS workspace.  Choose the OpenStreetMap > OpenStreetMap option.
+Also open the `Antebellum Period, Parts 1 and 2, 1843-1860` > `Title List`
 
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_05.png)
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_01.png)
 
-Since you are working in a new QGIS project, the map should show the entire earth as the default:
-![qgis osm ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_06.png)
 
-Use the zoom in tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png) and zoom into the Central Bronx in the area around The Botanical Garden:
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_02.png)
 
-![garden zoom ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_07.png)
-Now you will access the georeferencing tools and match the scanned map to the OSM map.  
+Looking at this website, we suspect that the data is organized as a table because there are columns, column headers, and all the data in each column lines up nicely.
 
-Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
-![georeferencer ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_08.png)
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_04.png)
 
-The Georeferencer screen will open:
-![georeferencer window](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_09.png)
+This is fortunate because whenever data is in an organized format, there are a host of simple tools to help us translat that data. Today, we are going to use Google Drive to format the table nicely for our use.
 
-Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.  
+#### Making Tables into CSVs
 
-It will appear in the georeferencer window:
-![georeferencer window with map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_10.png)
+Go to Google Drive and log in to your account. You actually don't need to save anything to your account, but you do need to log in. If you do not have a Google Account and do not wish to create one, please skip this section. You will use the same dataset that has already been downloaded for you in the class folder. You can also gather this data through webscraping, but that is far beyond the scope of this tutorial.
 
-This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner.  The area to the east of the Bronx Park area is still largely undeveloped at this point.  
+In Google Drive, click on the `New` button in the upper left hand corner, and select `Sheet`. This will take you to an empty Google Sheet.
 
-Historical maps can be difficult to georeference, and this sheet poses a number of complications.  The map projection is unclear and there are no ground control points or coordinates specified.  Because of this, you will georeference by matching physical features represented on the map with their current counterparts (and their known coordinates).  However, most of the features in this map have changed or no longer exist (or were never actually built in the first place).  Thus, you will need to be very careful to choose locations that you are confident match up well with their contemporary counterparts.   Fortunately, there are a number of good candidates, particularly on the western half of the map where many streets and buildings still exist in the same location.  You will use those to georeferenced the map.
+In the first cell (cell A1), type the following formula and hit 'Enter':
 
-The QGIS georeferencer does not allow you to view both the scanned map and the workspace at the same time, so you will have to inspect both maps in turn and choose carefully to select locations to add georeferencing control points.
-One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration.  Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png) to zoom to the conservatory structure in the southwest corner of the park:
+`=IMPORTHTML("https://www.readex.com/titlelists/jacksonian-era-parts-1-and-2-1823-1842", "table", 1)`
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png)
+![google sheet options](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_06.png)
 
-Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) When you do so, the Enter map coordinates window appears:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
+Let's break that expression down. Google Sheets has a function, `IMPORT HTML`, which imports and parses content found on websites. For this function to work in our Sheet, anything that is words has to be enclosed in quotes because we  want the Sheet to just match the words, not *evaluate* them. First, we tell it which website we want it to read by giving it the exact url ( for the Readex Jacksonian Era), then tell the function if it should look for a "table" or a "list"; we want a "table". Those are the only types this particular function can work with, but that's enough for us. Finally, which table (or list) it should look for (the first, second, etc.). Once we hit 'Enter', it goes out and reads the website, sees if there is a table where we told it to look and then pulls in the data.
 
-If you knew the coordinates of this location, you could now add them manually, but since you do not, you must select them from the OSM data in the main QGIS window.  Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.  
-You may want to use the QGIS zoom tools to zoom in very closely to the conservatory.
+For more on this function, click on the 'Learn More about IMPORTHTML' link at the bottom of the dialogue box. Google sheets also has IMPORT XML (for structured data online), FEED (for RSS feeds), DATA (for data hosted online), or RANGE (for portions of other Google Sheets) for different types of data.
 
-![conservatory](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_11.png))
+![google sheet help](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_07.png)
 
-Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again.  Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.  
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
+Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-separated values (.csv, current sheet). Save it in the Class_Data/2_MakingData Folder
 
-At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png)
-If satisfied, click the OK button and the point will be assigned and appear on the map.  
+![save](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_08.png)
 
-A link table entry will be generated on the bottom of the window:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
+Now add another sheet at the bottom of the page (or overwrite the one we just made) and do the same for the newspapers listed on the Antebellum Era website.
 
-To add a second point, repeat the same process.  It is a good idea to choose another point in a different portion of the map.  A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.  
 
-Here, I have zoomed in to the northwestern most potion of the map where I add a ground control point at the very center of the intersection of Gun Hill Road and Tryon Ave:
+#### Cities Data
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef23.png)
+We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/2_MakingData folder. This is a modern list of US cities, and we may find some discrepancies (although none that impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose: many of which reference ancient times as well as modern.
 
-Repeat the same stepsto select the center of the same intersection from the OSM map and add the locations to the link table:
+Let's take a look at our cities data by opening it in any program that can read a csv (i.e., Excel, Google Sheets, Sublime, etc.). We see that there are two **UNIQUE** identifiers: `city_state`, and the `city_ID`. I made that 'city_state' column - data rarely arrives with a column that is both redundant and complicated (i.e., it has 2 pieces of information). It's actually not that good of an identifier since so many town have different spellings. However, for the geocoding step, we will need one column that contains the city and state.
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef24.png)
+This column allows us to do a lookup with our newspapers data, it serves as a sort of dictionary of places, and will allow us to match the place names.
 
-You must add a minimum of four points to complete the georeferencing (although more is generally better). Generate at least two more points on your own and add them to the link table.
+#### Make an Address Field
 
-Be careful to make sure that the control points you add match.  This can be quite tricky as many of the features have changed or were not actually built as planned.  
+For the Geocoding, we will need one field that contains **ALL** of the address data. We want to make that BEFORE we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office, the process is similar, though there are no images here.
 
-Normally it is a good idea to choose control points from throughout the map.  However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
+**EXCEL**
 
-In this example, I selected six control points:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
+Open one of your newspapers files in Excel (it does not matter which one, you will have to do this for both files anyhow).
 
-It is good practice to save the table of control points at this stage. Choose “Save GCP points as” under the file menu and save it in the .points format in the same location as the image. This will allow you to later recreate the work you have done:
+Insert a column between the \*State\* and \*Start Date\* columns by clicking on the 'Column D' box to highlight the whole column, then right click and select 'Insert'. A new column will appear.
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef26.png)
+![insert](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_12.png)
 
-Next, you will “transform” the image and create a georeferenced version of the scanned map image. In the georeferencer window, select transformation settings under the settings window:
+In the first cell of that column, type `city_state` with no space between the words - use an underscore instead (this is just good naming convention). In the next cell (D2), type the following formula: `=CONCATENATE(B2, ", ", C2)` and hit 'Enter'. The new field should appear.
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef27.png)
+
+![formula](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_13.png)
+
+Hover over the little square in the bottom right hand corner of the cell and your cursor should turn into a black hatch mark. Once it does, click and drag this cell down to populate all of the rows.
+
+![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_14.png)
+
+Your file should look like this now:
+
+![paper](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_15.png)
+
+Save your file as a .csv. You will get a warning message, select 'Continue'
+
+![warning](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_20.png)
+
+Repeat this process for the other newspaper file.
+
+**GOOGLE DRIVE**
+
+If you saved your file to your Google Drive, open it from there. Otherwise, import it by clicking on the `New` button in the upper left corner, and the `File Upload`, and select the newspaper you want to start with. Once you upload it, open it in Google Drive, and then click on `Open in Google Sheets` at the top of the window.
+
+Insert a column between the \*State\* and \*Start Date\* columns by clicking on the 'Column D' box to highlight the whole column, then right click and select 'Insert 1 left'. A new column will appear.
+
+![insert](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_16.png)
+
+In the first cell of that column, type `city_state` with no space between the words - use an underscore instead (this is just good naming convention). In the next cell (D2), type the following formula: `=CONCATENATE(B2, ", ", C2)` and hit 'Enter'. The new field should appear.
+
+![formula](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_17.png)
+
+Hover over the little square in the bottom right hand corner of the cell and your cursor should turn into a black hatch mark. Once it does, click and drag this cell down to populate all of the rows.
+
+![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_18.png)
+
+Your file should look like this now:
+
+![papers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_19.png)
+
+Download your sheet as a csv file the same way we did before. Move it to the Class_Data/2_MakingData folder. You can (and should) rename these files.
+
+Repeat this process for the other newspaper file.
+
+
+### Set Up
+
+Open a new QGIS project.
+
+
+As written, the newspapers files fo not have any geographic information attached to them, we will have to add it. But before we get started, we would like a basemap, so **FIRST**, add the counties file from the Mapping Data tutorial.  
+
+**Click** on the `Add Vector Layer` button, and open the `US_county_1850_Albers.shp` file from the Class_Data/1_MappingData/Shape Folder folder. If you like, you can add the file we joined the population data to `US_county_1850_Albers_PopJoin.shp` instead; we won't use it in this tutorial, but if you want to investigate the relationship with population on your own later, it will save you a step.
+
+If the map of the US comes out very stretched at the top, change the *project** projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
+
+![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_10.png)
+
+Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and make the following selections:
+- csv
+- point coordinates
+	- X field: 'lng'
+	- Y Field: 'lat'
+
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_03.png)
+
+The uscities layer will be essential for matching the cities in our newspapers files with geolocated places.
+
+**TROUBLESHOOTING**
+
+If you only get one point in the middle of the US when you add your cities layer, right click on the cities layer, navigate to Properties >> General. change the Coordinate reference system to `Default CRS WGS 84` EPSG: 4326
+
+![qgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_21.png)
+
+**END TROUBLESHOOTING**
+
+Finally, add **both** of the Newspapers layers you just created using the `Delimited Text Layer` button, and make the following selections:
+- csv
+- No geometry (attribute only table)
+
+![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_09.png)
+
+Finally, we will need another plugin - actually a group of plugins. Install the MMQGIS plugin. Navigate to Plugins >> Manage and Install Plugins
+
+![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_24.png)
+
+Search for MMQGIS and Select `Install Plugin`
+
+![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_25.png)
+
+SAVE your project in the Tutorials/Exercises folder.
+
+### Geocoding
+
+Now that we have all of our data loaded into QGIS, we need to align the place names in our newspapers with geographic data. I am going to start with the Antebellum file, you will do the same set of steps for the Jacksonian files. HINT: we will have to fix our Antebellum file and reimport it. The problem will exist in the Jacksonian file, too... You may want to fix the problem *before* doing all of these steps.
+
+Generally, there are two ways to go about geocoding. The first is to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, and each city only appeared once. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. This is our situations, so we will have to make our own *geocorder* from a *gazetteer*
+
+Table Join **will** work for this data:
+
+![tablejoin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_22.png)
+
+Table Join will **NOT** work for this data:
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_23.png)
+
+The uscities layer will become our gazeteer. A gazetteer is essentially a "lookup" file, kind of a geographic dictionary. Rather than matching columns 1:1, QGIS goes through every item in our newspapers file and matches it with an item in the uscities file. For this to work, though, there must be one column in both files that is formatted the exact same way. We already made this: it's our cities_states column.
+
+Let's get started with the Antebellum Newspapers
+
+Navigate to MMQGIS >> Geocode >> Street Address Join
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_26.png)
 
 Make the following selections:
 
-Transformation type: Polynomial 1
+- Input CSV File: AntebellumNewspapers.csv
+- CSV File Address Field: city_state
+- Shape Layer: uscities
+- Shape Layer Address Field: city_state
+- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
+- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
 
-Resampling Method: Cubic (usually used for images and photos)
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
 
-Output Raster: *save this in the same folder you are working in*
+Click `OK` and wait... This is a long process.
 
-Spatial reference system: EPSG:3857 *the pseudo Mercator projection used in the OSM data.**  
+Once it is complete, a new layer will appear in your layers pane. Open the Attribute table for this layer. Each row should have both the geographic information and the newspaper information.
 
-You can also opt to have the georeferenced layer added to QGIS when finished:
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_28.png)
 
-![save as](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_12.png)
+Now let's go check our 'not found layer and see what problems arose. In not found, we have three categories of problems:
 
-Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png).
+Washington, DC was formatted in a strange way, and some cities did not appear.
 
-After the transformation finishes, you should see the map appear in the QGIS workspace:
-![georeferenced map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_13.png)
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_30.png)
 
-You can make the scanned map layer partially transparent in the layer properties.  Right click on the map in the layer panel and select properties:
-![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_14.png)
+Since this is a relatively small dataset, we will fix these problems in the original dataset (this is why we saved a set of files in the `Originals` Folder) and then re-do the geocoding.
 
-On the left panel in the properties dialog, select Transparency, here you can adjust the global transparency with a slider:
-![transparency](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_15.png)
+First, let's fix the Washington, DC problem. Open the `uscities Attribute Table`, and sort by `city` to find how Washington, DC is formatted in the `city_state column`. Now open the **AntebellumNewspapers.csv** file (in either Excel or Google Sheets). Find and Replace 'Washington (DC)' with 'Washington'. Save this file.
 
-Compare the georeferenced map with the Open Street Map layer.  Make sure that features appear to match up closely:
-![review](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_16.png)
+In Excel:
+![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_32.png)
 
-In the next exercise you will be using the sheet you georeferenced here and digitizing some of the features from it.
+In Google Sheets:
+![sheets](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_33.png)
+
+Now on to the other problems. I did a web search for each place to get more information about where it is located and other names it may be called. This works because our dataset is small. Your data management strategy always depends on your project.
+
+**May's Landing** is an unincorporated community and census-designated place located within Hamilton Township. In the AntebellumNewspapers file, change the city_state column to say 'Hamilton, NJ'. However,  keep May's Landing in the city column, because we don't want to lose that information. This column now has unique information in it.
+
+**Sing-Sing** likely refers to the prison (which did have a printing press in the mid-1800's). Sing Sing Correctional Facility is in the village of Ossining, NY. We will fix this entry in the AntebellumNewspapers file the same way we fixed May's Landing.
+
+**Rondout** was originally a maritime village serving the nearby city of Kingston, NY, Rondout merged with Kingston in 1872. We will fix this entry in the AntebellumNewspapers file the same way we fixed May's Landing.
+
+That is all of the problems. Save this file (or Download, if using Google Sheets).
+
+Return to QGIS. Remove the AntebellumNewspapers layer (both the delimited text file and the points layer). Right-click and select `Remove`. Upload your corrected AntebellumNewspapers.csv file as a `Delimited Text Layer` with no geometry, and complete the geocoding steps again.
+
+Navigate to MMQGIS >> Geocode >> Street Address Join
+Make the following selections (overwrite the files you made before):
+
+- Input CSV File: AntebellumNewspapers.csv
+- CSV File Address Field: city_state
+- Shape Layer: uscities
+- Shape Layer Address Field: city_state
+- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
+- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
+
+Click `OK`.
+
+Once it finishes loading, check the AntebellumNotFound.csv file one last time to make sure everything is ok.
+
+Follow the same steps for the JacksonianNewspapers file. Start with the corrections you know are problems before running it for the first time.
+
+Once the Antebellum layer loads, remove and upload the new JacksonianNewspapers.csv file and geocode it using the same steps.
+
+Once that completes, open the JacksonianNotFound file and make the necessary changes to the JacksonianNewspapers.csv (you may have to cross reference with the uscities file and internet searches to understand what is going on, and there may be some issues with alternative spellings).
+
+Geocode the JacksonianNewspapers.csv file again.
+
+
+#### Cleaning the results
+
+We want to remove some of the layers either because they are redundant or because they do not align to our time period.
+
+Open the Attribute table for the AntebellumStreetAddressJoin layer.
+
+Click on the `Edit` button, and select the `Delete Field` button. Then, delete the following fields:
+
+- county_fip  (because the historic county names are different from these modern county names)
+- county_nam
+- \*State\* (because this field is redundant. Note that \*City\* is not redundant)
+- city_stat2
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+
+
+Save your changes.
+
+Do the same for the JacksonianStreetAddressJoin layer.
+
+### Visualizing the results
+
+Turn off the uscities layer if it is still on. We will style the points so they are a bit easier to see, and make the county boundaries slightly less obtrusive.
+
+First select properties of the US_county_1850 layer. Select `Style`. Click on the `Simple Line`, and change the color to a dark grey and/or change the line width to .200.
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_35.png)
+
+Now click on the Jacksonian points layer, and select Properties >> Style
+
+Click on `Marker`, and change the color to something brighter (I've used pink), and the size to something larger (I've used 3.00 mm).
+
+Repeat with the Antebellum layer.
+
+Process to use the print composer (as we did in the Mapping Data Tutorials) to make two maps:
+- one of the Jacksonian Era Newspapers (1823-1842, before the expansion of the railroads and the invention of the rotary printing press)
+- one of the Antebellum Era Newspapers (1843-1860, before the expansion of the railroads and after the invention of the rotary printing press).
+
+Note: These maps are not very good: it's almost impossible to tell how many newspapers exist in the northeast, but it is a good first pass.
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_37.png)
+
+![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_38.png)
+
+
+
+#### Optional Next Steps
+
+**If you want a tally of how many papers appeared in each city:**
+
+Use the GroupStats plugin. First install the plugin by navigating to Plugins >> Manage and Install Plugins. Search for the `GroupStats` plugin.
+
+It will be in the `Vector` menu.
+
+Navigate to Vector >> GroupStats >> GroupStats. Select the Antebellum layer.
+
+From the fields list, drag the city_states field into the "rows" box. Also drag the city_states field into the "value" box.
+
+Drag the "count" option into the "value" box (below the field you put in there).
+Click "calculate" and a table will appear on the left. To save the output, navigate to Data >> Save all to CSV File. Name your file AntebellumNewspaperCounts.
+
+![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+
+
+**If you want to know how many papers were in each county** (maybe to make a chloropleth map)
+
+Use the Vector >> Analysis Tools >> Points in Polygon AS WE DID IN TUTORIAL XXXXX
 
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
