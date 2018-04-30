@@ -69,7 +69,8 @@ Studio@Butler
 
 
 **Thursday, May 24 | Making Data 01**
-300 S Buell Hall
+Studio@Butler
+
 * **Topics:** Where GIS Data Comes From, Geocoding	
 						
 * **Tutorial:** 
