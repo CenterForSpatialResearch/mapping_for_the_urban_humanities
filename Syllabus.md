@@ -1,13 +1,11 @@
 ## Mapping for the Urban Humanities
 >Center for Spatial Research | Summer 2017
 
-> Instructors: Michelle McSweeney, Buck Wanner
+>Michelle McSweeney, Buck Wanner, Anna Stokes (TA)
 
-> TA: Anna Stokes
+>May 21, 2017 – June 8, 2017 | 1:00-5:30 pm 
 
-> Dates: May 21, 2017 – June 8, 2017 | 1:00-5:30 pm 
-
->Location: Studio@Butler & 300 S Buell Hall
+>Studio@Butler & 300 S Buell Hall
 
 ### Description
 
