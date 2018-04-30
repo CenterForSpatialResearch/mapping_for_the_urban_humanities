@@ -1,6 +1,6 @@
 ## Downloading QGIS
 
-We will be using QGIS 2.18 (Las Palmas) which is the most recent Long Term Release of the program. Please download this version of the program. 
+We will be using QGIS 2.18 (Las Palmas) which is the most recent Long Term Release of the program. Please download this version of the program. For various reasons that can be explained in class, we do *not* want to use the most recent version of QGIS (3.0.2).
 
 ### Instructions for PC Users
 PC users can download QGIS here and follow the instructions provided by the installer:
