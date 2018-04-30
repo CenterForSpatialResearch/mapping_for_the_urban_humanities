@@ -1,9 +1,9 @@
 ## Mapping for the Urban Humanities
 >Center for Spatial Research | Summer 2017
 
->Dare Brawley, Eric Glass, Leah Meisterlin, Grant Wythoff 
+>Michelle McSweeney, Buck Wanner, Anna Stokes
 
->May 22, 2017 – June 9, 2017 | 1:00-5:30 pm 
+>May 21, 2017 – June 8, 2017 | 1:00-5:30 pm 
 
 >Studio@Butler & 300 S Buell Hall
 
@@ -13,11 +13,11 @@
 
 This hands-on workshop course is intended to broaden and transform the disciplinary locations within which data analysis takes place. This course will introduce participants to open-source mapping software, QGIS, to methods of data collection and creation, and to approaches and concepts in critical spatial analysis. With support from the course’s four instructors, participating faculty will incorporate newly-acquired spatial analysis skills into course assignments and syllabi as well as research plans. One aim of the summer intensive is to equip faculty with tools to transform their humanities courses into places where students learn spatial data analytical skills and apply them to humanistic questions. 
 
-The course condenses topics from a semester long introductory GIS course into a two-week hands-on intensive and one-week practicum. Skills based tutorials draw on diverse datasets relevant to investigations in the urban humanities, including: CEISEN’s Gridded Population of the World, UN Population Division national population estimates, the National Historic Geographic Information System’s historic census records, historical rail lines from the University of Nebraska’s Digital History Project, Reference USA records for music industry businesses, American Community Survey demographic data, New York State Board of Education records of schools, and scanned historical maps from Columbia University’s map collection. Course tutorials and lectures have been developed concurrently and will expose faculty to critical approaches in GIS, introductory spatial analysis methods, and modes of data creation.
+The course condenses topics from a semester long introductory GIS course into a two-week hands-on intensive and one-week practicum. Skills based tutorials draw on diverse datasets relevant to investigations in the urban humanities, including: CEISEN’s Gridded Population of the World, UN Population Division national population estimates, the National Historic Geographic Information System’s historic census records, historical rail lines from the University of Nebraska’s Digital History Project, the Readex list of Newspaper Publishers, American Community Survey demographic data, New York State Board of Education records of schools, and scanned historical maps from Columbia University’s map collection. Course tutorials and lectures have been developed concurrently and will expose faculty to critical approaches in GIS, introductory spatial analysis methods, and modes of data creation.
 
 
 ### Structure and Rhythm: 
-Over the course of the first two weeks (May 22-June 2), participants will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 6 -10) will focus on how to incorporate newly acquired skills into research and course assignments and syllabi, using the syllabi or research brief submitted with the application to the course as a starting point. During the third week participation is optional and will be scheduled in individual (or small group) workshop sessions. 
+Over the course of the first two weeks (May 21-June 1), participants will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 5 - 8) will focus on how to incorporate newly acquired skills into research and course assignments and syllabi, using the syllabi or research brief submitted with the application to the course as a starting point. During the third week, participation is optional and will be scheduled in individual (or small group) workshop sessions. 
 
 
 ### Course Goals: 
@@ -33,9 +33,9 @@ The course aims to equip faculty with a grasp of the methods and methodologies o
 
 
 ### Materials 
-* Laptop with QGIS 2.14 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/DownloadingQGIS.md))
+* Laptop with QGIS 2.18 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Resources/DownloadingQGIS.md))
 * A three button mouse
-* In addition to printed copies distributed on the first day, all course tutorials are available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
+* In addition to printed copies distributed on the first day, all course tutorials are available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/tree/master/Tutorials)
 * A three button mouse (this is highly *highly* encouraged)
 * Optional: a 16 GB flash drive to store course data + exercises
 
@@ -46,62 +46,66 @@ Our projects generally involve collaborations with researchers and advocates acr
 
 
 ### Schedule and Topics
-**Monday, May 22 | Introduction**
+**Monday, May 21 | Introduction**
 Studio@Butler
 * **Topics:** Introductions, What is GIS?, Introduction to the Command Line
-* **Tutorial:** [Mapping Data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/01_MappingData00.md): Adding Layers to a Map
+* **Tutorial:** [Mapping Data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/01_MappingData00.md): Adding Layers to a Map
 
-**Tuesday, May 23 | Mapping Data 01**      	
+**Tuesday, May 22 | Mapping Data 01**      	
 Studio@Butler
 
 * **Topics:** GIS Data Types: Vector & Raster; Quantitative & Qualitative, Fundamentals of Cartography, Symbology, Classification			
-* **Tutorial:** [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/02_MappingData01.md): Mapping World Populations
+* **Tutorial:** [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/02_MappingData01.md): Mapping World Populations
 	* *Population by Country*
 	* *CEISEN Gridded Population of the World*
 			
 
-**Wednesday, May 24 | Mapping Data 02**
+**Wednesday, May 23 | Mapping Data 02**
 Studio@Butler
 * **Topics:** Coordinate Reference Systems & Projection 							
-* **Tutorial:** [Mapping Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/03_MappingData02.md): Map Projections & Population Density
+* **Tutorial:** [Mapping Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/03_MappingData02.md): Map Projections & Population Density
 	* *U.S. Population by County 1850, 1870 Historical Census*
 	* *U.S. Rail Lines 1850, 1870*
 
 
-**Thursday, May 25 | Making Data 01**
+**Thursday, May 24 | Making Data 01**
 300 S Buell Hall
-* **Topics:** Where GIS Data Comes From, Georeferencing 	
+* **Topics:** Where GIS Data Comes From, Geocoding	
 						
 * **Tutorial:** 
-	* [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/04_MakingData01.md): Working with Historical Maps
-		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
+	* [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/04_MakingData01.md): Geocoding data from Historical Sources
+		* *Newspapers from the Jacksonian (1823-1842) and Antebellum (1843-1860) Eras.*
+		* *US cities*
+	
 
 
-**Friday, May 26 | Making Data 02**
+
+**Friday, May 25 | Making Data 02**
 300 S Buell Hall
-* **Topics:** Digitizing, Geocoding	
+* **Topics:** Digitizing, Georeferencing	
 						
 * **Tutorials:** 
-	* [Making Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/05_MakingData02.md): Digitizing Features from Historical Maps
+	* [Making Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/05_MakingData02.md): Working with Historical Maps
 		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
-	* [Making Data 03](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/06_MakingData03.md): Geocoding Music 
-		* *Reference USA Database of Music Related Businesses c. 2015*
+	* [Making Data 03](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/06_MakingData03.md): Digitizing Features from Historical Maps
+			* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 				
 
-**Monday, May 29 | No Workshop, Memorial Day**
+**Monday, May 28 | No Workshop, Memorial Day**
 
 
-**Tuesday, May 30 | Making Public Work** 	Studio@Butler
+**Tuesday, May 29 | Making Work Public** 	Studio@Butler
 
 * **Due:** Deliverables from Week One tutorials. Printed 8.5x11 in color.
 
 * **Topics**			Group discussion and Pin Up of week one work, Examples from the GeoHumanities, Webmaps
 
-* **Tutorial** 			Showing Data 01: Making Public Interactive Work with Webmaps
-*East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
+* **Tutorial** 			Showing Data 01: Making Work Interactive with Webmaps
+		* *Newspapers from the Jacksonian (1823-1842) and Antebellum (1843-1860) Eras.*
+		* *US cities*
 
-**Wednesday, May 31 | Analyzing Data 01**
+**Wednesday, May 30 | Analyzing Data 01**
 Studio@Butler
 
 * **Topics**			Introduction to Geoprocessing, 
@@ -109,50 +113,50 @@ Studio@Butler
 Spatial Joins, Proportional Split Estimation,
 Working with Census Data, Modifiable Areal Unit Problem
 						
-* **Tutorial:**		[Analyzing Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/08_AnalyzingData01.md): Libraries, Education, and Language
+* **Tutorial:**		[Analyzing Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/08_AnalyzingData01.md): Libraries, Education, and Language
 	* *NYC Branch Libraries*
 	* *American Community Survey Language Spoken by Census Tract* 
 	* *NYC Board of Education Elementary School Locations*
 
 
-**Thursday, June 1 | Analyzing Data 02**
+**Thursday, May 31 | Analyzing Data 02**
 Studio@Butler
 
 * **Topics**			
 			Geoprocessing with Rasters, Raster Classification, Density Maps
 						
-* **Tutorials:** 	[Analyzing Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/09_AnalyzingData02.md): Concentrations of Libraries and Education 
+* **Tutorials:** 	[Analyzing Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/09_AnalyzingData02.md): Concentrations of Libraries and Education 
 	* *NYC Branch Libraries*
 	* *NYC Board of Education Elementary School Locations*
 
 
-**Friday, June 2 | Bringing it all Together**
+**Friday, June 1 | Bringing it all Together**
 300 S Buell Hall
 
 * Designing Methodologies and Assignments 
 
 
-**Monday, June 5 | Spatial Pedagogies**
+**Monday, June 4 | Spatial Pedagogies**
 300 S Buell Hall
 
 * Curriculum Development Sessions by Appointment
 
-**Tuesday, June 6 | Syllabus Development & Practicum**
+**Tuesday, June 5 | Syllabus Development & Practicum**
 Studio@Butler
 	
 * Curriculum Development Sessions by Appointment
 
-**Wednesday, June 7 | Syllabus Development & Practicum**
+**Wednesday, June 6 | Syllabus Development & Practicum**
 Studio@Butler
 
 * Curriculum Development Sessions by Appointment
 
-**Thursday, June 8 | Syllabus Development & Practicum**
+**Thursday, June 7 | Syllabus Development & Practicum**
 Studio@Butler
 
 * Curriculum Development Sessions by Appointment
 
-**Friday, June 9 | Syllabus Development & Practicum**
+**Friday, June 8 | Syllabus Development & Practicum**
 300 S Buell Hall
 	
 * Debrief and discussion of course outcomes 
