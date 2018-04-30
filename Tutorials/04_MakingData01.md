@@ -298,7 +298,7 @@ Do the same for the JacksonianStreetAddressJoin layer.
 
 Turn off the uscities layer if it is still on. We will style the points so they are a bit easier to see, and make the county boundaries slightly less obtrusive.
 
-First select properties of the US_county_1850 layer. Select `Style`. Click on the `Simple Line`, and change the color to a dark grey and/or change the line width to .200.
+First select properties of the US_county_1850 layer. Select the `Style` tab on the left. Click on the `Simple Line`, and change the color to a dark grey and/or change the line width to .200 or smaller if you like. *Note*: It may have defaulted to `Simple Fill` rather than `Simple Line`; that's fine, you can still change the line weight by adjusting `Outline Width`.
 
 ![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_35.png)
 
