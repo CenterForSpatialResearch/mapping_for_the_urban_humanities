@@ -6,7 +6,7 @@
 In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States.
 
 By the end of this tutorial, you will be able to:
-- identify the types of data that can be used
+- identify types of data that can be used in GIS applications
 - transform data you find in a table into a csv file that can be used in QGIS
 - align that data to geographic locations using a gazetteer
 - query the data you collected to answer a research question
@@ -18,17 +18,17 @@ If you haven't already, download the GitHub repository for this course. Using th
 
 One of the primary hurdles that researchers encounter is finding appropriate datasets (for QGIS and otherwise). For more on this, see the [Finding Spatial Data](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Resources/FindingSpatialData.md) page in the Resources.  
 
-This problem is compounded when working with historic data as it may not necessarily have spatial data attached or it may only have place names attached that may or may not represent modern place names. Ultimately, finding data and transforming data are separate issues. As far as finding data is concerned, Columbia keeps a list of [Spatial Data on the Internet](http://library.columbia.edu/locations/dssc/data/spatialdata.html), as well as [Lehman Library's Map Collection](http://library.columbia.edu/locations/maps.html) and [CIESIN](http://sedac.ciesin.columbia.edu/data/sets/browse), the [NYPL Maps Division](https://www.nypl.org/about/divisions/map-division) the [US Census](https://www.census.gov/data.html), [NHGIS](https://www.nhgis.org/), or the [AAG Databases](http://www.aag.org/cs/projects_and_programs/historical_gis_clearinghouse/hgis_databases) are a good place to start (this list is obviously not comprehensive, but illustrative that data is in a lot of places). If none of these have the data you are looking for, you may need to turn to repositories on the Internet.
+This problem is compounded when working with historic data as it may not necessarily have spatial data attached, or it may only have place names attached that may or may not represent modern place names. Ultimately, finding data and transforming data are separate issues. As far as finding data is concerned, Columbia keeps a list of [Spatial Data on the Internet](http://library.columbia.edu/locations/dssc/data/spatialdata.html). Other good places to start include [Lehman Library's Map Collection](http://library.columbia.edu/locations/maps.html) and [CIESIN](http://sedac.ciesin.columbia.edu/data/sets/browse), the [NYPL Maps Division](https://www.nypl.org/about/divisions/map-division) the [US Census](https://www.census.gov/data.html), [NHGIS](https://www.nhgis.org/), or the [AAG Databases](http://www.aag.org/cs/projects_and_programs/historical_gis_clearinghouse/hgis_databases). This list is not comprehensive, but illustrative that data is in a lot of places. If none of these have the data you are looking for, you may need to turn to less-straightforward repositories on the Internet.
 
 Sometimes the library may have data available, or you may find it through a web search. Assuming that you are not able to find shapefiles, you will want your data to be in a format that QGIS can parse. This includes .csv (comma separated values), .txt (plain text), or some form of database. Formats such as .pdf may pose insurmountable problems.
 
-We will go through the process of turning data that we find through an internet search into data we can use in a mapping project. This is not the only way to get data, and at Columbia, the librarians may be more helpful than the internet in this regard.  
+In this tutorial, we will go through the process of turning data that we find through an internet search into data we can use in a mapping project. This is not the only way to get data, and often not the best way. At Columbia, the librarians may be more helpful than the internet in locating data sources. But learning these techniques will also help you start to think about less-than-obvious places data can be found.
 
 ### Making the Data
 
 We are going to use data from [Readex](https://www.readex.com/who-we-are-what-we-do), a company that sells primary source collections to institutions. We want the names of newspapers, the location of publication, and the year they were established. We are not interested in reading the papers right now. Readex offers these lists in a variety of organizations: by region, decade, or era. We will use the 'By Era' breakdown, and look at the pre- and post-1842 eras.
 
-Open a web browser (Google Chrome, Firefox, or Safari are OK, please do not use Internet Explorer), and navigate to [www.readex.com](www.readex.com). Hover over the 'Collections' link in the Navigation bar and click on 'By Era'. Then select the `Jacksonian Era, Parts 1 and 2, 1823-1842` > `Title List` it will open in a new tab.
+Open a web browser (Google Chrome, Firefox, or Safari are OK, please do not use Internet Explorer), and navigate to [www.readex.com](www.readex.com). Hover over the 'Collections' link in the Navigation bar and click on 'By Era'. Then select `Jacksonian Era, Parts 1 and 2, 1823-1842` > `Title List`, opening it in a new tab.
 
 Also open the `Antebellum Period, Parts 1 and 2, 1843-1860` > `Title List`
 
@@ -41,11 +41,13 @@ Looking at this website, we suspect that the data is organized as a table becaus
 
 ![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_04.png)
 
-This is fortunate because whenever data is in an organized format, there are a host of simple tools to help us translat that data. Today, we are going to use Google Drive to format the table nicely for our use.
+This is fortunate because whenever data is in an organized format, there are a host of simple tools to help us translate that data. Today, we are going to use Google Drive to format the table nicely for our use.
 
 #### Making Tables into CSVs
 
-Go to Google Drive and log in to your account. You actually don't need to save anything to your account, but you do need to log in. If you do not have a Google Account and do not wish to create one, please skip this section. You will use the same dataset that has already been downloaded for you in the class folder. You can also gather this data through webscraping, but that is far beyond the scope of this tutorial.
+Go to Google Drive and log in to your account. You actually don't need to save anything to your account, but you do need to log in. <!--If you do not have a Google Account and do not wish to create one, please skip this section.--> <!--columbia webmail is google, and has google drive, so everyone in the course has a google account-->
+
+(Note: If you have any trouble with this step, the data is already included in the `Class Data` folder. You can find it there and continue with the rest of the tutorial. If you are familiar with webscraping, you can also get the You can also gather this data through webscraping, but that is far beyond the scope of this tutorial.)
 
 In Google Drive, click on the `New` button in the upper left hand corner, and select `Sheet`. This will take you to an empty Google Sheet.
 
@@ -56,7 +58,7 @@ In the first cell (cell A1), type the following formula and hit 'Enter':
 ![google sheet options](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_06.png)
 
 
-Let's break that expression down. Google Sheets has a function, `IMPORT HTML`, which imports and parses content found on websites. For this function to work in our Sheet, anything that is words has to be enclosed in quotes because we  want the Sheet to just match the words, not *evaluate* them. First, we tell it which website we want it to read by giving it the exact url ( for the Readex Jacksonian Era), then tell the function if it should look for a "table" or a "list"; we want a "table". Those are the only types this particular function can work with, but that's enough for us. Finally, which table (or list) it should look for (the first, second, etc.). Once we hit 'Enter', it goes out and reads the website, sees if there is a table where we told it to look and then pulls in the data.
+Let's break that expression down. Google Sheets has a function, `IMPORT HTML`, which imports and parses content found on websites. For this function to work in our Sheet, anything that is words has to be enclosed in quotes because we  want the Sheet to just match the words, not *evaluate* them<!--will see if there is link to explain strings versus values-->. First, we tell it which website we want it to read by giving it the exact url (first, for the Readex Jacksonian Era), then tell the function if it should look for a "table" or a "list"; we want a "table". Those are the only types this particular function can work with, but that's enough for us. Finally, which table (or list) it should look for (the first, second, etc.). Once we hit 'Enter', it goes out and reads the website, sees if there is a table where we told it to look and then pulls in the data.
 
 For more on this function, click on the 'Learn More about IMPORTHTML' link at the bottom of the dialogue box. Google sheets also has IMPORT XML (for structured data online), FEED (for RSS feeds), DATA (for data hosted online), or RANGE (for portions of other Google Sheets) for different types of data.
 
@@ -71,15 +73,15 @@ Now add another sheet at the bottom of the page (or overwrite the one we just ma
 
 #### Cities Data
 
-We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/2_MakingData folder. This is a modern list of US cities, and we may find some discrepancies (although none that impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose: many of which reference ancient times as well as modern.
+We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/2_MakingData folder, `uscities.csv`. This is a modern list of US cities, and as such, there may be some discrepancies, as some place names may have changed since the mid-19th century (luckily, none of these will impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose, many of which reference ancient times as well as modern.
 
-Let's take a look at our cities data by opening it in any program that can read a csv (i.e., Excel, Google Sheets, Sublime, etc.). We see that there are two **UNIQUE** identifiers: `city_state`, and the `city_ID`. I made that 'city_state' column - data rarely arrives with a column that is both redundant and complicated (i.e., it has 2 pieces of information). It's actually not that good of an identifier since so many town have different spellings. However, for the geocoding step, we will need one column that contains the city and state.
+Let's take a look at our cities data by opening it in any program that can read a csv (e.g., LibreOffice, Excel, Google Sheets, Sublime Text, etc.). We see that there are two "unique" identifiers: `city_state`, and the last column, `id`. I made that `city_state` column — data rarely arrives with a column that is both redundant and complicated (i.e., it has 2 pieces of information). However, for the geocoding step, we need a column that contains both the city and state information.
 
-This column allows us to do a lookup with our newspapers data, it serves as a sort of dictionary of places, and will allow us to match the place names.
+This column will also allow us to do a lookup with our newspapers data, serving as a sort of dictionary of places, and will allow us to match the place names.
 
 #### Make an Address Field
 
-For the Geocoding, we will need one field that contains **ALL** of the address data. We want to make that BEFORE we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. If you do not use either of those programs, you can do this in Libre Office, the process is similar, though there are no images here.
+For the Geocoding, we will need one field that contains ALL of the address data. We want to make that *before* we start our project. To make this field, we need to CONCATENATE the city and state columns. There are instructions here for Excel and Google Drive users. You can also do this in LibreOffice, the process is similar, though there are no images here.
 
 **EXCEL**
 
@@ -138,11 +140,11 @@ Repeat this process for the other newspaper file.
 Open a new QGIS project.
 
 
-As written, the newspapers files fo not have any geographic information attached to them, we will have to add it. But before we get started, we would like a basemap, so **FIRST**, add the counties file from the Mapping Data tutorial.  
+In their original form, the newspapers files we just downloaded do not have any geographic information attached to them, so we will have to add it. But before we get started, we would like a basemap, so first, add the counties file from the Mapping Data tutorial.  
 
 **Click** on the `Add Vector Layer` button, and open the `US_county_1850_Albers.shp` file from the Class_Data/1_MappingData/Shape Folder folder. If you like, you can add the file we joined the population data to `US_county_1850_Albers_PopJoin.shp` instead; we won't use it in this tutorial, but if you want to investigate the relationship with population on your own later, it will save you a step.
 
-If the map of the US comes out very stretched at the top, change the *project** projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
+If the map of the US comes out very stretched at the top, change the *project* projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
 
 ![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_10.png)
 
