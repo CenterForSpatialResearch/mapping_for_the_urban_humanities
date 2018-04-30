@@ -2,6 +2,7 @@
 >Center for Spatial Research | Summer 2017
 
 > Instructors: Michelle McSweeney, Buck Wanner
+
 > TA: Anna Stokes
 
 > Dates: May 21, 2017 – June 8, 2017 | 1:00-5:30 pm 
