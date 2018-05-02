@@ -1,13 +1,12 @@
-## Making Webmaps with Leaflet.js
+## Making Webmaps with the QGIS2Web
 
-With this exercise you will learn how to create a basic web-based map using the javascript library leaflet.js. This is necessarily not an introduction to javascript, but rather intends to provide familiarity with the components and requirements of publishing maps online. Upon completing this tutorial you should ....
+With this exercise you will learn how to create a basic web-based maps using the javascript library, leaflet.js. Webmapping has some very important distinctions that differentiate it from static mapping. This tutorial is intended to illustrate the differences between webmaps and static maps. To reach this goal, we will use pre-written code. Therefore, this tutorial is not intended to be an introduction to coding, but rather an introduction to the components of a web map as well as the constraints and affordances web mapping provides. Upon completing this tutorial you will:
 
-1. Understand how to export GeoJSON files from QGIS
-2. Understand the structure of a basic webpage
-3. Be able to import a historical map to be shown on the web
-4. Create interactive vector features with embedded photos and annotations
-5. Experiment with layer styles and map composition
-6. Access the NYPL Map Warper archive  
+1. Understand the structure of a basic webpage
+2. Be able to download data from QGIS as a GeoJSON to be used in a webmap
+3. Modify vector features in a webmap
+4. Experiment with layer styles and map composition
+5. Identify the strengths and weaknesses of webmapping to make an informed decision about how to publish your project
 
 #### The Premise
 
@@ -15,7 +14,8 @@ With this exercise our goal is to create a simple interactive online map that sh
 
 For context lets take a look at what this final map will look like. It is visible [here](https://centerforspatialresearch.github.io/MappingForTheUrbanHumanities_2017/Class_Data/3_Webmaps/)
 
-To accomplish this we will be using Leaflet.js, an incredibly well documented javascript library with many online easily accessible examples to learn from. Review the [Docs](http://leafletjs.com/reference-1.0.3.html) page for explanations of all of the functions in the leaflet library. 
+
+To accomplish this we will be using javascript library, leaflet.js. Leaflet is a very well documented javascript library with many online easily accessible examples to learn from. Review the [Docs](http://leafletjs.com/reference-1.0.3.html) page for explanations of all of the functions in the leaflet library. 
 
 Leaflet.js is one of many many ways to create webmaps. Others include: 
 * OpenLayers
@@ -62,69 +62,8 @@ Our webmap will rely on a different data format for our spatial data. Up until n
 #### Building a Webmap
 
 Lets begin to make our webmap. 
-First you need to make sure you have Python installed. Check if you have Python installed and which version it is. We will be using Python to run a local server.
+INSTRUCTIONS FOR THE MAP
 
-### (Mac) Check which Python version you have (if any)
-
-1. Open a Terminal Window 
-2. Type `$ python -V` hit 'Return'
-4. Make a note of which Python version you have, you will need it later.
-
-### (Windows) Check which Python version you have (if any)
-1. open Command Prompt
-2. type python --version hit 'Return'
-	* if python is installed something like this will appear
-	![img](https://github.com/CenterForSpatialResearch/NYCDHWeek/blob/master/Images/pythontest.png)
-	* if it isn't then a message stating that will appear
-	* if Python is installed make note of which version you have installed, you will need it later
-3. if python is not installed then go to [python.org](python.org) to download python. We recommend installing version 2.7. 
-4. After downloading the installer, double-click to open it and follow the installation prompts, selecting the default settings until you get to the page that reads "Customize Python 2.7.XX" 
-	* Scroll to the bottom of options, and click the drop-down selection that reads "Add python.exe to Path" (it should have a red "X" by default)
-	* Select the option that reads "Entire feature will be installed on local hard drive"
-5. Follow the prompts on the rest of the setup, allow the installation to finish. When it's done, it will tell you, and python is now installed on your computer and available to use.
-6. To test that python was installed, open the Command Prompt application, and enter `python --version`. It should read `Python 2.12.XX`.
-
-### (Mac) Set up a local server
-
-We will run a local server from our computers. The details of this are far beyond this tutorial, for more on  the technical details, visit the [Mozilla Developer site](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment). For more on how the web works the difference between a local and remote server, [read this](https://devdojo.com/blog/technology/local-vs-remote-servers).
-
-1. In a Terminal window, navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in Documents > MappingForTheUrbanHumanities_2017 > Class_Data >3_Webmaps. To navigate there, I type the following commands (don't type the $, that just indicates that you are in the Terminal):
-
-	* `$ cd Documents`
-	* `$ cd MappingForTheUrbanHumanities_2017` 
-	* `$ cd Class_Data`
-	* `$ cd 3_Webmaps`
-	
-2. If you have Python 3, type:
-
-	* `$  python -m http.server`  
-	
-2. If you have Python 2, type:
-
-	* `$ python -m SimpleHTTPServer`
-	
-3. Return to your browser window (Chrome, Firefox, or Safari) and type `localhost` in the navigation bar. You should see an empty webpage. 
-
-### (Windows) Set up a local server
-1. Open Command Prompt. Then navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in Documents > MappingForTheUrbanHumanities_2017 > Class_Data >3_Webmaps. To navigate there, I type the following commands:
-
-	* cd Documents
-	* cd MappingForTheUrbanHumanities_2017
-	* cd Class_Data
-	* cd 3_Webmaps
-
-2. If you have python 2 type:
-
-	* python -m SimpleHTTPServer
-
-3. If you have python 3 type: 
-
-	* python -m http.server
-
-	It will look something like this:
-	![img](https://github.com/CenterForSpatialResearch/NYCDHWeek/blob/master/Images/localhost.png)
-
-3. Return to your browser window (Chrome, Firefox, or Safari) and type `http:\\localhost` in the navigation bar. You should see an empty webpage.
 
 ### Deconstructing The Webmap
 
