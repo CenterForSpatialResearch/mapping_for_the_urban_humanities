@@ -1,4 +1,4 @@
-## Making Webmaps with the QGIS2Web
+## Making Webmaps with Leaflet.js
 
 With this exercise you will learn how to create a basic web-based maps using the javascript library, leaflet.js. Webmapping has some very important distinctions that differentiate it from static mapping. This tutorial is intended to illustrate the differences between webmaps and static maps. To reach this goal, we will use pre-written code. Therefore, this tutorial is not intended to be an introduction to coding, but rather an introduction to the components of a web map as well as the constraints and affordances web mapping provides. Upon completing this tutorial you will:
 
