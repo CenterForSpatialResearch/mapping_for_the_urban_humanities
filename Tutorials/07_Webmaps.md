@@ -45,12 +45,19 @@ In addition there are folders for images: `img` and `data`. These two folders wi
 For the purposes of this tutorial we have already prepared all of the data for you. However the following steps outline how you would go about exporting data from QGIS to include in an online map if you were starting from scratch. 
 
 **Exporting and Formatting a Georeferenced Historical Map**
-1. *Find the latitude and longitude* coordinates of your image. We will need these later on when we import the historical map into our web map. Enable the `Lat Lon Tools` plugin in QGIS. Then use it to select the top left and bottom right corners of your raster and copy these to your notes. One thing that is important to note, you must choose the corners of your raster dataset (i.e. the corners of the black rectangle around your rotated map).
+
+1. *Find the latitude and longitude* coordinates of your image. We will need these later on when we import the historical map into our web map. Enable the `Lat Lon Tools` plugin in QGIS. Then use it to select the top left and bottom right corners of your raster and copy these to your notes. One thing that is important to note, you must choose the corners of your raster dataset (**the corners of the black rectangle around your rotated map**).
+
 ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/05_LatLonTools.png).
+
 2. *Set No Data Value.* Open the `Properties ` menu for the georeferenced historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image disappears. 
+
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_NoData.png)
+
 3. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialog box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
+
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_MapExport.png)
+
 4. *Reducing the File Size of the Map Image*. To make it more manageable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more manageable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
 
 **Exporting Vector Layers as GeoJSON**
@@ -61,8 +68,35 @@ Our webmap will rely on a different data format for our spatial data. Up until n
 
 #### Building a Webmap
 
-Lets begin to make our webmap. 
-INSTRUCTIONS FOR THE MAP
+To test our web map, we first need to set up a local server. We recommend using Google Chrome for this. If you do not have the Google Chrome web browser on your computer, you can download it [here](https://www.google.com/chrome/). If you do not have and do not wish to install Google Chrome, you can still complete the tutorial by running a local server, following [these instructions](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/LocalServer.md). These instructions require that you use bash or the Command Line. and run a local server using Python. 
+
+We want to add an extension that can turn our computer into a local server. When we access a webpage, we are really accessing an address on a server somewhere. The URL that we type into the navigation bar maps onto a document being housed on another machine. When doing web development, we want to be able to try out what web pages will look like before we go through the effort of putting them up on a remote server. That is, we don't want to put up our website just to look at it and interact with it. We would rather be able to do it all from the comfort of our own computer. This is where a local server comes in, it's like having an address that only you can access because it is all contained on your machine.
+
+**GOOGLE CHROME**
+
+Find the [Google Chrome Web Store](https://chrome.google.com/webstore/category/extensions?hl=en-US). From here, you can install extensions to add functionality to your web browser.  
+
+In the Web Store, search for `Web Server 200 OK`. 
+
+![200 ok](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata07_01.png)
+
+Select `Add to Chrome` in the upper right hand corner. You will be redirected to a page that has all of your extensions installed. Select the 200 OK! Extension
+
+![200 ok](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata07_02.png)
+
+The dialogue box will open, giving you the option to Choose a Folder. 
+
+![200 ok](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata07_03.png)
+
+Click on the `Choose a Folder` box and navigate to the Class_Data/3_Webmaps Folder. Select this folder. 
+
+![200 ok](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata07_04.png)
+
+When it is fully loaded, you will see a blue link with a bunch of numbers. This is where the local server is running. Click on this link. 
+
+![200 ok](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata07_05.png)
+
+You will be redirected to a webpage where you will see the map we are working on. 
 
 
 ### Deconstructing The Webmap
