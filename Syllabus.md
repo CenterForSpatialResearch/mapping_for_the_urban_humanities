@@ -48,7 +48,7 @@ Our projects generally involve collaborations with researchers and advocates acr
 ### Schedule and Topics
 **Monday, May 21 | Introduction**
 Studio@Butler
-* **Topics:** Introductions, What is GIS?, Introduction to the Command Line
+* **Topics:** Introductions, What is GIS?
 * **Tutorial:** [Mapping Data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/01_MappingData00.md): Adding Layers to a Map
 
 **Tuesday, May 22 | Mapping Data 01**      	

@@ -1,150 +1,134 @@
-## Making Data
+## Making Data 
 
-### Making Data 01: Georeferencing a scanned paper map
+### Making Data 03: Digitizing Features from a georeferenced map
 
 #### Premise
 
-In this exercise, we will create spatial data from a scanned paper map. As far as a computer program such as QGIS is concerned, a scanned map is an image, and the data that is encoded within it is mostly incomprehensible. So, while we can read a map and through that, gather information, that information is largely inaccessible to our computers. The first thing we need to do to transform a scanned paper map into a map that a computer can read is to georectify it. This means that we will match spots on the image with coordinates on a map. Though we will use a webmap for this (Open Street Maps), it could be down with any map that has coordinate information embedded in it.
+In this exercise, you will create your own dataset by outlining the trees that were represented in the "1902 map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that we previously georectified. Making new data from historic maps is a fairly common, if laborious, practice. In many cases, the data we are interested in is not digitized, so we have to translate it ourselves. This process is similar to digitizing books handwritten in script by typing them. It is time-intensitve, but sometimes, it is the only way to get the data we need in a format a computer can reas. 
 
-In the second part of this tutorial, we will take this georectified map and digitize some of the features on it to make a new dataset that can then be used with this map or imported into other projects as a shapefile itself.
+Through this tutorial, you will explore some of the on-screen hand digitizing tools available in QGIS and use them to digitize trees, paths and other features from a georeferenced map. In essence, you will be converting raster spatial data into vector based features.
 
-In this tutorial, we will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation.
+#### Notes on the data: 
 
-#### Notes on the data:
+The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete the [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/04_MakingData01.md) exercise. 
 
-The map you will be using for this exercise is one sheet of six from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" published in 1902.  This map is from the Columbia Map collection and is an exceptionally detailed, large scale (1:7,200) series made shortly after the area east of the Bronx River was annexed from Westchester to the Bronx, and the Bronx was consolidated into New York City and New York County. The library catalog record for the map can be found [here](https://clio.columbia.edu/catalog/9282162). If you would like to see the entire map, there is another copy (in a lower resolution) in the New York Public Libraries digital collections [here](http://digitalcollections.nypl.org/items/dc910ee0-4682-0131-4759-58d385a7bbd0)
+### Digitizing Exercise
 
-You are going to use [OpenStreetMap](https://www.openstreetmap.org/about) (OSM)  as reference data for the georeferencing process. OSM provides a free, open-source map of the world from public domain and volunteered data.
+Open a **new project** in QGIS.
 
-#### Before you begin
-If you haven't already, download the GitHub repository for this course. Using the green button [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities), select `Download ZIP`. The Class_Data folder will then have all of the datasets needed for tutorials.
+Since we already georectified our map, you only need to load the georectified tiff file. In the process of georectifying it, we aligned the image with spatial information that QGIS can understand. It is now similar to the raster file for the gridded population of the world that we used in Part I. This is important because we can now combine other datasets such as historic or current population data, maps showing development in the intervening years, or other datasets. We can also use the data that was drawn onto this map and combine it with other datasets once we translate it from the scanned version it currently exists as into a digitized version. 
 
-#### Setting up QGIS
 
-Open QGIS:
+Let's start with our map.
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_01.png)
+Click on the add raster button ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize2.png) and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/04_MakingData01.md) exercise. 
 
-You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM basemap service is QGIS through the OpenLayers plugin.  This plugin does not come pre-installed with QGIS, so you will probably need to add it.  Under the plugins menu, select “Manage and Install Plugins…”
-![option](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_02.png)
+Since you verified its accuracy already, you will not need any basemap data for this exercise, so your project will look like this:
+![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_01.png)
 
-The plugins dialog will open.  Search for “Openlayers Plugin.”  Highlight it, and click “Install plugin”:
+This map is part of a very large-scale plan and the Bronx park area, which contains the then-new botanical garden and zoo, is particularly detailed. Every structure, road, walking path, and tree is mapped. We would like to be able to use this data in another setting, so we will digitize some of the features. We will start by digitizing trees. For the trees, we will use point geometry, so this will be a particularly simple dataset.
 
-![plugin dialogue](![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_03.png))
+Remove any transparency from the georeferenced map layer. Zoom into the southwest corner of Bronx Park, where the Conservatory garden and library (labeled ‘museum’ on the map) are:
+![zoomed map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_02.png)
 
-It may take a few seconds to install.  Close the plugins menu when finished.  The OpenLayers tools should now appear under the Web menu:
+We will create a New Shapefile layer consisting of points. Navigate to Layer >> Create Layer >> New Shape File:
+![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_03.png)
 
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_04.png)
+In the new vector dialog layer, choose type “Point”. Every point will have its own unique ID that you will have to enter. If you want to attach more data, you can create additional attribute fields for your dataset. In the 'New Field' Name box, I've entered the category, Tree to create a new attribute. I might fill this attribute with values such as 'Maple', 'Tulip', or 'London Plane'
+It is best practice to separate all of the data types into different attributes (i.e., if you had data about the age of the tree, you would make another attribute for 'Age', etc.). When making data, more specific categories is always better than a smaller table.
+Here, I have added a tree “type” attribute and made it a text field with a maximum length of 80. Select `Add to fields list``, the click `OK`:
+![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_04.png)
 
-This plugin will allow you to view a number of basemap services and steam them directly into your QGIS workspace.  Choose the OpenStreetMap > OpenStreetMap option.
+When prompted, save the new file in the same directory with your map, and name it BronxParkTrees.
 
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_05.png)
+The layer will now appear in the Layers panel:
+![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_05.png)
 
-Since you are working in a new QGIS project, the map should show the entire earth as the default:
-![qgis osm ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_06.png)
+Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the `Editing Tool` ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize9.png) 
 
-Use the zoom in tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png) and zoom into the Central Bronx in the area around The Botanical Garden:
+Now the `Add Features` tool should be available. Click on the `Add Features` tool to begin digitizing trees.
 
-![garden zoom ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_07.png)
-Now you will access the georeferencing tools and match the scanned map to the OSM map.  
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_06.png)
+	 
+This tool gives us a circular cursor. For every tree (or other data point) we want to add, all we have to do is click on it. An attribute dialog appears where we can type in attribute information for the feature we just created:
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_07.png)
 
-Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
-![georeferencer ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_08.png)
+There is no information on the map in regards to the type of tree; however, I know that the trees in front of the library are a stand of stately tulips, so I am entering that information now. I will give each tree a unique id so that I can reference them later (unfortunately, QGIS does not do this automatically, so it is prone to errors, but still worth doing as this it is much easier to work with data where the rows have unique identifiers). It is generally best practice to make these identifiers simple and uniform. For example, "3rd tree on the left after the museum" is unique and probably refers to one and only one tree, it is difficult to manage in our dataset. This is obviously a silly example for trees, but much more likely to crop up if we think about buildings, names, or even states (i.e., New York is unique, but NY is a better identifier). For our trees example, I'm just going to use sequential numbers.
 
-The Georeferencer screen will open:
-![georeferencer window](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_09.png)
+Click `OK` when finished. 
 
-Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.  
+Continue to digitize trees in this corner of the park:
+![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize12.png)
 
-It will appear in the georeferencer window:
-![georeferencer window with map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_10.png)
+We can move or edit the point features with the move feature tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize13.png) if you want to delete a tree, you can select it with the select features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize14.png) at use the delete key on the keyboard. It is a good idea to regularly use the “save for selected laters” function to save your work as you digitize: 
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_08.png)
 
-This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner.  The area to the east of the Bronx Park area is still largely undeveloped at this point.  
+When finished, depress the toggle editing tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize16.png) to close the editing session and save your changes to the layer.
 
-Historical maps can be difficult to georeference, and this sheet poses a number of complications.  The map projection is unclear and there are no ground control points or coordinates specified.  Because of this, you will georeference by matching physical features represented on the map with their current counterparts (and their known coordinates).  However, most of the features in this map have changed or no longer exist (or were never actually built in the first place).  Thus, you will need to be very careful to choose locations that you are confident match up well with their contemporary counterparts.   Fortunately, there are a number of good candidates, particularly on the western half of the map where many streets and buildings still exist in the same location.  You will use those to georeferenced the map.
+We are also interested in where the park pathways were situated. It is best practice to keep different types of shapes (points, lines, and polygons) separate (and actually QGIS won't let us make them all as the same file anyhow). This goes back to making data more broadly. When working with datasets, the more uniform the dataset is, the better, and the less information per bin, the better. So, whether it is breaking up different data types, or separating each datum into its own bin, we want to organize our data with categories rather than human-readable things like words. 
 
-The QGIS georeferencer does not allow you to view both the scanned map and the workspace at the same time, so you will have to inspect both maps in turn and choose carefully to select locations to add georeferencing control points.
-One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration.  Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png) to zoom to the conservatory structure in the southwest corner of the park:
+So let's get started with digitizing the park pathways. Create another new shapefile layer as above (Layer >> New Layer >> New Shapefile Layer). This time, select “Line” as the vector type. I'm going to include the 'Path Type' attribute to keep track of if the path is for a 'major' or 'minor' path. The only thing I will type into this box is 'major' or 'minor' (in all lowercase). If I wanted to make a sub type of either of these categories, I would have to add another attribute. 
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png)
+Save it as `BronxParkPaths` when prompted. 
 
-Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) When you do so, the Enter map coordinates window appears:
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_09.png)
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
 
-If you knew the coordinates of this location, you could now add them manually, but since you do not, you must select them from the OSM data in the main QGIS window.  Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.  
-You may want to use the QGIS zoom tools to zoom in very closely to the conservatory.
+Now when you toggle on editing and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize19.png). You will be digitizing line features. As you click with the add features tool you can continue to add as many vertices to the line as you wish. To complete the line segment, use the right mouse button. 
 
-![conservatory](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_11.png))
+Line features are more complex than the point features, so we need to consider a few more dimensions (pun intended :) ). Since these streets are so detailed we have the option of actually digitizing the curbs and path outlines. For our analysis, we are less concerned with the outline and more concerned with where the paths were situated. Therefore, we are going to digitize the ‘centerline,’ using a single line feature to represent the center of the path feature. 
 
-Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again.  Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.  
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
+We also must decide where to begin and end the individual line features. A common practice is to create individual features between every intersection, ending each feature at the next intersection. This is advantageous because we can represent the connectivity of the features, essentially modeling a network. But doing it this way means that we must make sure that the connecting features are exactly coincident. QGIS has a handy feature to help with this: snapping tolerances. Snapping tools will automatically adjust the digitizing tools and ‘snap’ them to specified features as the cursor gets sufficiently close. 
 
-At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png)
-If satisfied, click the OK button and the point will be assigned and appear on the map.  
+To activate and customize the snapping tools, navigate to Settings >> Snapping Options:
 
-A link table entry will be generated on the bottom of the window:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
+![Snapping Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_10.png)
 
-To add a second point, repeat the same process.  It is a good idea to choose another point in a different portion of the map.  A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.  
+Set the snapping options for the current layer to be within 10 map units of a vertex (our map units are meters, based on the projection we are working in):
 
-Here, I have zoomed in to the northwestern most potion of the map where I add a ground control point at the very center of the intersection of Gun Hill Road and Tryon Ave:
+Layer selection: `Current Layer`
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef23.png)
+Snap: `To vertex`
 
-Repeat the same stepsto select the center of the same intersection from the OSM map and add the locations to the link table:
+Tolerance: `10.00000` `map units`
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef24.png)
+Click `Apply` then `OK`
 
-You must add a minimum of four points to complete the georeferencing (although more is generally better). Generate at least two more points on your own and add them to the link table.
+![Snapping Selections](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize21.png)
 
-Be careful to make sure that the control points you add match.  This can be quite tricky as many of the features have changed or were not actually built as planned.  
+Now the `Add feature` tool will automatically snap to another feature’s vertex whenever the cursor comes within 10 meters.
 
-Normally it is a good idea to choose control points from throughout the map.  However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
+Activate `Editing Mode` and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize22.png). Be careful to keep each vertex as close to the center of the street as possible. The more vertices you add, the smoother the street can be. Right click (or Control+Click) at the middle of the first intersection. This ends a line. 
 
-In this example, I selected six control points:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
+The attributes box will appear. I was digitizing a 'major' path, so I entered:
 
-It is good practice to save the table of control points at this stage. Choose “Save GCP points as” under the file menu and save it in the .points format in the same location as the image. This will allow you to later recreate the work you have done:
+id: `1`
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef26.png)
+Path Type: `major`
 
-Next, you will “transform” the image and create a georeferenced version of the scanned map image. In the georeferencer window, select transformation settings under the settings window:
+![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_13.png)
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef27.png)
+Begin the next feature at the endpoint of the first. Make sure the first point ‘snaps’ to the last vertex. In QGIS the cursor will highlight when you get within the snapping tolerance.
 
-Make the following selections:
+Continue to digitize until the next intersection. 
 
-Transformation type: Polynomial 1
+**TROUBLESHOOTING**
 
-Resampling Method: Cubic (usually used for images and photos)
+If you can't make a second line, your snapping tool may have small, easily resolved bug. Go back to Settings >> Snapping Options
 
-Output Raster: *save this in the same folder you are working in*
+and change the Tolerance from 10 map units to 10 pixels. This is a much smaller distance, but will solve the problem. Continue digitizing the paths. 
 
-Spatial reference system: EPSG:3857 *the pseudo Mercator projection used in the OSM data.**  
+**END TROUBLEHSHOOTING**
 
-You can also opt to have the georeferenced layer added to QGIS when finished:
+![Next Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_15.png)
 
-![save as](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_12.png)
+You can make the line bigger by clicking on the layer and navigating to Properties >> Style and change the line width - though this is not necessary. 
 
-Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png).
+Be sure to save your work regularly. 
 
-After the transformation finishes, you should see the map appear in the QGIS workspace:
-![georeferenced map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_13.png)
-
-You can make the scanned map layer partially transparent in the layer properties.  Right click on the map in the layer panel and select properties:
-![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_14.png)
-
-On the left panel in the properties dialog, select Transparency, here you can adjust the global transparency with a slider:
-![transparency](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_15.png)
-
-Compare the georeferenced map with the Open Street Map layer.  Make sure that features appear to match up closely:
-![review](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_16.png)
-
-In the next exercise you will be using the sheet you georeferenced here and digitizing some of the features from it.
-
+When you are completed, you will have two new datasets that you can use to study the evolution of the park's vegetation and paths. The features you encoded (i.e., tree type or path type) are permanently attached to the geometries you just traced as well. You will be able to import these new datasets into any other QGIS project. 
 
 ______________________________________________________________________________________________________________
 
 Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+
