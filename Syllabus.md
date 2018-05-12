@@ -68,8 +68,8 @@ Studio@Butler
 Studio@Butler
 * **Topics:** Where GIS Data Comes From, Geocoding
 * **Tutorial:** [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/04_MakingData01.md): Geocoding data from Historical Sources
-		* *Newspapers from the Jacksonian (1823-1842) and Antebellum (1843-1860) Eras.*
-		* *US cities*
+	* *Newspapers from the Jacksonian (1823-1842) and Antebellum (1843-1860) Eras.*
+	* *US cities*
 
 **Friday, May 25 | Making Data 02**
 300 S Buell Hall
