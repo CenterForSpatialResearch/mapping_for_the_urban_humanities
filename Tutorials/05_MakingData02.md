@@ -10,7 +10,7 @@ The first thing we need to do to transform a scanned paper map into a map that a
 
 In the second part of this tutorial, we will take this georeferenced map and digitize some of the features on it to make a new dataset that can then be used with this map or imported into other projects as a shapefile itself.
 
-In this tutorial, we will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georectify raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map infomation.
+In this tutorial, we will explore some of the georeferencing tools available in QGIS and use them to georeference a 1902 map of the Bronx. You will learn how to use GIS tools to georeference raster datasets. You will use the georeferenced map for the next exercise where you will digitize vector features from the map information.
 
 #### Notes on the data:
 
