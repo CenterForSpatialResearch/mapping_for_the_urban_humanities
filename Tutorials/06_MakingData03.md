@@ -10,7 +10,7 @@ Through this tutorial, you will explore some of the on-screen hand digitizing to
 
 #### Notes on the data: 
 
-The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete the [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/04_MakingData01.md) exercise. 
+The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete the [Making Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/05_MakingData02.md) exercise. 
 
 ### Digitizing Exercise
 
