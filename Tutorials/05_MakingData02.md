@@ -48,7 +48,7 @@ Since you are working in a new QGIS project, the map should show the entire eart
 Use the zoom-in tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png) and zoom into the Central Bronx in the area around The Botanical Garden<!--this took a lot of time for my computer to process. consider adding coordinates they can just type in?-->:
 
 ![garden zoom ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_07.png)
-Now you will access the georeferencing tools and match the scanned map to the OSM map.  
+Now you will access the georeferencing tools and match the scanned map to the OSM map.
 
 Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
 ![georeferencer ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_08.png)
@@ -56,12 +56,12 @@ Under the Raster menu,<!--Georeferencer was not automatically activated on my ve
 The Georeferencer screen will open:
 ![georeferencer window](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_09.png)
 
-Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.  
+Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.
 
 It will appear in the georeferencer window:
 ![georeferencer window with map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_10.png)
 
-This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner. The area to the east of the Bronx Park area is still largely undeveloped at this point.  
+This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner. The area to the east of the Bronx Park area is still largely undeveloped at this point.
 
 Historical maps can be difficult to georeference, and this sheet illustrates a number of the complications that can arise. The map projection is unclear and there are no ground control points or coordinates specified on the image itself. Because of this, you will georeference by matching physical features represented on the map with their current counterparts (and their known coordinates). However, most of the features in this map have changed or no longer exist (or were never actually built in the first place). Thus, you will need to be very careful to choose locations that you are confident match up well with their contemporary counterparts. Fortunately, there are a number of good candidates, particularly on the western half of the map where many streets and buildings still exist in the same location. You can use these landmarks to georeference the map.
 
@@ -75,21 +75,21 @@ Identify as precise a location as possible (a corner of the building will work n
 
 ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
 
-If you knew the coordinates of this location, you could now add them manually, but since you do not, you can select them from the OSM data in the main QGIS window. Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.  
+If you knew the coordinates of this location, you could now add them manually, but since you do not, you can select them from the OSM data in the main QGIS window. Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.
 You may want to zoom in very closely to the conservatory.
 
 ![conservatory](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_11.png)
 
-Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.  
+Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.
 ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
 
 At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png).
-If satisfied, click the OK button and the point will be assigned and appear on the map.  
+If satisfied, click the OK button and the point will be assigned and appear on the map.
 
 A link table entry will be generated on the bottom of the window:
 ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
 
-To add a second point, repeat the same process. It is a good idea to choose another point in a different portion of the map. A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.  
+To add a second point, repeat the same process. It is a good idea to choose another point in a different portion of the map. A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.
 
 Here, I have zoomed in to the northwestern most potion of the map where I add a ground control point at the very center of the intersection of Gun Hill Road and Tryon Ave:
 
@@ -101,7 +101,7 @@ Repeat the same steps to select the center of the same intersection from the OSM
 
 You must add a minimum of four points to complete the georeferencing (although more is generally better). Generate at least two more points on your own and add them to the link table.
 
-Be careful to make sure that the control points you add match. This can be quite tricky as many of the features have changed or were not actually built as planned.  
+Be careful to make sure that the control points you add match. This can be quite tricky as many of the features have changed or were not actually built as planned.
 
 Normally it is a good idea to choose control points from throughout the map. However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
 
