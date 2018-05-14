@@ -118,15 +118,15 @@ Next, you will “transform” the image and create a georeferenced version of t
 
 Make the following selections:
 
-Transformation type: Polynomial 1
+Transformation type: `Polynomial 1`
 
-Resampling Method: Cubic (usually used for images and photos)
+Resampling Method: `Cubic` (usually used for images and photos)
 
 Output Raster: *save this in the same folder you are working in*
 
-Target SRS: EPSG:3857 (*this is the pseudo Mercator projection used in the OSM data*)
+Target SRS: `EPSG:3857` (*this is the pseudo Mercator projection used in the OSM data — you may have to manually add this*)
 
-You can also opt to have the georeferenced layer added to QGIS when finished:
+You should also opt to have the georeferenced layer "Load in QGIS when done":
 
 ![save as](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_12.png)
 
