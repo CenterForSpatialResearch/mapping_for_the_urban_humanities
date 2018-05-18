@@ -89,7 +89,7 @@ Studio@Butler
 
 * **Due:** Deliverables from Week One tutorials. Printed 8.5x11 in color.
 * **Topics:** Group discussion and Pin Up of week-1 work (Examples from the GeoHumanities, Webmaps)
-* **Tutorial:** Showing Data 01 [**link forthcoming**]: Making Work Interactive with Webmaps
+* **Tutorial:** Showing Data: [Webmaps](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/07_Webmaps.md): Making Work Interactive with Webmaps
 	- *Newspapers from the Jacksonian (1823-1842) and Antebellum (1843-1860) Eras.*
 	- *US cities*
 
