@@ -80,7 +80,7 @@ Studio@Butler
 		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
 	* [Making Data 03](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Tutorials/06_MakingData03.md): Digitizing Features from Historical Maps
-			* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
+		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
 **Monday, May 28 | No Workshop, Memorial Day**
 
