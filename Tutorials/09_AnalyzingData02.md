@@ -3,7 +3,7 @@
 ### Analyzing Data 02: Schools, Libraries and Density Mapping
 #### Premise
 
-In that exercise we are interested in answering two questions: which areas of New York City have the highest concentration of libraries? And which areas have the highest concentration of schools?
+In this exercise we are interested in answering two questions: which areas of New York City have the highest concentration of libraries? And which areas have the highest concentration of schools?
 
 We will create a density map to do this – this is a very common type of map that is often used to construct persuasive arguments. The visualizations of such maps can also be incredibly misleading, so it is important to understand how they work and what they show.
 
