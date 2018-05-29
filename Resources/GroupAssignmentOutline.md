@@ -49,13 +49,13 @@ If you are designing a research project some questions you might choose address 
 
 #### Outline
 
-On *Tuesday, May 30*: Revisit your research questions in light of the research you conducted on the availability of datasets. Decide with your group on a general direction for the "prototype."
+On *Tuesday, May 29*: Revisit your research questions in light of the research you conducted on the availability of datasets. Decide with your group on a general direction for the "prototype."
 
 Between Tuesday and Wednesday research examples/precedents that can help guide your group's work on the prototype.
 
 On both *Wednesday* and *Thursday* you will have 1 hour to work with your group and the course instructors to develop your "prototype".
 
-On *Friday, June 2* you will have 2.5 hours to work with your group and the course instructors to finalize your prototype and presentation. The final 2 hours of class will be dedicated to group presentations and a discussion of the work.
+On *Friday, June 1* you will have 2.5 hours to work with your group and the course instructors to finalize your prototype and presentation. The final 2 hours of class will be dedicated to group presentations and a discussion of the work.
 
 #### Some Resources
 
