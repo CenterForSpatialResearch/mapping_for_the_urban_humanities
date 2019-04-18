@@ -29,16 +29,19 @@ To make a line break be sure to include two spaces at the end of your line.
 Like that.  
 
 lists:
-`1. text
-2. text
-3. text`
+`1. text  
+2. text  
+3. text``
+
 1. text
 2. text
 3. text
+
 bullets:
 `- first
 - second
 - third`
+
 - first
 - second
 - third
