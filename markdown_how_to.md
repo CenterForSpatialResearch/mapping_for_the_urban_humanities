@@ -50,10 +50,13 @@ bullets:
 - second
 - third
 
-`**bold**` **bold**  
-*italics*  
+`**bold**` looks like **bold**  
+``*italics*`` looks like *italics*
 
-Formulas can be highlighted with `backticks`: ``formula``
+Formulas can be highlighted with backticks `1 + 2 = 3`:
+```
+`1 + 2 = 3`
+```
 
 Include hyperlinks like [this](https://data.cityofnewyork.us) with this syntax: `[this](https://data.cityofnewyork.us)`
 
