@@ -1,5 +1,7 @@
 This is a quick guide to markdown syntax and tutorial styling for Mapping for the Urban Humanities summer 2019.
 
+** save all tutorials in the root folder of the github repository **not** in the tutorials folder. 
+
 ### Markdown syntax guide:
 
 ## Tutorial Title
@@ -51,3 +53,10 @@ i.e.:
 1. do this
 2. then do this
 3. after that do this
+
+
+
+### Resources about learning git and github:
+- [git handbook](https://guides.github.com/introduction/git-handbook/)
+- [cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
+-
