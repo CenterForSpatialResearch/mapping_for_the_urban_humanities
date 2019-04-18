@@ -25,18 +25,17 @@ bullets:
 
 **bold**  
 *italics*  
-    
+
 Formulas can be highlighted with `backticks`.
 
 Include hyperlinks like [this](https://data.cityofnewyork.us)
 
-For images use this syntax to embed it where you want to in the document:
+For images:
+1. use this syntax to embed it where you want to in the document:
 ![description of image one]
-
-At the bottom of the document make a running list formatted as follows:
+2. At the bottom of the document make a running list formatted as follows:
 [description of image one]: Images/2019/image_file_name.png
-
-Then place the image in the Images/2019 folder of the gihub repository
+3. Then place the image in the Images/2019 folder of the gihub repository
 
 Screenshots/images should follow this naming convention: `tutorial_name_01.png`
 
@@ -59,4 +58,3 @@ i.e.:
 ### Resources about learning git and github:
 - [git handbook](https://guides.github.com/introduction/git-handbook/)
 - [cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
--
