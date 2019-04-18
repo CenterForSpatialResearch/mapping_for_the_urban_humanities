@@ -1,6 +1,8 @@
 This is a quick guide to markdown syntax and tutorial styling for Mapping for the Urban Humanities summer 2019.
 
-** save all tutorials in the root folder of the github repository **not** in the tutorials folder. 
+** save all tutorials in the root folder of the github repository **not** in the tutorials folder.
+
+** view this in `Raw` mode above to see all of the syntax
 
 ### Markdown syntax guide:
 
@@ -12,21 +14,19 @@ To make a line break be sure to include two spaces at the end of your line.
 Like that.  
 
 lists:
-1.
-2.
-3.
+1. text
+2. text
+3. text
 
 bullets:
 - first
 - second
 - third
 
-**bold**
-*italic*
-
- Indenting happens with a tab.  
-    Or with two tabs.
-Code or names of
+**bold**  
+*italics*  
+    
+Formulas can be highlighted with `backticks`.
 
 Include hyperlinks like [this](https://data.cityofnewyork.us)
 
