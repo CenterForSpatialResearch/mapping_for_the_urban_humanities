@@ -2,8 +2,6 @@ This is a quick guide to markdown syntax and tutorial styling for Mapping for th
 
 ** save all tutorials in the root folder of the github repository **not** in the tutorials folder.
 
-** view this in `Raw` mode above to see all of the syntax
-
 ### General Style notes:
 Tutorials should start off with learning objectives outlining skills to be covered, as well as a premise outlining the concept / question being investigated with the particular tutorial.
 
@@ -24,40 +22,46 @@ Description of what happened.
 
 ### Markdown syntax guide:
 
-## Tutorial Title
+`## Tutorial Title`
 
-#### Section break  
+`#### Section break `
 
 To make a line break be sure to include two spaces at the end of your line.
 Like that.  
 
 lists:
+`1. text
+2. text
+3. text`
 1. text
 2. text
 3. text
-
 bullets:
+`- first
+- second
+- third`
 - first
 - second
 - third
 
-**bold**  
+`**bold**` **bold**  
 *italics*  
 
-Formulas can be highlighted with `backticks`.
+Formulas can be highlighted with `backticks`: ``formula``
 
-Include hyperlinks like [this](https://data.cityofnewyork.us)
+Include hyperlinks like `[this](https://data.cityofnewyork.us)`
 
 For images:
 1. use this syntax to embed it where you want to in the document:
-![description of image one]
+`![description of image one]`
 2. At the bottom of the document make a running list formatted as follows:
-[description of image one]: Images/2019/image_file_name.png
+`[description of image one]: Images/2019/image_file_name.png`
 3. Then place the image in the Images/2019 folder of the gihub repository
 
-Screenshots/images should follow this naming convention: `tutorial_name_01.png`
+Screenshots/images should follow this naming convention: tutorial_name_01.png
 
-
+#### Markdown resources:
+- [syntax](https://www.markdownguide.org/basic-syntax/)
 
 ### Resources about learning git and github:
 - [git handbook](https://guides.github.com/introduction/git-handbook/)
