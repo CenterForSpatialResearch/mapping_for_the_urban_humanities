@@ -29,18 +29,22 @@ To make a line break be sure to include two spaces at the end of your line.
 Like that.  
 
 lists:
-`1. text  
+```
+1. text  
 2. text  
-3. text`
+3. text
+```
 
 1. text
 2. text
 3. text
 
 bullets:
-`- first
+```
+- first
 - second
-- third`
+- third
+```
 
 - first
 - second
@@ -51,18 +55,21 @@ bullets:
 
 Formulas can be highlighted with `backticks`: ``formula``
 
-Include hyperlinks like `[this](https://data.cityofnewyork.us)`
+Include hyperlinks like [this](https://data.cityofnewyork.us) with this syntax: `[this](https://data.cityofnewyork.us)`
 
 For images:
 1. use this syntax to embed it where you want to in the document:
 `![description of image one]`
 2. At the bottom of the document make a running list formatted as follows:
-`[description of image one]: Images/2019/image_file_name.png`
+```
+[description of image one]: Images/2019/image_file_name.png
+```
 3. Then place the image in the Images/2019 folder of the gihub repository
 
 Screenshots/images should follow this naming convention: tutorial_name_01.png
 
 #### Markdown resources:
+- [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
 - [syntax](https://www.markdownguide.org/basic-syntax/)
 
 ### Resources about learning git and github:
