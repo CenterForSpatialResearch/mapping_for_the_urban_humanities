@@ -4,6 +4,24 @@ This is a quick guide to markdown syntax and tutorial styling for Mapping for th
 
 ** view this in `Raw` mode above to see all of the syntax
 
+### General Style notes:
+Tutorials should start off with learning objectives outlining skills to be covered, as well as a premise outlining the concept / question being investigated with the particular tutorial.
+
+Tutorials should include brief conceptual descriptions of tools/processes being used but should assume that the theoretical foundations of these tools/processes have been covered in lectures/class discussion.
+
+Its good to try to keep a through line that's connected to the premise with conversational notes about reason that we are about to embark on each methodological step. After the completion of that step, then, if applicable its often good to discuss any conclusions that can be drawn from it.
+
+It has worked well to call out each major conceptual step with a section break and then each software step gets numbered within that section
+
+i.e.:
+#### Performing a table join
+Description of why we are doing this and/or what this tool actually is.
+1. do this
+2. then do this
+3. after that do this
+Description of what happened.
+
+
 ### Markdown syntax guide:
 
 ## Tutorial Title
@@ -38,20 +56,6 @@ For images:
 3. Then place the image in the Images/2019 folder of the gihub repository
 
 Screenshots/images should follow this naming convention: `tutorial_name_01.png`
-
-### General Style notes:
-Tutorials should start off with learning objectives outlining skills to be covered, as well as a premise outlining the concept / question being investigated with the particular tutorial.
-
-Tutorials should include brief conceptual descriptions of tools/processes being used but should assume that the theoretical foundations of these tools/processes have been covered in lectures/class discussion.
-
-Its good to try to keep a through line that's connected to the premise with conversational notes about reason that we are about to embark on each methodological step. After the completion of that step, then, if applicable its often good to discuss any conclusions that can be drawn from it.
-
-It has worked well to call out each major conceptual step with a section break and then each software step gets numbered within that section
-i.e.:
-#### Performing a table join
-1. do this
-2. then do this
-3. after that do this
 
 
 
