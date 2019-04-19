@@ -58,11 +58,16 @@ Formulas can be highlighted with backticks `1 + 2 = 3`:
 `1 + 2 = 3`
 ```
 
-Include hyperlinks like [this](https://data.cityofnewyork.us) with this syntax: `[this](https://data.cityofnewyork.us)`
+Include hyperlinks like [this](https://data.cityofnewyork.us) with this syntax:
+```
+[this](https://data.cityofnewyork.us)
+```
 
 For images:
 1. use this syntax to embed it where you want to in the document:
-`![description of image one]`
+```
+![description of image one]
+```
 2. At the bottom of the document make a running list formatted as follows:
 ```
 [description of image one]: Images/2019/image_file_name.png
