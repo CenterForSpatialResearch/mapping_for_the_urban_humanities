@@ -21,9 +21,13 @@ A note on file structure for the github repository: save all tutorials in the ro
 
 ## Markdown syntax guide:
 
-`## Tutorial Title`
+```
+## Tutorial Title
+```
 
-`#### Section break `
+```
+#### Section break
+```
 
 To make a line break be sure to include two spaces at the end of your line.
 Like that.  
@@ -50,8 +54,14 @@ bullets:
 - second
 - third
 
-`**bold**` looks like **bold**  
-``*italics*`` looks like *italics*
+make things **bold**  like this:
+```
+**bold**
+```
+make things *italics* like this:
+```
+*italics*
+```
 
 Formulas can be highlighted with backticks `1 + 2 = 3`:
 ```
