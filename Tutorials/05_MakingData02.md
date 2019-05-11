@@ -40,7 +40,7 @@ Use the zoom-in tool ![zoom tool](https://github.com/CenterForSpatialResearch/ma
 
 Now you will access the georeferencing tools and match the scanned map to the OSM map.
 
-Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
+Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer..:
 ![georeferencer ](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png)
 
 The Georeferencer screen will open:
@@ -70,24 +70,24 @@ You may want to zoom in very closely to the conservatory.
 
 ![conservatory](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef16.png)
 
-Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
+Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
 
-At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png).
+At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png).
 If satisfied, click the OK button and the point will be assigned and appear on the map.
 
 A link table entry will be generated on the bottom of the window:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
 
 To add a second point, repeat the same process. It is a good idea to choose another point in a different portion of the map. A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.
 
 Here, I have zoomed in to the northwestern most potion of the map where I add a ground control point at the very center of the intersection of Gun Hill Road and Tryon Ave:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef23.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef23.png)
 
 Repeat the same steps to select the center of the same intersection from the OSM map and add the locations to the link table:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef24.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef24.png)
 
 You must add a minimum of four points to complete the georeferencing (although more is generally better). Generate at least two more points on your own and add them to the link table.
 
@@ -96,15 +96,15 @@ Be careful to make sure that the control points you add match. This can be quite
 Normally it is a good idea to choose control points from throughout the map. However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
 
 In this example, I selected six control points:
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
 
 It is good practice to save the table of control points at this stage. Choose “Save GCP points as” under the file menu and save it in the .points format in the same location as the image. This will allow you to later recreate the work you have done:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef26.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef26.png)
 
 Next, you will “transform” the image and create a georeferenced version of the scanned map image. In the georeferencer window, select transformation settings under the settings window:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef27.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef27.png)
 
 Make the following selections:
 
@@ -118,25 +118,25 @@ Target SRS: `EPSG:3857` (*this is the pseudo Mercator projection used in the OSM
 
 You should also opt to have the georeferenced layer "Load in QGIS when done":
 
-![save as](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_12.png)
+![save as](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef28.png)
 
-Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png).
+Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png.
 
 After the transformation finishes, you should see the map appear in the QGIS workspace:
-![georeferenced map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_13.png)
+![georeferenced map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef30.png)
 
 You can make the scanned map layer partially transparent in the layer properties.  Right click on the map in the layer panel and select properties:
-![properties](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_14.png)
+![properties](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef31.png)
 
 On the left panel in the properties dialog, select Transparency, here you can adjust the global transparency with a slider:
-![transparency](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_15.png)
+![transparency](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef32.png)
 
 Compare the georeferenced map with the Open Street Map layer.  Make sure that features appear to match up closely:
-![review](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_16.png)
+![review](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef33.png)
 
 In the next exercise you will be using the sheet you georeferenced here and digitize some of the features from it.
 
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
