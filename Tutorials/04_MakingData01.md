@@ -41,14 +41,17 @@ Use the zoom-in tool ![zoom tool](https://github.com/CenterForSpatialResearch/ma
 Now you will access the georeferencing tools and match the scanned map to the OSM map.
 
 Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer..:
+
 ![georeferencer ](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png)
 
 The Georeferencer screen will open:
+
 ![georeferencer window](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef7.png)
 
 Click on the Add Raster button ![Add Raster](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef8.png)  and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.
 
 It will appear in the georeferencer window:
+
 ![georeferencer window with map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef9.png)
 
 This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner. The area to the east of the Bronx Park area is still largely undeveloped at this point.
@@ -59,6 +62,7 @@ The QGIS georeferencer does not allow you to view both the scanned map and the w
 One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration. Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef10.png) to zoom to the conservatory structure in the southwest corner of the park:
 
 ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png)
+
 ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
 
 Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png) When you do so, the Enter map coordinates window appears:
@@ -71,12 +75,14 @@ You may want to zoom in very closely to the conservatory.
 ![conservatory](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef16.png)
 
 Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.
+
 ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
 
 At this point, if you are dissatisfied, you can move the assigned control points with the move GCP point tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef20.png) or delete it entirely and start over with the delete point tool ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef21.png).
 If satisfied, click the OK button and the point will be assigned and appear on the map.
 
 A link table entry will be generated on the bottom of the window:
+
 ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef22.png)
 
 To add a second point, repeat the same process. It is a good idea to choose another point in a different portion of the map. A street intersection or corner from the western portion of the map will work well for this as most of those streets continue to exist in the same configuration.
@@ -96,6 +102,7 @@ Be careful to make sure that the control points you add match. This can be quite
 Normally it is a good idea to choose control points from throughout the map. However, in this case this will be difficult as there are few features in the eastern sections of the map that can be reliably associated with contemporary locations.
 
 In this example, I selected six control points:
+
 ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef25.png)
 
 It is good practice to save the table of control points at this stage. Choose “Save GCP points as” under the file menu and save it in the .points format in the same location as the image. This will allow you to later recreate the work you have done:
@@ -123,15 +130,19 @@ You should also opt to have the georeferenced layer "Load in QGIS when done":
 Close the settings options and click on the start georeferencing button ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef29.png.
 
 After the transformation finishes, you should see the map appear in the QGIS workspace:
+
 ![georeferenced map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef30.png)
 
 You can make the scanned map layer partially transparent in the layer properties.  Right click on the map in the layer panel and select properties:
+
 ![properties](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef31.png)
 
 On the left panel in the properties dialog, select Transparency, here you can adjust the global transparency with a slider:
+
 ![transparency](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef32.png)
 
 Compare the georeferenced map with the Open Street Map layer.  Make sure that features appear to match up closely:
+
 ![review](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef33.png)
 
 In the next exercise you will be using the sheet you georeferenced here and digitize some of the features from it.
