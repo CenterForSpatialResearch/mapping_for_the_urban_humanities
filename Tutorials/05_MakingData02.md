@@ -25,7 +25,7 @@ If you haven't already, download the GitHub repository for this course. Using th
 
 Open QGIS:
 
-![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/Tutorials/Images/MakingData01/GeoRef1.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef1.png)
 
 You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM basemap service is QGIS through the OpenLayers plugin. This plugin does not come pre-installed with QGIS, so you will probably need to add it. Under the plugins menu, select “Manage and Install Plugins…”
 ![option](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_02.png)
