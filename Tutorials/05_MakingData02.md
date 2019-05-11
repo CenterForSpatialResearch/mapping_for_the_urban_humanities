@@ -25,60 +25,50 @@ If you haven't already, download the GitHub repository for this course. Using th
 
 Open QGIS:
 
-![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef1.png)
+![open](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef1.png)
 
-You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM basemap service is QGIS through the OpenLayers plugin. This plugin does not come pre-installed with QGIS, so you will probably need to add it. Under the plugins menu, select “Manage and Install Plugins…”
-![option](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_02.png)
+You are going to use OSM data as the reference data for the georeferencing process. You can view the OSM web basemap service directly through QGIS. One way to do this is to connect to OSM directly through the QGIS browser.  Expand "XYZ Tiles" in the QGIS browser listing and click on OpenStreetMap:
 
-The plugins dialog will open. Search for “Openlayers Plugin.”  Highlight it, and click “Install plugin”:
-
-![plugin dialogue](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_03.png)
-
-It may take a few seconds to install.  Close the plugins menu when finished. The OpenLayers tools should now appear under the Web menu:
-
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_04.png)
-
-This plugin will allow you to view a number of basemap services and stream them directly into your QGIS workspace. Choose the OpenStreetMap > OpenStreetMap option.
-
-![plugin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_05.png)
+![XYZ Tiles](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef2.png)
 
 Since you are working in a new QGIS project, the map should show the entire earth as the default:
-![qgis osm ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_06.png)
+![OSM](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef3.png)
 
-Use the zoom-in tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png) and zoom into the Central Bronx in the area around The Botanical Garden<!--this took a lot of time for my computer to process. consider adding coordinates they can just type in?-->:
+Use the zoom-in tool ![zoom tool](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef4.png) and zoom into the Central Bronx in the area around The Botanical Garden:
 
-![garden zoom ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_07.png)
+![garden zoom ](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef5.png)
+
 Now you will access the georeferencing tools and match the scanned map to the OSM map.
 
 Under the Raster menu,<!--Georeferencer was not automatically activated on my version. May have to manually activate on others.--> select Georeferencer>Georeferencer:
-![georeferencer ](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_08.png)
+![georeferencer ](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef6.png)
 
 The Georeferencer screen will open:
-![georeferencer window](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_09.png)
+![georeferencer window](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef7.png)
 
-Click on the Add Raster button ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef10a.png) and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.
+Click on the Add Raster button ![Add Raster](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef8.png)  and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.
 
 It will appear in the georeferencer window:
-![georeferencer window with map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_10.png)
+![georeferencer window with map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef9.png)
 
 This map is one sheet of six of a map of the East Bronx in 1902.  This section represents the area around the New York Botanical Garden and the (then new) Bronx Zoo. Fordham University can be seen just to the southwest of the garden and the Norwood neighborhood is in the northeast corner. The area to the east of the Bronx Park area is still largely undeveloped at this point.
 
 Historical maps can be difficult to georeference, and this sheet illustrates a number of the complications that can arise. The map projection is unclear and there are no ground control points or coordinates specified on the image itself. Because of this, you will georeference by matching physical features represented on the map with their current counterparts (and their known coordinates). However, most of the features in this map have changed or no longer exist (or were never actually built in the first place). Thus, you will need to be very careful to choose locations that you are confident match up well with their contemporary counterparts. Fortunately, there are a number of good candidates, particularly on the western half of the map where many streets and buildings still exist in the same location. You can use these landmarks to georeference the map.
 
 The QGIS georeferencer does not allow you to view both the scanned map and the workspace at the same time, so you will have to inspect both maps in turn and choose carefully to select locations to add georeferencing control points.
-One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration. Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png) to zoom to the conservatory structure in the southwest corner of the park:
+One candidate is the Haupt Conservatory in the Botanical Garden which continues to exist largely its original configuration. Use the georeferencer zoom tools ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef10.png) to zoom to the conservatory structure in the southwest corner of the park:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef11.png)
+![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef12.png)
 
-Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) When you do so, the Enter map coordinates window appears:
+Identify as precise a location as possible (a corner of the building will work nicely) and click on it in the georeferencing window using the add point tool ![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef13.png) When you do so, the Enter map coordinates window appears:
 
-![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
+![Enter Coords](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef14.png)
 
-If you knew the coordinates of this location, you could now add them manually, but since you do not, you can select them from the OSM data in the main QGIS window. Click on the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.
+If you knew the coordinates of this location, you could now add them manually, but since you do not, you can select them from the OSM data in the main QGIS window. Click on the ![blank](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef15.png) button to see the QGIS workspace.
 You may want to zoom in very closely to the conservatory.
 
-![conservatory](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata04_11.png)
+![conservatory](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData01/GeoRef16.png)
 
 Once you do so, you will need to reactivate the add button tool ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef17.png) by maximizing the georeferencing window and clicking the ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef18.png) button again. Once you select the same location on the workspace window, you will automatically be brought back to the georeferencing window where the assigned coordinates will be imputed.
 ![blank](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/GeoRef19.png)
