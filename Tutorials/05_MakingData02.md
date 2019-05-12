@@ -38,22 +38,23 @@ We will create a New Shapefile layer consisting of points. Navigate to Layer >> 
 
 ![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize5.png)
 
-In top of the New Shapefile Layer dialog box, save the new file in the same directory with your map, and name it "BronxParkTrees". Choose geometry type “Point”. Assign the same EPSG:3857 Pseudo-Mercator projection you used for the map in the previous exercise.  Every point will have its own unique ID that you will have to enter.
+In top of the New Shapefile Layer dialog box, save the new file in the same directory with your map, and name it "BronxParkTrees". Choose geometry type “Point”. Assign the same EPSG:3857 Pseudo-Mercator projection you used for the map in the previous exercise.  
 
-If you want to attach more data, you can create additional attribute fields for your dataset. It is best practice to separate all of the data types into different attributes (i.e., if you had data about the age of the tree, you would make another attribute field for "Age," etc.). When making data, having additional specific categories is always preferable to having a smaller table.
+Every point will have its own unique ID that you will have to enter.  If you want to attach more data, you can create additional attribute fields for your dataset. It is best practice to separate all of the data types into different attributes (i.e., if you had data about the age of the tree, you would make another attribute field for "Age," etc.). When making data, having additional specific categories is always preferable to having a smaller table.
 
 In the "New Field" Name box, enter the Name, "Type," to create a new attribute (We might fill this attribute with values such as "Maple," "Walnut," or "London Plane.").  Choose attribute type "Text Data" and click ![Add to Fields List](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize6.png) then click `OK`:
 
 ![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize7.png)
 
 The layer will now appear in the Layers panel:
+
 ![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize8.png)
 
 Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the Toggle Editing Tool ![Toggle editing](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize9.png):
 
  ![DigitizingExercise](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize10.png)
 
-Now the `Add Features` ![Add features](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize11.png) tool should be available. Click on the `Add Features` tool to begin digitizing trees.  This tool gives us a circular cursor. For every tree (or other data point) we want to add, all we have to do is click on it. An attribute dialog appears where we can type in attribute information for the feature we just created:
+Now the `Add Features` ![Add features](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize11.png) tool should be available. Click on the ![Add features](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize11.png) to begin digitizing trees.  This tool gives us a crosshair cursor. For every tree (or other data point) we want to add, all we have to do is click on it. An attribute dialog appears where we can type in attribute information for the feature we just created:
 
 ![New Feature](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize12.png)
 
@@ -62,47 +63,58 @@ There is no information on the map in regards to the type of tree; however, I ha
 Click `OK` when finished.
 
 Continue to digitize trees in this corner of the park:
-![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize12.png)
 
-We can move or edit the point features with the move feature tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize13.png) if you want to delete a tree, you can select it with the select features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize14.png) at use the delete key on the keyboard. It is a good idea to regularly use the “save for selected laters” function to save your work as you digitize:
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_08.png)
+![DigitizingExercise](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize13.png)
 
-When finished, depress the toggle editing tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize16.png) to close the editing session and save your changes to the layer.
+We can move or edit the point features with the Vertex Tool, click ![vertex tool](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize14.png) and then click on the desired point to select it:
+
+![select point](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize15.png)
+
+ You can manually move a selected point with the mouse or delete it with the delete key on the keyboard:
+
+ ![move point](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize16.png)
+
+  It is a good idea to regularly use the “save for selected layers” function, under the Current Edits menu ![current edits](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize17.png), to save your work as you digitize:
+
+![Save Feature](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize18.png)
+
+When finished, depress the toggle editing tool ![Toggle editing](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize9.png) to close the editing session and save your changes to the layer.
 
 We are also interested in where the park pathways were situated. However, in order to do this, we will need to create another new shapefile layer. The reason for this is that the pathways will be made with lines, while the trees were made points. It is best practice to keep different types of shapes (points, lines, and polygons) separate (luckily, QGIS won't let us make them all as the same file anyhow). This is a general principle to keep in mind when making data. When working with datasets, the more uniform the dataset is, the better, and the less information per bin, the better. So, whether it is breaking up different data types, or separating each datum into its own bin, we want to organize our data by categories rather than human-readable things like words.
 
-So let's get started with digitizing the park pathways. Create another new shapefile layer as above (Layer >> New Layer >> New Shapefile Layer). This time, select "Line" as the vector type. I'm going to include the "Path Type" attribute to keep track of if the path is for a "major" or "minor" path. The only thing I will type into this box is "major" or "minor" (in all lowercase). If I wanted to make a sub-type of either of these categories, I would have to add another attribute.
+So let's get started with digitizing the park pathways. Create another new shapefile layer as above (Layer >> Create Layer >> New Shapefile Layer). This time, use `BronxParkPaths` as the name. Select "Line" as the vector type. Again assign the same EPSG:3857 Pseudo-Mercator projection.  I'm going to include the "Path Type" attribute to keep track of if the path is for a "major" or "minor" path. The only thing I will type into this box is "major" or "minor" (in all lowercase). If I wanted to make a sub-type of either of these categories, I would have to add another attribute.
 
-Save it as `BronxParkPaths` when prompted.
+![New Line Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize19.png)
 
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_09.png)
-
-
-Now when you toggle on editing and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize19.png). You will be digitizing line features. As you click with the add features tool you can continue to add as many vertices to the line as you wish. To complete the line segment, use the right mouse button.
+Now when you toggle on editing and select the add features tool ![Add Line features](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize20.png). You will be digitizing line features. As you click with the add features tool you can continue to add as many vertices to the line as you wish. To complete the line segment, use the right mouse button.
 
 Line features are more complex than the point features, so we need to consider a few more dimensions (pun intended :) ). Since these streets are so detailed, we could potentially digitize everything from the path outlines to the curbs; this is more detail than we need. For our analysis, we are less concerned with the outline of the paths (the space they take up) and more concerned with where the paths were situated. Therefore, we are going to digitize the "centerline," using a single line feature to represent the center of the path feature.
 
 We also must decide where to begin and end the individual line features. A common practice is to create individual features between every intersection, ending each feature at the next intersection. This is advantageous because we can represent the connectivity of the features, essentially modeling a network. But doing it this way means that we must make sure that the connecting features are exactly coincident. QGIS has a handy feature to help with this: snapping tolerances. Snapping tools will automatically adjust the digitizing tools and "snap" them to specified features as the cursor gets sufficiently close.
 
-To activate and customize the snapping tools, navigate to Settings >> Snapping Options:
+To activate and customize the snapping tools, navigate to Settings >> Options:
 
-![Snapping Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_10.png)
+![Settings](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize21.png).
+
+In the Options dialog, choose the Digitizing tabs and navigate to the snapping options:
+
+![Digitizing options](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize22.png).
 
 Set the snapping options for the current layer to be within 10 map units of a vertex (our map units are meters, based on the projection we are working in):
 
-Layer selection: `Current Layer`
+Check on `Enable snapping by default`
 
-Snap: `To vertex`
+Default snap mode: `Vertex`
 
-Tolerance: `10.00000` `map units`
+Default snapping tolerance: `10.00000` `map units`
 
-Click `Apply` then `OK`
+![Digitizing settings](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize23.png).
 
-![Snapping Selections](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize21.png)
+Click `OK`
 
 Now the `Add feature` tool will automatically snap to another feature’s vertex whenever the cursor comes within 10 meters.
 
-Activate `Editing Mode` and select the add features tool ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize22.png). Be careful to keep each vertex as close to the center of the street as possible. The more vertices you add, the smoother the street can be. Right click (or Control+Click) at the middle of the first intersection. This ends a line.
+Activate `Editing Mode` and select the add features tool ![Add Line features](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize20.png). Be careful to keep each vertex as close to the center of the street as possible. The more vertices you add, the smoother the street can be. Right click at the middle of the first intersection. This ends a line.
 
 The attributes box will appear. I was digitizing a "major" path, so I entered:
 
@@ -110,7 +122,7 @@ id: `1`
 
 Path Type: `major`
 
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_13.png)
+![Create Line](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize24.png).
 
 Begin the next feature at the endpoint of the first. Make sure the first point "snaps" to the last vertex. In QGIS the cursor will highlight when you get within the snapping tolerance.
 
@@ -122,7 +134,7 @@ If you can't make a second line, your snapping tool may have small, easily resol
 
 **END TROUBLEHSHOOTING**
 
-![Next Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_15.png)
+![All paths](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize25.png).
 
 You can make the line bigger by clicking on the layer and navigating to Properties >> Style and change the line width - though this is not necessary.
 
@@ -132,4 +144,4 @@ When you are completed, you will have two new datasets that you can use to study
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
