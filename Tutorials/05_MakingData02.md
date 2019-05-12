@@ -1,6 +1,6 @@
 ## Making Data
 
-### Making Data 02: Digitizing features from a georeferenced map
+### Making Data 02: Digitizing Features from a georeferenced map
 
 #### Premise
 
@@ -10,17 +10,17 @@ Through this tutorial, you will explore some of the on-screen hand digitizing to
 
 #### Notes on the data:
 
-The map you will be using for this exercise is a detail from a map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that has been gereferenced in a previous exercise.  If you would like to read more about this map or review how it was georectified for use here (or georectify the original map yourself), review the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.
+The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.
 
 ### Digitizing Exercise
 
 Open a **new project** in QGIS.
 
-Since we already georeferenced our map, you only need to load the georeferenced tiff file. In the process of georeferencing it, we aligned the image with spatial information that QGIS can understand. It is now similar to the raster file for that we used in Part I. This is important because we can now combine other datasets such as historic or current population data, maps showing development in the intervening years, or other datasets. We can also use the data that was drawn onto this map and combine it with other datasets once we translate it from the scanned version into a digitized version.
+Since we already georeferenced our map, you only need to load the georeferenced tiff file. In the process of georeferencing it, we aligned the image with spatial information that QGIS can understand. It is now similar to the raster file for the gridded population of the world that we used in Part I. This is important because we can now combine other datasets such as historic or current population data, maps showing development in the intervening years, or other datasets. We can also use the data that was drawn onto this map and combine it with other datasets once we translate it from the scanned version into a digitized version.
 
 Let's start with our map.
 
-Click on the Data Source Manager button ![Data Source](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.png) choose raster and navigate to the file Bronx1902Sheet2Detail_Georectified.tif in the course data directory. Click Add:
+Click on the Data Source Manager button ![Data Source](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.png) choose raster and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.  Click Add:
 
 ![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize2.PNG)
 
