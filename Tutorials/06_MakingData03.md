@@ -1,6 +1,6 @@
 ## Making Data
 
-### Making Data 03: Digitizing Features from a georeferenced map
+### Making Data 02: Digitizing Features from a georeferenced map
 
 #### Premise
 
@@ -20,39 +20,43 @@ Since we already georeferenced our map, you only need to load the georeferenced 
 
 Let's start with our map.
 
-Click on the add raster button ![DigitizingExercise](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.png) and navigate to the georeferenced image you made in the [Making Data 01]https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.
+Click on the Data Source Manager button ![Data Source](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.png) choose raster and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.  Click Add:
+
+![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize2.png)
 
 Since you verified its accuracy already, you will not need any basemap data for this exercise, so your project will look like this:
-![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_01.png)
+
+![DigitizingExercise](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize3.png)
 
 This map is part of a very large-scale plan and the Bronx park area, which contains the then-new botanical garden and zoo, is particularly detailed. Every structure, road, walking path, and tree is mapped. We would like to be able to use this data in another setting, so we will digitize some of the features. We will start by digitizing trees. For the trees, we will use point geometry, so this will be a particularly simple dataset.
 
 Zoom into the southwest corner of Bronx Park, where the Conservatory garden and library are (labeled "museum" on the map):
-![zoomed map](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_02.png)
+![zoomed map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize4.png)
 
-We will create a New Shapefile layer consisting of points. Navigate to Layer >> Create Layer >> New Shape File:
-![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_03.png)
+We will create a New Shapefile layer consisting of points. Navigate to Layer >> Create Layer >> New Shapefile Layer:
 
-In the new vector dialog layer, choose type “Point”. Every point will have its own unique ID that you will have to enter. If you want to attach more data, you can create additional attribute fields for your dataset. In the "New Field" Name box, enter the category, "Tree," to create a new attribute. (We might fill this attribute with values such as "Maple," "Walnut," or "London Plane.")
+![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize5.png)
+
+In the New Shapefile Layer dialog box, choose geometry type “Point”. Every point will have its own unique ID that you will have to enter. If you want to attach more data, you can create additional attribute fields for your dataset. In the "New Field" Name box, enter the Name, "Type," to create a new attribute. (We might fill this attribute with values such as "Maple," "Walnut," or "London Plane.")
 
 It is best practice to separate all of the data types into different attributes (i.e., if you had data about the age of the tree, you would make another attribute field for "Age," etc.). When making data, having additional specific categories is always preferable to having a smaller table.
 
 Here, I have added an attribute named "Tree" and made it a text field with a maximum length of 80. Select `Add to fields list`, then click `OK`:
-![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_04.png)
+![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize6.png)
 
 When prompted, save the new file in the same directory with your map, and name it "BronxParkTrees".
 
 The layer will now appear in the Layers panel:
-![New Layer](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_05.png)
+![New Layer](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize7.png)
 
-Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the `Editing Tool` ![DigitizingExercise](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MakingData01/Digitize9.png)
+Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the `Editing Tool` ![DigitizingExercise](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize8.png)
 
 Now the `Add Features` tool should be available. Click on the `Add Features` tool to begin digitizing trees.
 
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_06.png)
+![New Feature](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize3.png)
 
 This tool gives us a circular cursor. For every tree (or other data point) we want to add, all we have to do is click on it. An attribute dialog appears where we can type in attribute information for the feature we just created:
-![New Feature](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata05_07.png)
+![New Feature](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize3.png)
 
 There is no information on the map in regards to the type of tree; however, I happen to know that the trees in front of the library are a stand of stately tulips, so we can enter that information now. We will give each tree a unique id so that we can reference them later (unfortunately, QGIS does not do this automatically, and doing this manually is prone to errors. However, it is still worth doing as it is much easier to work with data where the rows have unique identifiers). It is generally best practice to make these identifiers simple and uniform. For example, while "3rd tree on the left after the museum" is unique and probably refers to one and only one tree, this naming system would be difficult to make consistent in our dataset. This is obviously a silly example, but the issue becomes much more relevant if we think about buildings, names, or even states (i.e., New York is unique, but NY is a better identifier — simpler, but also because other states also begin with "New"). For our trees example, I'm just going to use sequential numbers.
 
