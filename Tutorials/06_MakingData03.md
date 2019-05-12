@@ -20,9 +20,9 @@ Since we already georeferenced our map, you only need to load the georeferenced 
 
 Let's start with our map.
 
-Click on the Data Source Manager button ![Data Source](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.PNG) choose raster and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.  Click Add:
+Click on the Data Source Manager button ![Data Source](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize1.png) choose raster and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.  Click Add:
 
-![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize2.png)
+![Add Map](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/Images/MakingData02/Digitize2.PNG)
 
 Since you verified its accuracy already, you will not need any basemap data for this exercise, so your project will look like this:
 
