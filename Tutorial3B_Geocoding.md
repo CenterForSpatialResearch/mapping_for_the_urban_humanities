@@ -146,7 +146,7 @@ If the map of the US comes out very stretched at the top, change the *project* p
 
 ![projection]
 
-Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and make the following selections:
+Now add the `uscities.csv layer` by using the  `Add Data Source Manager` button, and selecting `Delimited Text`. Use options:
 - csv
 - point coordinates
 	- X field: 'lng'
@@ -164,7 +164,7 @@ If you only get one point in the middle of the US when you add your cities layer
 
 **END TROUBLESHOOTING**
 
-Finally, add **both** of the Newspapers layers you just created using the `Delimited Text Layer` button, and make the following selections:
+Finally, add **both** of the Newspapers layers you just created using the `Add Data Source Manager` button, and make the following selections:
 - csv
 - No geometry (attribute only table)
 
@@ -184,7 +184,7 @@ SAVE your project in the Tutorials/Exercises folder.
 
 Now that we have all of our data loaded into QGIS, we need to align the place names in our newspapers with geographic data. I am going to start with the Antebellum file, you will do the same set of steps for the Jacksonian files. HINT: we will have to fix our Antebellum file and reimport it. The problem will exist in the Jacksonian file, too... You may want to fix the problem *before* doing all of these steps.
 
-Generally, there are two ways to go about geocoding. The first is to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, and each city only appeared once. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. This is our situations, so we will have to make our own *geocorder* from a *gazetteer*
+Generally, there are two ways to go about geocoding. The first is to do a table join, matching records 1:1. If we had tabulated data, this would be our strategy. For example, if we had a list of how many newspapers were in each city, and each city only appeared once. We did this in the Mapping Data tutorial. However, if we have multiple records for the same city, we cannot do a table join, since there is no unique identifier. This is our situations, so we will have to make our own *geocoder* from a *gazetteer*
 
 Table Join **will** work for this data:
 
@@ -376,5 +376,5 @@ Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, 
 [excel replace]: Images/2019/Geocoding_32.png
 [sheets replace]: Images/2019/Geocoding_33.png
 [Line symbol]: Images/2019/Geocoding_35.png
-[Jacksonian Map](Images/2019/Geocoding_37.png)
-[Antebellum Map](Images/2019/Geocoding_38.png)
+[Jacksonian Map]: Images/2019/Geocoding_37.png
+[Antebellum Map]: Images/2019/Geocoding_38.png
