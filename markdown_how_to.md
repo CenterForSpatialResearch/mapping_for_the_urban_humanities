@@ -86,6 +86,8 @@ For images:
 
 Screenshots/images should follow this naming convention: tutorial_name_01.png
 
+![test image csr logo]
+
 #### Markdown resources:
 - [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
 - [syntax](https://www.markdownguide.org/basic-syntax/)
@@ -93,3 +95,8 @@ Screenshots/images should follow this naming convention: tutorial_name_01.png
 ### Resources about learning git and github:
 - [git handbook](https://guides.github.com/introduction/git-handbook/)
 - [cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
+
+
+------
+
+[test image csr logo]:Images/2019/image_file_name.png
