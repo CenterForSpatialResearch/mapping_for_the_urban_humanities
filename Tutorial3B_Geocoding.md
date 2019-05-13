@@ -317,30 +317,6 @@ Note: These maps are not very good: it's almost impossible to tell how many news
 ![Antebellum Map]
 
 
-
-#### Optional Next Steps
-
-**If you want a tally of how many papers appeared in each city:**
-
-Use the GroupStats plugin. First install the plugin by navigating to Plugins >> Manage and Install Plugins. Search for the `GroupStats` plugin.
-
-It will be in the `Vector` menu.
-
-Navigate to Vector >> GroupStats >> GroupStats. Select the Antebellum layer.
-
-From the fields list, drag the city_states field into the "rows" box. Also drag the city_states field into the "value" box.
-
-Drag the "count" option into the "value" box (below the field you put in there).
-Click "calculate" and a table will appear on the left. To save the output, navigate to Data >> Save all to CSV File. Name your file AntebellumNewspaperCounts.
-
-![Delete fields]
-
-
-**If you want to know how many papers were in each county** (maybe to make a chloropleth map)
-
-Use the Vector >> Analysis Tools >> Points in Polygon AS WE DID IN TUTORIAL XXXXX
-
-
 ______________________________________________________________________________________________________________
 
 Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
@@ -360,7 +336,7 @@ Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, 
 [paper]: Images/2019/Geocoding_15.png
 [insert2]: Images/2019/Geocoding_16.png
 [formula2]: Images/2019/Geocoding_17.png
-[excel2]: mages/2019/Geocoding_18.png
+[excel2]: Images/2019/Geocoding_18.png
 [papers]: Images/2019/Geocoding_19.png
 [warning]: Images/2019/Geocoding_20.png
 [Layer properties]: Images/2019/Geocoding_21.png
