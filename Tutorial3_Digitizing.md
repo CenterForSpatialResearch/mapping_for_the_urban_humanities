@@ -50,9 +50,9 @@ The layer will now appear in the Layers panel:
 
 ![Layers List]
 
-Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the Toggle Editing Tool ![Toggle editing]:
+Now click on the BronxParksTrees Layer to activate it and turn on editing by clicking on the Toggle Editing Tool ![Toggle editing]
 
- ![Editing Mode]
+![Editing Mode]
 
 Now the `Add Features` ![Add features] tool should be available. Click on the ![Add features] to begin digitizing trees.  This tool gives us a crosshair cursor. For every tree (or other data point) we want to add, all we have to do is click on it. An attribute dialog appears where we can type in attribute information for the feature we just created:
 
@@ -147,9 +147,9 @@ ________________________________________________________________________________
 Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 [Data Source]: Images/2019/Digitize1.png
-[Add Map]: Images/2019/Digitize2.png
+[Add Map]: Images/2019/Digitize2.PNG
 [Map Sheet]: Images/2019/Digitize3.png
-[zoomed map]: tool](Images/2019/Digitize4.png
+[zoomed map]: Images/2019/Digitize4.png
 [New Shapefile]: Images/2019/Digitize5.png
 [Add to Fields List]: Images/2019/Digitize6.png
 [New Layer Settings]: Images/2019/Digitize7.png
