@@ -189,6 +189,7 @@ To finish, **arrange** your data layers (click and drag in the Layers panel), pl
 
 ![WithRaster]
 
+**Save** your QGIS project.
 
 [blank]: Images/2019/Tutorial0_interface_blank.png
 [ProjectHome]: Images/2019/Tutorial0_ProjectHome.png
