@@ -10,6 +10,7 @@ Its good to try to keep a through line that's connected to the premise with conv
 
 It has worked well to call out each major conceptual step with a section break and then each software step gets numbered within that section
 For example:
+
 #### Performing a table join
 Description of why we are doing this and/or what this tool actually is.
 1. do this
