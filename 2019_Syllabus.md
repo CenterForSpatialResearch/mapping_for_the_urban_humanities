@@ -97,3 +97,9 @@ Studio@Butler
 
 **Thursday, June 6 | Final Presentations**  
 300 S Buell Hall
+
+
+**By June 21**
+- Please upload your final presentation and required two page reflection on how you will incorporate topics and skills from the workshop into your teaching and/or research via [this form](https://docs.google.com/forms/d/e/1FAIpQLSdTPyUYdNniXsnMi2BtIr4gagNFNUDUZi1w27aL3ZJvoFulFw/viewform?usp=sf_link).
+
+- Please complete [this](https://docs.google.com/forms/d/e/1FAIpQLSearZxxg-hdlYquE0gQZ8akofojDCf_1eJrvAzjh3PPLWra_A/viewform?usp=sf_link) brief survey with your feedback on the structure and material of the workshop.
