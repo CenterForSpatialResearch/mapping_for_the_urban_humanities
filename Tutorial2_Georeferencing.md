@@ -147,9 +147,9 @@ Compare the georeferenced map with the Open Street Map layer.  Make sure that fe
 
 In the next exercise you will be using the sheet you georeferenced here and digitize some of the features from it.
 
-[open](Images/2019/GeoRef1.png)
-
 
 ______________________________________________________________________________________________________________
 
 Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+
+[open]: Images/2019/GeoRef1.png
