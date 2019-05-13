@@ -154,7 +154,7 @@ Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intens
 [Add to Fields List]: Images/2019/Digitize6.png
 [New Layer Settings]: Images/2019/Digitize7.png
 [Layers List]: Images/2019/Digitize8.png
-[Toggle editing] : Images/2019/Digitize9.png
+[Toggle editing]: Images/2019/Digitize9.png
 [Editing Mode]: Images/2019/Digitize10.png
 [Add features]: Images/2019/Digitize11.png
 [Attribute entry]: Images/2019/Digitize12.png
