@@ -1,6 +1,4 @@
-## Making Data
-
-### Making Data 01: Georeferencing a scanned paper map
+### Tutorial 2: Georeferencing a scanned paper map
 
 #### Premise
 
@@ -48,7 +46,7 @@ The Georeferencer screen will open:
 
 ![georeferencer window]
 
-Click on the Add Raster button ![Add Raster] and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/2_MakingData.
+Click on the Add Raster button ![Add Raster] and navigate to the JPEG image "Bronx1902Sheet2_Edit.jpg" from the class files in the directory Class_Data/Tutorial2_Georeferencing.
 
 It will appear in the georeferencer window:
 

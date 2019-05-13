@@ -1,6 +1,4 @@
-## Making Data
-
-### Making Data 02: Digitizing Features from a georeferenced map
+### Tutorial 3: Digitizing Features from a georeferenced map
 
 #### Premise
 
@@ -10,7 +8,7 @@ Through this tutorial, you will explore some of the on-screen hand digitizing to
 
 #### Notes on the data:
 
-The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.
+The map you will be using for this exercise is the map sheet from "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" that you georeferenced in the previous exercise. If you have not already done so, please complete [Tutorial 2: Georeferencing](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorial2_Georeferencing.md) exercise.
 
 ### Digitizing Exercise
 
@@ -20,7 +18,7 @@ Since we already georeferenced our map, you only need to load the georeferenced 
 
 Let's start with our map.
 
-Click on the Data Source Manager button ![Data Source] choose raster and navigate to the georeferenced image you made in the [Making Data 01](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorials/04_MakingData01.md) exercise.  Click Add:
+Click on the Data Source Manager button ![Data Source] choose raster and navigate to the georeferenced image you made in the [Tutorial 2: Georeferencing](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities/blob/master/Tutorial2_Georeferencing.md) exercise.  Click Add:
 
 ![Add Map]
 

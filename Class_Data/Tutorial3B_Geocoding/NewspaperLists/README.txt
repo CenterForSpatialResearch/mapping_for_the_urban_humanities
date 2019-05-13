@@ -1,0 +1,1 @@
+Only use these files if you do not have access to Google Sheets, Microsoft Excel, LibreOffice, Numbers, or another program that can work with spreadsheets.

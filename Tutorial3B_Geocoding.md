@@ -1,6 +1,4 @@
-## Making Data
-
-### Making Data 03: Geocoding historic data
+### Tutorial 3B: Geocoding historic data
 
 #### Premise
 In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States.
@@ -32,14 +30,14 @@ Open a web browser (Google Chrome, Firefox, or Safari are OK, please do not use 
 
 Also open the `Antebellum Period, Parts 1 and 2, 1843-1860` > `Title List`
 
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_01.png)
+![readex1]
 
 
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_02.png)
+![readex2]
 
 Looking at this website, we suspect that the data is organized as a table because there are columns, column headers, and all the data in each column lines up nicely.
 
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_04.png)
+![readex3]
 
 This is fortunate because whenever data is in an organized format, there are a host of simple tools to help us translate that data. Today, we are going to use Google Drive to format the table nicely for our use.
 
@@ -55,25 +53,25 @@ In the first cell (cell A1), type the following formula and hit 'Enter':
 
 `=IMPORTHTML("https://www.readex.com/titlelists/jacksonian-era-parts-1-and-2-1823-1842", "table", 1)`
 
-![google sheet options](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_06.png)
+![google sheet options]
 
 
 Let's break that expression down. Google Sheets has a function, `IMPORT HTML`, which imports and parses content found on websites. For this function to work in our Sheet, anything that is words has to be enclosed in quotes because we  want the Sheet to just match the words, not *evaluate* them<!--will see if there is link to explain strings versus values-->. First, we tell it which website we want it to read by giving it the exact url (first, for the Readex Jacksonian Era), then tell the function if it should look for a "table" or a "list"; we want a "table". Those are the only types this particular function can work with, but that's enough for us. Finally, which table (or list) it should look for (the first, second, etc.). Once we hit 'Enter', it goes out and reads the website, sees if there is a table where we told it to look and then pulls in the data.
 
 For more on this function, click on the 'Learn More about IMPORTHTML' link at the bottom of the dialogue box. Google sheets also has IMPORT XML (for structured data online), FEED (for RSS feeds), DATA (for data hosted online), or RANGE (for portions of other Google Sheets) for different types of data.
 
-![google sheet help](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_07.png)
+![google sheet help]
 
-Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-separated values (.csv, current sheet). Save it in the Class_Data/2_MakingData Folder
+Now we will save our sheet as a csv. Navigate to File >> Download as >> Comma-separated values (.csv, current sheet). Save it in the Class_Data/Tutorial3B_Geocoding Folder
 
-![save](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_08.png)
+![save csv]
 
 Now add another sheet at the bottom of the page (or overwrite the one we just made) and do the same for the newspapers listed on the Antebellum Era website.
 
 
 #### Cities Data
 
-We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/2_MakingData folder, `uscities.csv`. This is a modern list of US cities, and as such, there may be some discrepancies, as some place names may have changed since the mid-19th century (luckily, none of these will impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose, many of which reference ancient times as well as modern.
+We now need to find a list of cities so we can geolocate these places. The list we are using is from [www.data.gov](https://catalog.data.gov/dataset/place-national), it has already been downloaded for you as a csv (and modified in the way that we need), and is in the Class_Data/Tutorial3B_Geocoding folder, `uscities.csv`. This is a modern list of US cities, and as such, there may be some discrepancies, as some place names may have changed since the mid-19th century (luckily, none of these will impact our project). We also know that the biggest changes between then and now are the shape of the counties more than the names of the cities. Columbia University Libraries keeps a [collection of historical place names](http://www.columbiagazetteer.org/static/using_gazetteer) with geographic information for just this purpose, many of which reference ancient times as well as modern.
 
 Let's take a look at our cities data by opening it in any program that can read a csv (e.g., LibreOffice, Excel, Google Sheets, Sublime Text, etc.). We see that there are two "unique" identifiers: `city_state`, and the last column, `id`. I made that `city_state` column — data rarely arrives with a column that is both redundant and complicated (i.e., it has 2 pieces of information). However, for the geocoding step, we need a column that contains both the city and state information.
 
@@ -89,24 +87,24 @@ Open one of your newspapers files in Excel (it does not matter which one, you wi
 
 Insert a column between the \*State\* and \*Start Date\* columns by clicking on the 'Column D' box to highlight the whole column, then right click and select 'Insert'. A new column will appear.
 
-![insert](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_12.png)
+![insert]
 
 In the first cell of that column, type `city_state` with no space between the words - use an underscore instead (this is just good naming convention). In the next cell (D2), type the following formula: `=CONCATENATE(B2, ", ", C2)` and hit 'Enter'. The new field should appear.
 
 
-![formula](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_13.png)
+![formula]
 
 Hover over the little square in the bottom right hand corner of the cell and your cursor should turn into a black hatch mark. Once it does, click and drag this cell down to populate all of the rows.
 
-![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_14.png)
+![excel]
 
 Your file should look like this now:
 
-![paper](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_15.png)
+![paper]
 
 Save your file as a .csv. You will get a warning message, select 'Continue'
 
-![warning](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_20.png)
+![warning]
 
 Repeat this process for the other newspaper file.
 
@@ -116,21 +114,21 @@ If you saved your file to your Google Drive, open it from there. Otherwise, impo
 
 Insert a column between the \*State\* and \*Start Date\* columns by clicking on the 'Column D' box to highlight the whole column, then right click and select 'Insert 1 left'. A new column will appear.
 
-![insert](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_16.png)
+![insert2]
 
 In the first cell of that column, type `city_state` with no space between the words - use an underscore instead (this is just good naming convention). In the next cell (D2), type the following formula: `=CONCATENATE(B2, ", ", C2)` and hit 'Enter'. The new field should appear.
 
-![formula](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_17.png)
+![formula2]
 
 Hover over the little square in the bottom right hand corner of the cell and your cursor should turn into a black hatch mark. Once it does, click and drag this cell down to populate all of the rows.
 
-![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_18.png)
+![excel2]
 
 Your file should look like this now:
 
-![papers](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_19.png)
+![papers]
 
-Download your sheet as a csv file the same way we did before. Move it to the Class_Data/2_MakingData folder. You can (and should) rename these files.
+Download your sheet as a csv file the same way we did before. Move it to the Class_Data/Tutorial3B_Geocoding folder. You can (and should) rename these files.
 
 Repeat this process for the other newspaper file.
 
@@ -142,11 +140,11 @@ Open a new QGIS project.
 
 In their original form, the newspapers files we just downloaded do not have any geographic information attached to them, so we will have to add it. But before we get started, we would like a basemap, so first, add the counties file from the Mapping Data tutorial.  
 
-**Click** on the `Add Data Source Manager` button, select the `Vector` tab and open the `US_county_1850_Albers.shp` file from the Class_Data/2_MakingData/Shape folder.
+**Click** on the `Add Data Source Manager` button, select the `Vector` tab and open the `US_county_1850_Albers.shp` file from the Class_Data/Tutorial3B_Geocoding folder.
 
 If the map of the US comes out very stretched at the top, change the *project* projection by clicking on the number in the bottom right corner. Change the projection to `USA_Contiguous_Albers_Equal_Area_Conic` or EPSG: 102003, this is the projection of the counties file.
 
-![projection](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_10.png)
+![projection]
 
 Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and make the following selections:
 - csv
@@ -154,7 +152,7 @@ Now add the `uscities.csv layer` using the `Delimited Text Layer` button, and ma
 	- X field: 'lng'
 	- Y Field: 'lat'
 
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_03.png)
+![view csv]
 
 The uscities layer will be essential for matching the cities in our newspapers files with geolocated places.
 
@@ -162,7 +160,7 @@ The uscities layer will be essential for matching the cities in our newspapers f
 
 If you only get one point in the middle of the US when you add your cities layer, right click on the cities layer, navigate to Properties >> General. change the Coordinate reference system to `Default CRS WGS 84` EPSG: 4326
 
-![qgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_21.png)
+![Layer properties]
 
 **END TROUBLESHOOTING**
 
@@ -170,15 +168,15 @@ Finally, add **both** of the Newspapers layers you just created using the `Delim
 - csv
 - No geometry (attribute only table)
 
-![readex](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_09.png)
+![Add csv]
 
 Finally, we will need another plugin - actually a group of plugins. Install the MMQGIS plugin. Navigate to Plugins >> Manage and Install Plugins
 
-![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_24.png)
+![mmqgis]
 
 Search for MMQGIS and Select `Install Plugin`
 
-![mmqgis](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_25.png)
+![mmqgis2]
 
 SAVE your project in the Tutorials/Exercises folder.
 
@@ -190,11 +188,11 @@ Generally, there are two ways to go about geocoding. The first is to do a table 
 
 Table Join **will** work for this data:
 
-![tablejoin](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_22.png)
+![tablejoin]
 
 Table Join will **NOT** work for this data:
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_23.png)
+![tablejoin2]
 
 The uscities layer will become our gazeteer. A gazetteer is essentially a "lookup" file, kind of a geographic dictionary. Rather than matching columns 1:1, QGIS goes through every item in our newspapers file and matches it with an item in the uscities file. For this to work, though, there must be one column in both files that is formatted the exact same way. We already made this: it's our cities_states column.
 
@@ -202,7 +200,7 @@ Let's get started with the Antebellum Newspapers
 
 Navigate to MMQGIS >> Geocode >> Street Address Join
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_26.png)
+![Address join]
 
 Make the following selections:
 
@@ -210,32 +208,32 @@ Make the following selections:
 - CSV File Address Field: city_state
 - Shape Layer: uscities
 - Shape Layer Address Field: city_state
-- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
-- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
+- Output Shapefile: Tutorial3B_Geocoding/AntebellumStreetAddressJoin
+- Not Found CSV Output List: Tutorial3B_Geocoding/AntebellumNotFound
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
+![Address join2]
 
 Click `OK` and wait... This is a long process.
 
 Once it is complete, a new layer will appear in your layers pane. Open the Attribute table for this layer. Each row should have both the geographic information and the newspaper information.
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_28.png)
+![geocode table]
 
 Now let's go check our 'not found layer and see what problems arose. In not found, we have three categories of problems:
 
 Washington, DC was formatted in a strange way, and some cities did not appear.
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_30.png)
+![Not found]
 
 Since this is a relatively small dataset, we will fix these problems in the original dataset (this is why we saved a set of files in the `Originals` Folder) and then re-do the geocoding.
 
 First, let's fix the Washington, DC problem. Open the `uscities Attribute Table`, and sort by `city` to find how Washington, DC is formatted in the `city_state column`. Now open the **AntebellumNewspapers.csv** file (in either Excel or Google Sheets). Find and Replace 'Washington (DC)' with 'Washington'. Save this file.
 
 In Excel:
-![excel](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_32.png)
+![excel replace]
 
 In Google Sheets:
-![sheets](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_33.png)
+![sheets replace]
 
 Now on to the other problems. I did a web search for each place to get more information about where it is located and other names it may be called. This works because our dataset is small. Your data management strategy always depends on your project.
 
@@ -256,10 +254,10 @@ Make the following selections (overwrite the files you made before):
 - CSV File Address Field: city_state
 - Shape Layer: uscities
 - Shape Layer Address Field: city_state
-- Output Shapefile: 2_MakingData/AntebellumStreetAddressJoin
-- Not Found CSV Output List: 2_MakingData/AntebellumNotFound
+- Output Shapefile: Tutorial3B_Geocoding/AntebellumStreetAddressJoin
+- Not Found CSV Output List: Tutorial3B_Geocoding/AntebellumNotFound
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_27.png)
+![Address Join2]
 
 Click `OK`.
 
@@ -287,7 +285,7 @@ Click on the `Edit` button, and select the `Delete Field` button. Then, delete t
 - \*State\* (because this field is redundant. Note that \*City\* is not redundant)
 - city_stat2
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+![Delete fields]
 
 
 Save your changes.
@@ -300,7 +298,7 @@ Turn off the uscities layer if it is still on. We will style the points so they 
 
 First select properties of the US_county_1850 layer. Select the `Style` tab on the left. Click on the `Simple Line`, and change the color to a dark grey and/or change the line width to .200 or smaller if you like. *Note*: It may have defaulted to `Simple Fill` rather than `Simple Line`; that's fine, you can still change the line weight by adjusting `Outline Width`.
 
-![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_35.png)
+![Line symbol]
 
 Now click on the Jacksonian points layer, and select Properties >> Style
 
@@ -314,9 +312,9 @@ Process to use the print composer (as we did in the Mapping Data Tutorials) to m
 
 Note: These maps are not very good: it's almost impossible to tell how many newspapers exist in the northeast, but it is a good first pass.
 
-![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_37.png)
+![Jacksonian Map]
 
-![style](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_38.png)
+![Antebellum Map]
 
 
 
@@ -335,7 +333,7 @@ From the fields list, drag the city_states field into the "rows" box. Also drag 
 Drag the "count" option into the "value" box (below the field you put in there).
 Click "calculate" and a table will appear on the left. To save the output, navigate to Data >> Save all to CSV File. Name your file AntebellumNewspaperCounts.
 
-![geocodeme](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2018/blob/master/Images/mappingdata06_29.png)
+![Delete fields]
 
 
 **If you want to know how many papers were in each county** (maybe to make a chloropleth map)
@@ -346,3 +344,37 @@ Use the Vector >> Analysis Tools >> Points in Polygon AS WE DID IN TUTORIAL XXXX
 ______________________________________________________________________________________________________________
 
 Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+
+[readex1]: Images/2019/Geocoding_01.png
+[readex2]: Images/2019/Geocoding_02.png
+[view csv]: Images/2019/Geocoding_03.png
+[readex3]: Images/2019/Geocoding_04.png
+[google sheet options]: Images/2019/Geocoding_06.png
+[google sheet help]: Images/2019/Geocoding_07.png
+[save csv]: Images/2019/Geocoding_08.png
+[Add csv]: Images/2019/Geocoding_09.png
+[projection]: Images/2019/Geocoding_10.png
+[insert]: Images/2019/Geocoding_12.png
+[formula]: Images/2019/Geocoding_13.png
+[excel]: Images/2019/Geocoding_14.png
+[paper]: Images/2019/Geocoding_15.png
+[insert2]: Images/2019/Geocoding_16.png
+[formula2]: Images/2019/Geocoding_17.png
+[excel2]: mages/2019/Geocoding_18.png
+[papers]: Images/2019/Geocoding_19.png
+[warning]: Images/2019/Geocoding_20.png
+[Layer properties]: Images/2019/Geocoding_21.png
+[tablejoin]: Images/2019/Geocoding_22.png
+[tablejoin2]: Images/2019/Geocoding_23.png
+[mmqgis]: Images/2019/Geocoding_24.png
+[mmqgis2]: Images/2019/Geocoding_25.png
+[Address join]: Images/2019/Geocoding_26.png
+[Address join2]: Images/2019/Geocoding_27.png
+[geocode table]: Images/2019/Geocoding_28.png
+[Delete fields]: Images/2019/Geocoding_29.png
+[Not found]: Images/2019/Geocoding_30.png
+[excel replace]: Images/2019/Geocoding_32.png
+[sheets replace]: Images/2019/Geocoding_33.png
+[Line symbol]: Images/2019/Geocoding_35.png
+[Jacksonian Map](Images/2019/Geocoding_37.png)
+[Antebellum Map](Images/2019/Geocoding_38.png)
