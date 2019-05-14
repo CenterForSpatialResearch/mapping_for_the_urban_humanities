@@ -53,44 +53,53 @@ Our projects generally involve collaborations with researchers and advocates acr
 
 
 ### Schedule and Topics
-**Tuesday, May 28 | Introduction**  
+**Tuesday, May 28**  
 Studio@Butler
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
 
-**Wednesday, May 29 | Mapping Data 02**  
+**Wednesday, May 29**  
 Studio@Butler
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
+* **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City"
 
-**Thursday, May 30 | Making Data 01**  
+**Thursday, May 30**  
 Studio@Butler
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
+* **Guest session:**
 
-**Friday, May 31 | Making Data 02**  
+**Friday, May 31**  
 300 S Buell Hall
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
+* **Guest session:** Laura Kurgan, Director, Center for Spatial Research, "Conflict Urbanism"
 
-**Monday, June 3 | **  
+**Monday, June 3**  
 * **Due:**
 * **Topics:**
 * **Tutorial:**
-* **Workshop:**
+* **Workshop:** Grga Basic & Michael Krisch, "Points Unknown"
 
 
 **Tuesday, June 4**  
 Studio@Butler
 * Curriculum Development Sessions by Appointment
 
-**Wednesday, June 5 **  
+**Wednesday, June 5**  
 300 S Buell Hall
 * Curriculum Development Sessions by Appointment
 
 **Thursday, June 6 | Final Presentations**  
 300 S Buell Hall
+
+
+**By June 21**
+- Please upload your final presentation and required two page reflection on how you will incorporate topics and skills from the workshop into your teaching and/or research via [this form](https://docs.google.com/forms/d/e/1FAIpQLSdTPyUYdNniXsnMi2BtIr4gagNFNUDUZi1w27aL3ZJvoFulFw/viewform?usp=sf_link).
+
+- Please complete [this](https://docs.google.com/forms/d/e/1FAIpQLSearZxxg-hdlYquE0gQZ8akofojDCf_1eJrvAzjh3PPLWra_A/viewform?usp=sf_link) brief survey with your feedback on the structure and material of the workshop.

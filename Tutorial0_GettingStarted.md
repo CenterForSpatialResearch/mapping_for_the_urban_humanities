@@ -9,7 +9,9 @@ The purpose of this tutorial is to introduce you to the QGIS interface, explorin
 - learn the basics of working with map projections.
 
 #### Prep
-Download the GitHub repository for this course. After following [this link](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2019), click on the green button on the right side that reads `Clone or Download`, and select `Download ZIP`. Save and decompress the downloaded folder to your preferred working location. (We highly recommend establishing a single folder or directory for all of the work and tutorials associated with the workshop.) The Class_Data folder will then have all of the datasets needed for tutorials.
+Download the GitHub repository for this course. After following [this link](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2019), click on the green button on the right side that reads `Clone or Download`, and select `Download ZIP`. Save and decompress the downloaded folder to your preferred working location. (We highly recommend establishing a single folder or directory for all of the work and tutorials associated with the workshop.) The Class_Data folder will then have most of the datasets needed for tutorials.
+
+Additional datasets required for the tutorials (those larger than certain upload limits allow) can be found in [this public google drive folder] (https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb), including the georectified scanned map image included later in this tutorial. Download, save, and decompress this folder to the same directory as the GitHub repository you saved.
 
 
 ### Setting up QGIS
@@ -183,7 +185,7 @@ Notice (green box) that the coordinate reference system information includes mor
 #### Adding a raster layer
 Lastly, **add** a new layer to your map project by, once again, accessing the Data Source Manager dialogue box. (You can click the Add Raster button from the toolbar or simply navigate to the Raster panel if you chose a different option.)
 
-Just as when we added the original vector polygon layer, **navigate** to your data using the browse (`...`) button. **Add** the GeoTIFF file called DensityRec.tif located in the Tutorial0_ClassData\raster\ folder. The cropped and georectified map should align fairly well with the national boundaries layer in your map project. 
+Just as when we added the original vector polygon layer, **navigate** to your data using the browse (`...`) button. **Add** the GeoTIFF file called DensityRec.tif located in the Tutorial0_ClassData\raster\ folder. (This dataset is provided in the auxiliary download for large files. You can find it directly [here](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb). The cropped and georectified map should align fairly well with the national boundaries layer in your map project. 
 
 To finish, **arrange** your data layers (click and drag in the Layers panel), placing the current national boundaries over the 1958 map, and **change the national boundary symbols** such that they are transparent.
 
