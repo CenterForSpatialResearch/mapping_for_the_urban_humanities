@@ -32,7 +32,7 @@ You are going to use OSM data as the reference data for the georeferencing proce
 Since you are working in a new QGIS project, the map should show the entire earth as the default:
 ![OSM]
 
-Use the zoom-in tool ![zoom tools] and zoom into the Central Bronx in the area around The Botanical Garden:
+Use the zoom-in tool ![zoom tool] and zoom into the Central Bronx in the area around The Botanical Garden:
 
 ![garden zoom]
 
@@ -152,7 +152,8 @@ Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intens
 
 [open]: Images/2019/GeoRef1.png
 [XYZ Tiles]: Images/2019/GeoRef2.png
-[OSM]: Images/2019/GeoRef4.png
+[OSM]: Images/2019/GeoRef3.png
+[zoom tool]: Images/2019/GeoRef4.png
 [garden zoom]: Images/2019/GeoRef5.png
 [georeferencer]: Images/2019/GeoRef6.png
 [georeferencer window]: Images/2019/GeoRef7.png

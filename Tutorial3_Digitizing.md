@@ -140,6 +140,8 @@ Be sure to save your work regularly.
 
 When you are completed, you will have two new datasets that you can use to study the evolution of the park's vegetation and paths. The features you encoded (i.e., tree type or path type) are permanently attached to the geometries you just traced as well. You will also be able to import these new datasets into any other QGIS project.
 
+If you would like to see several detailed GIS datasets made from this map, you can find several layers in [Geodata@Columbia](https://geodata.library.columbia.edu/catalog?f%5Bdct_provenance_s%5D%5B%5D=Columbia&q=1902+bronx&bbox=-73.973419%2040.704275%20-73.73378%2040.953663) available for public use. 
+
 ______________________________________________________________________________________________________________
 
 Tutorial written by Eric Glass, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
