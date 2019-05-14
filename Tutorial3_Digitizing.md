@@ -72,7 +72,7 @@ We can move or edit the point features with the Vertex Tool, click ![vertex tool
 
  ![move point]
 
-  It is a good idea to regularly use the “save for selected layers” function, under the Current Edits menu ![current edits], to save your work as you digitize:
+  It is a good idea to regularly use the “save for all layers” function, under the Current Edits menu ![current edits], to save your work as you digitize:
 
 ![Save Feature]
 
