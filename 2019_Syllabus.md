@@ -64,14 +64,14 @@ Studio@Butler
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
-* **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City"
+* **Guest session:**
 
 **Thursday, May 30**  
 Studio@Butler
 * **Topics:**
 * **Tutorial:**
 * **Workshop:**
-* **Guest session:**
+* **Guest session:** Grga Basic & Michael Krisch, "Points Unknown"
 
 **Friday, May 31**  
 300 S Buell Hall
@@ -84,8 +84,8 @@ Studio@Butler
 * **Due:**
 * **Topics:**
 * **Tutorial:**
-* **Workshop:** Grga Basic & Michael Krisch, "Points Unknown"
-
+* **Workshop:**
+* **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City" [tentative]
 
 **Tuesday, June 4**  
 Studio@Butler

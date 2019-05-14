@@ -1,4 +1,4 @@
-### Tutorial 2: Georeferencing a scanned paper map
+## Tutorial 2: Georeferencing a scanned paper map
 
 #### Premise
 

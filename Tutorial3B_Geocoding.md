@@ -1,4 +1,4 @@
-### Tutorial 3B: Geocoding historic data
+## Tutorial 3B: Geocoding historic data
 
 #### Premise
 In this tutorial, we are going to make a map of newspapers in the United States before and after the invention of the rotary printing press in 1843. We want to visualize the effect of this technological change on the access to communication across the United States.

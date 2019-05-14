@@ -2,7 +2,7 @@
 
 #### Premise & Objectives
 The purpose of this tutorial is to produce and export global map of population by country. For this we will use the national administrative boundaries layer in the previous tutorial, combining it with population data contained in a table. In the process, we will
-- learn more about the QGIS interface, 
+- learn more about the QGIS interface,
 - add a csv table to a map project,
 - perform a table join,
 - change the symbology of a vector layer using quantitative attributes,
@@ -16,11 +16,11 @@ The purpose of this tutorial is to produce and export global map of population b
 We will not be using the raster layer (the scanned and georectified 1958 population density map) to make our global population map. Thus, you can **turn off** the layer (by unchecking it in the Layers Panel) or **remove** the layer from your project by right-clicking on the layer name and selecting "Remove Layer."
 
 #### Adding a Delimited Table
-For this tutorial, we will make a map based on global population estimates from 2010. The country-level population data used for this tutorial was published by the [United Nations Population Division](http://esa.un.org/unpd/wpp/Download/Standard/Population/) in 2010. All figures are reported in thousands -- i.e., a value of "7,000" indicates a population of seven million. We have provided a cleaned version of the dataset but the original can be downloaded [here](http://esa.un.org/unpd/wpp/Download/Standard/Population/). 
+For this tutorial, we will make a map based on global population estimates from 2010. The country-level population data used for this tutorial was published by the [United Nations Population Division](http://esa.un.org/unpd/wpp/Download/Standard/Population/) in 2010. All figures are reported in thousands -- i.e., a value of "7,000" indicates a population of seven million. We have provided a cleaned version of the dataset but the original can be downloaded [here](http://esa.un.org/unpd/wpp/Download/Standard/Population/).
 
 These have been compiled into a simple CSV table (a delimited text file) located in the ClassData\Tutorial1_ClassData\tables folder. The file, called TotalPopulation_Countries.csv, can be opened and inspected in any software that reads tables and spreadsheets (such as Microsoft Excel or Google Sheets). We will add it to our QGIS project, as we added the vector and raster layers in the previous tutorial, and inspect its contents there.
 
-To add a delimited text file, **click** the Add Delimited Text Layer button on the Manage Layers toolbar, which will open the Data Source Manager dialogue box to the Delimited Text panel. 
+To add a delimited text file, **click** the Add Delimited Text Layer button on the Manage Layers toolbar, which will open the Data Source Manager dialogue box to the Delimited Text panel.
 
 ![AddTable]
 
@@ -30,9 +30,9 @@ In the File Name field, **click** the Browse (`...`) button to navigate to the T
 
 **File Format**: By default, the file format is read as a CSV (comma separated values) because of the file extension.
 
-**Record and Fields Options**: Here, you can specify how your table is imported. Because the first row of our table includes *field headers* we **specify** that the "First record has field names." Similarly, we want the software to "Detect field types" which means QGIS will interpret fields that "seem" to include numbers as numeric. 
+**Record and Fields Options**: Here, you can specify how your table is imported. Because the first row of our table includes *field headers* we **specify** that the "First record has field names." Similarly, we want the software to "Detect field types" which means QGIS will interpret fields that "seem" to include numbers as numeric.
 
-Take a moment to read through the other options, which are often useful. For example, if numeric values include commas as the decimal separator (rather than field separators) or if your table includes empty fields. 
+Take a moment to read through the other options, which are often useful. For example, if numeric values include commas as the decimal separator (rather than field separators) or if your table includes empty fields.
 
 ![csvOptions2]
 
@@ -43,21 +43,21 @@ When the options are set, **click Add** to add the table as a layer in your map 
 **Save** your QGIS project.
 
 #### Open the Population Table
-The table layer performs the same as the Attribute Table of a vector layer. To open it, **right-click** on the layer name in the Layers panel and **choose** Open Attribute Table. 
+The table layer performs the same as the Attribute Table of a vector layer. To open it, **right-click** on the layer name in the Layers panel and **choose** Open Attribute Table.
 
 **Open** the Attribute Table of the admin_0_countries layer in the same manner, in order to compare the two.
 
 ![TwoTables]
 
-The total number of features (as well as the number filtered and selected) is listed at the top of each attribute table. Notice that our population table does not include as many countries as those listed in the polygon dataset. Notice also that they appear to have at least two fields in common: They both have a numeric field with the ISO country code, and they both have a Name field. 
+The total number of features (as well as the number filtered and selected) is listed at the top of each attribute table. Notice that our population table does not include as many countries as those listed in the polygon dataset. Notice also that they appear to have at least two fields in common: They both have a numeric field with the ISO country code, and they both have a Name field.
 
 **Close** your Attribute Tables.
 
 
 ### Performing a Table Join
-A *table join* is the process of *appending data from one table to another based on unique values within a common field.* Table joins are almost always one-to-one processes. In this case, we would like to join the population data to the administrative boundary layer, in order to then visualize the global map based on the population values associated with each country. 
+A *table join* is the process of *appending data from one table to another based on unique values within a common field.* Table joins are almost always one-to-one processes. In this case, we would like to join the population data to the administrative boundary layer, in order to then visualize the global map based on the population values associated with each country.
 
-It appears that we have two fields that might serve as the basis of the join (two fields with unique values within each table, but shared in common between the two tables): the country code field and the country name field. We will use the numeric country code fields for our join. The values in the join fields must be identical in order to match features when performing the join. Because text fields may have spelling errors or errant spaces, the numeric fields are preferable for this matching process. 
+It appears that we have two fields that might serve as the basis of the join (two fields with unique values within each table, but shared in common between the two tables): the country code field and the country name field. We will use the numeric country code fields for our join. The values in the join fields must be identical in order to match features when performing the join. Because text fields may have spelling errors or errant spaces, the numeric fields are preferable for this matching process.
 
 **Helpful Note:** You will always initiate a join process on the Layer you are joining *to*. This is known as the *Target Layer*.
 
@@ -71,11 +71,11 @@ In the "Joins" panel, click the Add Join button (highlighted in red in the scree
 
 **Join Field**: The Join Field is the particular field in the Join Layer that will facilitate the join.
 
-**Target Field**: The Target Field is the field in the Target Layer that will facilitate the join. It must be of the same data type as the Join Field (e.g., numeric, text, etc.). 
+**Target Field**: The Target Field is the field in the Target Layer that will facilitate the join. It must be of the same data type as the Join Field (e.g., numeric, text, etc.).
 
 The Join Field and Target Field do not need to have the same field header (name), but they must be of the same data type (e.g., numeric, text, etc). Further, you should know before joining that they include unique values in order to ensure a proper one-to-one join. (Imagine if we accidentally joined the population data corresponding to one country to the boundaries of another. Now imagine if we did that across the dataset, and mapped the results!)
 
-Take a moment to read through the other options in this dialogue box. We will change only one of the defaults: the **Joined Fields** options under Dynamic Form. 
+Take a moment to read through the other options in this dialogue box. We will change only one of the defaults: the **Joined Fields** options under Dynamic Form.
 
 **Select** both the Dynamic Form option and the Joined Fields option. In the expanded Joined Fields option, notice that all the fields in the Join Layer (the population table) are listed. Here you can specify which of the Join Layer's fields should be appended to the Target Layer's (the administrative boundaries) attribute table. Three fields is not cumbersome, but for very large tables this is a useful option. Here, **choose** to join the Country_Code and Pop_2010 fields. We need the latter to map population by country. We will use the former to quickly see the results of our join.
 
@@ -83,26 +83,26 @@ When you are ready, **click** OK in the Add Vector Join dialogue box and return 
 
 ![Join2]
 
-In the Layer Properties Joins panel, you should now see the details of the new join associated with the administrative boundary layer. **Click** OK to close the Layer Properties dialogue box. 
+In the Layer Properties Joins panel, you should now see the details of the new join associated with the administrative boundary layer. **Click** OK to close the Layer Properties dialogue box.
 
 **Save** your map project.
 
-**Open** the admin_0_countries layer Attribute Table to see the results of your join. 
+**Open** the admin_0_countries layer Attribute Table to see the results of your join.
 
 ![Join3]
 
-**Notice** the two new fields appended to the end of our layer's original attribute table, based on shared values in the two country code fields. You should notice that features without a corresponding entry in the population table will have *NULL* values in the joined table (such as Antarctica in the screenshot above). 
+**Notice** the two new fields appended to the end of our layer's original attribute table, based on shared values in the two country code fields. You should notice that features without a corresponding entry in the population table will have *NULL* values in the joined table (such as Antarctica in the screenshot above).
 
 **IMPORTANT NOTE**: Table joins are not permanent changes to a dataset. Instead, they are temporary associations made between datasets within the context of the specific map project. In other words, if you added the admin_0_countries layer to a new map project, it would not include the data from the population table. (Again, this is extremely uesful because we can associate several different types of data with such a layer.)
 
 ### Exporting a new shapefile
-Because Table Joins are temporary, it is often useful to create a new shapefile (vector feature class) with the joined data permanently included in the layer. To do this, we will export a new shapefile from the results of the table join. 
+Because Table Joins are temporary, it is often useful to create a new shapefile (vector feature class) with the joined data permanently included in the layer. To do this, we will export a new shapefile from the results of the table join.
 
 To export a new feature layer from the admin_0_countries layer, **right-click** on the layer name in the Layers panel and click through Export > Save Features As... to open the Save Vector Layer as... dialogue box.
 
 ![Export1]
 
-We will move through the options in the In the Save Vector Layer as... dialogue, from top to bottom. 
+We will move through the options in the In the Save Vector Layer as... dialogue, from top to bottom.
 
 ![Export2]
 
@@ -110,23 +110,23 @@ We will move through the options in the In the Save Vector Layer as... dialogue,
 
 **File name**: Navigate to the Tutorial1_ClassData folder (click the Browse `...` button) and create a new folder called "shape," where you can store the shapefile. Name the new file "admin_0_Pop2010."
 
-**CRS**: You have a few options for specifying the Coordinate Reference System of the new shapefile. By default, an exported shapefile will be assigned the same CRS as the layer from which it is being created. In the screenshot above, this option has been changed to match the Winkel Tripel CRS of the map project file. 
+**CRS**: You have a few options for specifying the Coordinate Reference System of the new shapefile. By default, an exported shapefile will be assigned the same CRS as the layer from which it is being created. In the screenshot above, this option has been changed to match the Winkel Tripel CRS of the map project file.
 
-We will maintain the default options for the remainder of the dialogue box, but a few are worth mentioning. Maintain the default option to **Add the saved file to map** so we can use our results without needing to add the layer to our map project. 
+We will maintain the default options for the remainder of the dialogue box, but a few are worth mentioning. Maintain the default option to **Add the saved file to map** so we can use our results without needing to add the layer to our map project.
 
 ![Export3]
 
-Under the **Select fields to export and their export options** you can choose to export only a subset of the fields included in the original layer (and any joined information). For our purposes, we will keep all options. 
+Under the **Select fields to export and their export options** you can choose to export only a subset of the fields included in the original layer (and any joined information). For our purposes, we will keep all options.
 
 Take a moment to expand the other options for your reference. When you are ready, **click OK** to export a new vector layer with the joined population data in the attribute table.
 
 **Note**: If prompted to confirm the CRS of the new layer, do so and click OK.
 
-When the new layer is added to your map project, **turn off** the previous admin_0_countries layer by unchecking it in the Layers panel. **Open** the Attribute Table of the new admin_0_Pop2010 layer to inspect its Attribute Table. 
+When the new layer is added to your map project, **turn off** the previous admin_0_countries layer by unchecking it in the Layers panel. **Open** the Attribute Table of the new admin_0_Pop2010 layer to inspect its Attribute Table.
 
 ![Export4]
 
-**Congratulations!** You should see the two joined fields from the population table now included in the attributes of the new vector feature layer. 
+**Congratulations!** You should see the two joined fields from the population table now included in the attributes of the new vector feature layer.
 
 #### The Attribute Field Properties: Field Alias
 
@@ -140,8 +140,8 @@ To create an alias for each field, we must access the layer's Attributes Form pr
 
 Once again, **open** the Layer Properties for the admin_0_Pop2010 layer by right-clicking on its name in the Layers panel. Reading the options from left to right:
 1. Access the Attributes Form panel,
-2. Select the TotalPop_1 Field from the Available Widgets options. 
-3. In the General options section, specify "Pop2010" as the Alias for the TotalPop_1 field. 
+2. Select the TotalPop_1 Field from the Available Widgets options.
+3. In the General options section, specify "Pop2010" as the Alias for the TotalPop_1 field.
 4. Click Apply to save your changes.
 Repeat these steps for the "TotalPopul" field, assigning it the Alias "Country_Code."
 
@@ -200,7 +200,7 @@ With the Add Map tool selected, click and draw a rectangle within the page to es
 
 Next, we will add a legend to the Layout. From the toolbar or the Add Item menu, **click Add Legend**. Again, draw a rectangle to specify the legend's location and approximate size.
 
-**Notice** the options in the Item Properties panel to the right of the Layout interface. Take a moment to scroll through the various options, including which layers to include in your legend as well as fonts and other graphic considerations. 
+**Notice** the options in the Item Properties panel to the right of the Layout interface. Take a moment to scroll through the various options, including which layers to include in your legend as well as fonts and other graphic considerations.
 
 **Uncheck** the "Auto Update" option for the Legend's Item properties to unlock various editing opportunties. These include changing the layer's name to a more descriptive and meaningful phrase for your readers. (See the red highlights in the screenshot below.)
 
@@ -216,7 +216,10 @@ Finally, you can **export** your layout as an Image, SVG, or PDF by either click
 
 **Congratulations! You have a map!**
 
-When you are finished, **Save** your Layout and Map project. 
+When you are finished, **Save** your Layout and Map project.
+
+______________________________________________________________________________________________________________
+Tutorial written by Leah Meisterlin, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 
 [AddTable]: Images/2019/Tutorial1_AddTable.png

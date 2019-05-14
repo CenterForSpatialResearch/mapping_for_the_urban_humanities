@@ -1,7 +1,7 @@
 ## Tutorial 0: Getting Started
 
 #### Premise & Objectives
-The purpose of this tutorial is to introduce you to the QGIS interface, exploring a environment and a handful of its options. In doing this, we will set up the layers needed for the first tutorial (Tutorial 1), exploring the QGIS environment and a handful of its options. In the process, we will 
+The purpose of this tutorial is to introduce you to the QGIS interface, exploring a environment and a handful of its options. In doing this, we will set up the layers needed for the first tutorial (Tutorial 1), exploring the QGIS environment and a handful of its options. In the process, we will
 - start and save a map project,
 - add vector- and raster-based spatial data to the map project,
 - access the Attribute Table of a vector layer,
@@ -28,7 +28,7 @@ Begin to familiarize yourself with the interface. Yours may not exactly resemble
 
 If your interface defaults to a list of Recent Projects, double-click the newly created project file name to access and open it.
 
-You should notice your project added to the Brower Panel, in a folder collection named Project Home. 
+You should notice your project added to the Brower Panel, in a folder collection named Project Home.
 
 ![ProjectHome]
 
@@ -65,15 +65,15 @@ Confirm that the appropriate file is named in the Vector Dataset(s) path in the 
 
 ![CRSSelector]
 
-The Coordinate Reference System Selector dialogue box will appear asking that you confirm (or specify) the coordinate system of the dataset you are adding to your map project. This layer is projected with the Mollweide *projection* based on the World Geodetic System of 1984 (WGS1984) *datum*. Read through the information in the dialogue box confirming this. 
+The Coordinate Reference System Selector dialogue box will appear asking that you confirm (or specify) the coordinate system of the dataset you are adding to your map project. This layer is projected with the Mollweide *projection* based on the World Geodetic System of 1984 (WGS1984) *datum*. Read through the information in the dialogue box confirming this.
 
 **Click OK** in the Coordinate Reference System Selector dialogue box to add the layer to your map project.
 
 **Click Close** in the Data Source Manager dialogue box to exit it.
 
-The layer should appear in your map project as shown below. Note that the colors associated with each polygon feature (in this case depicting national boundaries) is the same for all features in the layer, and the color assigned is arbitrary. 
+The layer should appear in your map project as shown below. Note that the colors associated with each polygon feature (in this case depicting national boundaries) is the same for all features in the layer, and the color assigned is arbitrary.
 
-**Save** your map project. 
+**Save** your map project.
 
 ![Admin0Added]
 
@@ -99,7 +99,7 @@ To **deselect** any selected features, click the Deselect All button on the Attr
 
 #### On your own: Interactively Selecting and Inspecting Features and Attributes
 
-Interactively select features in the Attribute Table to highlight the corresponding polygon in the data frame. 
+Interactively select features in the Attribute Table to highlight the corresponding polygon in the data frame.
 
 Of course, the relationship between the geometry and attributes of a feature works in the opposite direction as well. Using the Selection Tool from the Attributes Toolbar (chosen in the screenshot below), you can also interactively select polygons and highlight them in the Attribute Table. Further, you can isolate selected features from the table: choose Show Selected Features from the the Attribute Table's filter drop-down menu.
 
@@ -120,29 +120,29 @@ We will discuss map *symbology* and cartography more completely later in the wor
 There are a few short-cut options in the QGIS interface for quickly changing a layer's symbols. We will walk through the Layer Properties dialogue box, which includes these and many more options and functions per layer.
 
 #### Accessing Symbology Properties
-To access the Layer Properties dialogue box, **right-click** on the layer name (`admin_0_countries`) in the Layers Panel and choose **Properties**. 
+To access the Layer Properties dialogue box, **right-click** on the layer name (`admin_0_countries`) in the Layers Panel and choose **Properties**.
 
-From the lelf-hand menu, choose the **Symbology** menu. You should notice that the layer is currently symbolized with a "Single Symbol" system and a "simple fill." **Highlight** "Simple Fill" from the panel at the top of the dialogue box to access the symbol options. 
+From the lelf-hand menu, choose the **Symbology** menu. You should notice that the layer is currently symbolized with a "Single Symbol" system and a "simple fill." **Highlight** "Simple Fill" from the panel at the top of the dialogue box to access the symbol options.
 
 ![SimpleFill]
 
 #### Changing a Single Symbol
-Take a moment to read through the various options and to experiment with an alternative symbol. **Note** that these options are tailored to a polygon feature class. (Polyline layers, for example, would not have "fill" options.) You can specify the color and style of the polygon fill and the color and width of the polygon stroke (outline). 
+Take a moment to read through the various options and to experiment with an alternative symbol. **Note** that these options are tailored to a polygon feature class. (Polyline layers, for example, would not have "fill" options.) You can specify the color and style of the polygon fill and the color and width of the polygon stroke (outline).
 
 **Click** Apply to apply your changes. When you are satisfied with your decisions, **click** OK to save them and close the Properties dialogue box. In the example below, the features have a transparent fill and a heavy, red stroke.
 
 ![SingleSymbolChanged]
 
 #### Qualitative or Categorical Symbology
-We can also use the layer's attributes to organize or categorize the map's symbology. To do this, access the Layer Properties (Symbology menu) dialogue box again and specify **Categorized** symbols from the drop-down menu at the top of the dialogue. 
+We can also use the layer's attributes to organize or categorize the map's symbology. To do this, access the Layer Properties (Symbology menu) dialogue box again and specify **Categorized** symbols from the drop-down menu at the top of the dialogue.
 
 ![CategoricalSymbol]
 
-The symbology options will change, and from here we can quickly assign separate symbols to each feature within unique groups described in the Attribute Table. In this case, we will effectively color-code our polygons based on their subregion. 
+The symbology options will change, and from here we can quickly assign separate symbols to each feature within unique groups described in the Attribute Table. In this case, we will effectively color-code our polygons based on their subregion.
 
 1. From the Column drop-down menu, **select** the SUBREGION field. **Note** that this menu includes each of the different fields included in the layer's attribute table.
 2. **Confirm** that the Color Ramp option is set to Random Colors. (If it is not, you can select it by clicking the drop-down menu.)
-3. Next, **click** the Classify button toward the bottom of the dialogue box to populate the panel with each unique value from the SUBREGION field. The Symbol list should automatically include each of the subregions listed in our dataset, with unique (randomly generated) color values. 
+3. Next, **click** the Classify button toward the bottom of the dialogue box to populate the panel with each unique value from the SUBREGION field. The Symbol list should automatically include each of the subregions listed in our dataset, with unique (randomly generated) color values.
 4. **Click Apply** to apply your symbology changes.
 
 ![Subregions]
@@ -155,7 +155,7 @@ When you are satisfied with your categorical symbology strategy, **click OK** to
 
 
 ### Finishing Up
-Thus far, we have been interacting with a Mollweide map projection. Before finishing this tutorial, we will reproject the map data frame to match the original projection of a scanned, *georectified* global population map. 
+Thus far, we have been interacting with a Mollweide map projection. Before finishing this tutorial, we will reproject the map data frame to match the original projection of a scanned, *georectified* global population map.
 
 The georectified map (below) we will add to our project is from the [David Rumsey Historical Map Collection] (https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~225244~5505992;JSESSIONID=fa751117-cbd7-452b-b867-46dac48ea52f#). The map is drawn in the Winkel Tripel projection, which is now commonly used in global atlases for its minimal distortion in distance, area, and direction.
 
@@ -164,7 +164,7 @@ The georectified map (below) we will add to our project is from the [David Rumse
 #### Assigning a new projection
 When assigning a new projection to the data frame, **note** that we are not assigning a new projection or coordinate reference system to our original data layer. Rather, we are using the coordinate reference information contained within each spatial dataset to re-positioning those coordinates according to the rules of a different projection.
 
-To change the the Coordinate Reference System of the map project, access the Project Properties dialogue box by clicking the Coordinate Reference System button on the bottom-right of the interface (in the screenshot below) or by clicking through Project > Properties from the Main Menu. 
+To change the the Coordinate Reference System of the map project, access the Project Properties dialogue box by clicking the Coordinate Reference System button on the bottom-right of the interface (in the screenshot below) or by clicking through Project > Properties from the Main Menu.
 
 ![CRSbutton]
 
@@ -174,9 +174,9 @@ Because we know the projection we need, we can use the Filter option to search f
 
 ![Winkel]
 
-In the resulting list of Coordinate Reference Systems, **highlight** the World_Winkel_Tripel_NGS option under Winkel Tripel (red box). 
+In the resulting list of Coordinate Reference Systems, **highlight** the World_Winkel_Tripel_NGS option under Winkel Tripel (red box).
 
-Notice (green box) that the coordinate reference system information includes more than the projection itself, but its origin,the datum to which it is applied (WGS84), and its linear unit (meters). 
+Notice (green box) that the coordinate reference system information includes more than the projection itself, but its origin,the datum to which it is applied (WGS84), and its linear unit (meters).
 
 **Click OK** to change the projection of the map project's data frame. You should notice a quick transformation.
 
@@ -185,13 +185,16 @@ Notice (green box) that the coordinate reference system information includes mor
 #### Adding a raster layer
 Lastly, **add** a new layer to your map project by, once again, accessing the Data Source Manager dialogue box. (You can click the Add Raster button from the toolbar or simply navigate to the Raster panel if you chose a different option.)
 
-Just as when we added the original vector polygon layer, **navigate** to your data using the browse (`...`) button. **Add** the GeoTIFF file called DensityRec.tif located in the Tutorial0_ClassData\raster\ folder. (This dataset is provided in the auxiliary download for large files. You can find it directly [here](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb). The cropped and georectified map should align fairly well with the national boundaries layer in your map project. 
+Just as when we added the original vector polygon layer, **navigate** to your data using the browse (`...`) button. **Add** the GeoTIFF file called DensityRec.tif located in the Tutorial0_ClassData\raster\ folder. (This dataset is provided in the auxiliary download for large files. You can find it directly [here](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb). The cropped and georectified map should align fairly well with the national boundaries layer in your map project.
 
 To finish, **arrange** your data layers (click and drag in the Layers panel), placing the current national boundaries over the 1958 map, and **change the national boundary symbols** such that they are transparent.
 
 ![WithRaster]
 
 **Save** your QGIS project.
+
+______________________________________________________________________________________________________________
+Tutorial written by Leah Meisterlin, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2019 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 [blank]: Images/2019/Tutorial0_interface_blank.png
 [ProjectHome]: Images/2019/Tutorial0_ProjectHome.png
