@@ -256,37 +256,37 @@ Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course,
 
 [language points1]:Images/2019/Tutorial4_languagepoints1.png
 
-[FrenchORCreole]:Images/2019/Tutorial4_FrenchORCreole
+[FrenchORCreole]:Images/2019/Tutorial4_FrenchORCreole.png
 
-[FrenchHaitianMap]:Images/2019/Tutorial4_FrenchHaitianMap
+[FrenchHaitianMap]:Images/2019/Tutorial4_FrenchHaitianMap.png
 
-[infobutton-haitian]:Images/2019/Tutorial4_infobutton-haitian
+[infobutton-haitian]:Images/2019/Tutorial4_infobutton-haitian.png
 
-[selectbyvalues]: Images/2019/Tutorial4_selectbyvalues
+[selectbyvalues]: Images/2019/Tutorial4_selectbyvalues.png
 
-[selectbyvalues2]: Images/2019/Tutorial4_selectbyvalues2
+[selectbyvalues2]: Images/2019/Tutorial4_selectbyvalues2.png
 
-[saveselection]: Images/2019/Tutorial4_saveselection
+[saveselection]: Images/2019/Tutorial4_saveselection.png
 
-[saveselection2]: Images/2019/Tutorial4_saveselection2
+[saveselection2]: Images/2019/Tutorial4_saveselection2.png
 
-[byscale2]: Images/2019/Tutorial4_byscale2
+[byscale2]: Images/2019/Tutorial4_byscale2.png
 
-[russiandots1]:Images/2019/Tutorial4_russiandots1
+[russiandots1]:Images/2019/Tutorial4_russiandots1.png
 
-[querythreshold]:Images/2019/Tutorial4_querythreshold
+[querythreshold]:Images/2019/Tutorial4_querythreshold.png
 
-[printlayout]:Images/2019/Tutorial4_printlayout
+[printlayout]:Images/2019/Tutorial4_printlayout.png
 
-[addmaplayout]:Images/2019/Tutorial4_addmaplayout
+[addmaplayout]:Images/2019/Tutorial4_addmaplayout.png
 
-[addlegend]:Images/2019/Tutorial4_addlegend
+[addlegend]:Images/2019/Tutorial4_addlegend.png
 
-[addtitle]:Images/2019/Tutorial4_addtitle
+[addtitle]:Images/2019/Tutorial4_addtitle.png
 
-[northarrow1]:Images/2019/Tutorial4_northarrow1
+[northarrow1]:Images/2019/Tutorial4_northarrow1.png
 
-[northarrow2]:Images/2019/Tutorial4_northarrow2
+[northarrow2]:Images/2019/Tutorial4_northarrow2.png
 
 [exportimage]:Images/2019/Tutorial4_exportimage.png
 
