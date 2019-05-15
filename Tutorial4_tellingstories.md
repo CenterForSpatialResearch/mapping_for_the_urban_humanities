@@ -126,7 +126,7 @@ We've mapped out where residents live who speak languages other than English at 
 ### Add the data. 
 Browse to the table `language_institutions_NYC` and add to the map. 
 
-![importinginstitutions]
+![importinstitutions]
 
 When you are adding, designate the `latitude` (Y) and `longitude` (X) variables and select the option for WGS 1984 coordinate reference system (the points in this table are in a different system; QGIS will convert as long as you flag which one it's coming from!).
  
@@ -214,8 +214,6 @@ Click on the add image icon on the left, and then navigate (on the right side) t
 
 Click on `search directories` and preset options will open for different styles of north arrows (and other icons).
 
-![northarrow2]
-
 #### Export
 From the top-left menu (`layout`), select `export as image`. Save in a place you can find. Open and admire your work! Also likely: open, see the changes you'd like to tweak, and return to the layout window to modify and beautify.
 ![exportimage]
@@ -250,7 +248,7 @@ Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course,
 
 [cleanuplines3]:Images/2019/Tutorial4_cleanuplines3.png
 
-[importinginstitutions]:Images/2019/Tutorial4_importinginstitutions.png
+[importinstitutions]:Images/2019/Tutorial4_importinstitutions.png
 
 [84]:Images/2019/Tutorial4_84.png
 
@@ -285,8 +283,6 @@ Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course,
 [addtitle]:Images/2019/Tutorial4_addtitle.png
 
 [northarrow1]:Images/2019/Tutorial4_northarrow1.png
-
-[northarrow2]:Images/2019/Tutorial4_northarrow2.png
 
 [exportimage]:Images/2019/Tutorial4_exportimage.png
 
