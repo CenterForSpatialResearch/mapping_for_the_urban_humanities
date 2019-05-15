@@ -118,21 +118,25 @@ The fastest way is to click on the square to the left of the zero value in the l
 
 Don't forget: at the end of the day, all of your choices are subjective and reflect what you think makes a better story while still maintaining methodological integrity. Bon voyage!
 
-###Language institutions
+### Language institutions
 We've mapped out where residents live who speak languages other than English at home. But language retention also depends significantly on speaking in spaces outside the home. Where are those spaces? The data for this section was hand-collected by research assistants for a Mellon-foundation-funded project in the summer of 2017 at the Center for Spatial Research. It is in no way complete or representative - there are many spaces where meaningful language exchanges regularly take place but that are too hard to map- and other places may be over-represented. What the dataset does do, however, is map the electronically 'visible' institutions where second language usage is publicized and where entry is relatively open to the public.
 
 *Can we identify spatial relationships by mapping institutions for a given language over the areas where speakers live? 
 
-###Add the data. 
+### Add the data. 
 Browse to the table `language_institutions_NYC` and add to the map. 
+
 ![importinginstitutions]
-When you are adding, designate the `latitude` (Y) and `longitude` (X) variables and select the option for WGS 1984 coordinate reference system (the points in this table are in a different system; QGIS will convert as long as you flag which one it's coming from!). 
-[84]
+
+When you are adding, designate the `latitude` (Y) and `longitude` (X) variables and select the option for WGS 1984 coordinate reference system (the points in this table are in a different system; QGIS will convert as long as you flag which one it's coming from!).
+ 
+[!84]
+
 First, let's look at this layer by itself -as points- and see if anything strikes us, or if we can modify to visualize interesting clusters or relationships (or skewdnesses in our data!). Are all five boroughs covered? Why not? Do some spaces seem to be particular clusters of a single language? 
 
 ![languagepoints1]
 
-####Built a filter and subset
+#### Built a filter and subset
 We could un-click each of the languages one by one. Or we can quickly build rules - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example. 
 
 ![FrenchORCreole]
@@ -150,29 +154,41 @@ Here's another way to select and play with a subset of your data.
 Select by values where Language = Russian in the institutions layer.
 
 ![selectbyvalues]
+
 ![selectbyvalues2]
 
 You can make selections a new shapefile - smaller and sometimes easier to work with. 
 
 ![saveselection]
+
 ![saveselection2]
 
 The language dataset coded cultural + educational institutions by their 'scale' of reach; whether they operated mainly for a neighborhood, borough or city-wide audience. We'll use this to learn to show these points by scale, not just different colors.
 
 ![byscale2]
+
 ![russiandots1]
 
 Now: imagine that the city council wants to help fund a new Russian storyhour program in certain libraries. Where are the tracts with the highest numbers of Russian-speaking households? In GIS you can query (and select) features by certain values, or characteristics. Navigate to the `select by expression` option, search for "Russian", double-click on the p_russian field (percentage) and then write greater than 0.3 (30 percent). It should read `"2010LanguagesbyTract2010_P_Russian">0.30`
 
 The selected fields should appear highlighted in yellow on our map.
+
 ![querythreshold]
+
 Using our eyes (and tomorrow we can calculate), where are the 'hotspots' of speakers that are furthest away from the cultural services we've mapped?
 
 
-###Preparing the map to print
+### Preparing the map to print
 
-In the top-left `project` menu, select `print layout`![printlayout]. Once that window opens, click on the icon on the left to add a map. 
-![addmaplayout]. You can play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
+In the top-left `project` menu, select `print layout`.
+
+![printlayout]
+
+ Once that window opens, click on the icon on the left to add a map. 
+
+![addmaplayout]
+
+ You can play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
 
 -*Add a legend.* Click on the legend icon and draw a rectangle on top of your map - ideally somewhere without much going on.
 
@@ -182,6 +198,7 @@ We almost always have to clean up the legend items - in this case, I went back i
 
 - *Add a title*
 Click on the add text box, and draw a rectangle where you want your title. Write, then make the font bigger so that it's legible - probably between 18 - 32 - point.
+
 ![addtitle]
 
 - *Add source information*
@@ -191,52 +208,59 @@ Draw another text rectangle and write out the data source and any other notes.
 It's always important to situate maps in space - most people know roughly where New York City is, and how big it is, but it's still important to flag!
 
 - *Add north arrow*
-Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. ![northarrow1] Click on `search directories` and preset options will open for different styles of north arrows (and other icons).![northarrow2]
+Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. 
 
-####Export
+![northarrow1] 
+
+Click on `search directories` and preset options will open for different styles of north arrows (and other icons).
+
+![northarrow2]
+
+#### Export
 From the top-left menu (`layout`), select `export as image`. Save in a place you can find. Open and admire your work! Also likely: open, see the changes you'd like to tweak, and return to the layout window to modify and beautify.
 ![exportimage]
 
 Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course, Summer 2019.
+
 ...
 
-[adding file]: Images/2019/Tutorial4_add.png
+[adding file]:Images/2019/Tutorial4_add.png
 
-[single fill box]: Images/2019/Tutorial4_fade.png
+[single fill box]:Images/2019/Tutorial4_fade.png
 
-[joining table]: Images/2019/Tutorial4_join1.png
+[joining table]:Images/2019/Tutorial4_join1.png
 
 [joining table continued]:Images/2019/Tutorial4_join2.png
  
-[graduated classification]: Images/2019/Tutorial4_graduated.png
+[graduated classification]:Images/2019/Tutorial4_graduated.png
 
-[equalinterval]: Images/2019/Tutorial4_equalinterval.png
+[equalinterval]:Images/2019/Tutorial4_equalinterval.png
 
-[equalinterval2]: Images/2019/Tutorial4_equalinterval2.png
+[equalinterval2]:Images/2019/Tutorial4_equalinterval2.png
 
 [quantiles]:Images/2019/Tutorial4_quantiles.png
 
-[naturalbreaks]: Images/2019/Tutorial4_naturalbreaks.png
+[naturalbreaks]:Images/2019/Tutorial4_naturalbreaks.png
 
 [naturalbreaks_inverse]:Images/2019/Tutorial4_naturalbreaks_inverse.png
 
-[cleanuplines1]: Images/2019/Tutorial4_cleanuplines1.png
+[cleanuplines1]:Images/2019/Tutorial4_cleanuplines1.png
 
-[cleanuplines2]: Images/2019/Tutorial4_cleanuplines2.png
+[cleanuplines2]:Images/2019/Tutorial4_cleanuplines2.png
 
-[cleanuplines3]: Images/2019/Tutorial4_cleanuplines3.png
+[cleanuplines3]:Images/2019/Tutorial4_cleanuplines3.png
 
-[importinginstitutions]: Images/2019/Tutorial4_importinginstitutions.png
+[importinginstitutions]:Images/2019/Tutorial4_importinginstitutions.png
 
 [84]:Images/2019/Tutorial4_84.png
 
-[language points1]: Images/2019/Tutorial4_languagepoints1.png
+[language points1]:Images/2019/Tutorial4_languagepoints1.png
 
-[FrenchORCreole]: Images/2019/Tutorial4_FrenchORCreole
+[FrenchORCreole]:Images/2019/Tutorial4_FrenchORCreole
 
 [FrenchHaitianMap]:Images/2019/Tutorial4_FrenchHaitianMap
 
-[infobutton-haitian]: Images/2019/Tutorial4_infobutton-haitian
+[infobutton-haitian]:Images/2019/Tutorial4_infobutton-haitian
 
 [selectbyvalues]: Images/2019/Tutorial4_selectbyvalues
 
@@ -248,21 +272,21 @@ Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course,
 
 [byscale2]: Images/2019/Tutorial4_byscale2
 
-[russiandots1]: Images/2019/Tutorial4_russiandots1
+[russiandots1]:Images/2019/Tutorial4_russiandots1
 
-[querythreshold]: Images/2019/Tutorial4_querythreshold
+[querythreshold]:Images/2019/Tutorial4_querythreshold
 
-[printlayout]: Images/2019/Tutorial4_printlayout
+[printlayout]:Images/2019/Tutorial4_printlayout
 
-[addmaplayout]: Images/2019/Tutorial4_addmaplayout
+[addmaplayout]:Images/2019/Tutorial4_addmaplayout
 
-[addlegend]: Images/2019/Tutorial4_addlegend
+[addlegend]:Images/2019/Tutorial4_addlegend
 
-[addtitle]: Images/2019/Tutorial4_addtitle
+[addtitle]:Images/2019/Tutorial4_addtitle
 
-[northarrow1]: Images/2019/Tutorial4_northarrow1
+[northarrow1]:Images/2019/Tutorial4_northarrow1
 
-[northarrow2]: Images/2019/Tutorial4_northarrow2
+[northarrow2]:Images/2019/Tutorial4_northarrow2
 
 [exportimage]:Images/2019/Tutorial4_exportimage.png
 
