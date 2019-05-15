@@ -1,5 +1,4 @@
 ## Tutorial 0: Getting Started
-
 #### Premise & Objectives
 The purpose of this tutorial is to introduce you to the QGIS interface, exploring a environment and a handful of its options. In doing this, we will set up the layers needed for the first tutorial (Tutorial 1), exploring the QGIS environment and a handful of its options. In the process, we will
 - start and save a map project,
@@ -11,14 +10,13 @@ The purpose of this tutorial is to introduce you to the QGIS interface, explorin
 #### Prep
 Download the GitHub repository for this course. After following [this link](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2019), click on the green button on the right side that reads `Clone or Download`, and select `Download ZIP`. Save and decompress the downloaded folder to your preferred working location. (We highly recommend establishing a single folder or directory for all of the work and tutorials associated with the workshop.) The Class_Data folder will then have most of the datasets needed for tutorials.
 
-Additional datasets required for the tutorials (those larger than certain upload limits allow) can be found in [this public google drive folder] (https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb), including the georectified scanned map image included later in this tutorial. Download, save, and decompress this folder to the same directory as the GitHub repository you saved.
-
+Additional datasets required for the tutorials (those larger than certain upload limits allow) can be found in [this public google drive folder](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb), including the georectified scanned map image included later in this tutorial. Download, save, and decompress this folder to the same directory as the GitHub repository you saved.
 
 ### Setting up QGIS
 
 **Launch** QGIS. Your new blank map project will look like this:
-
 ![blank]
+<div style="page-break-after: always;"></div>
 
 Begin to familiarize yourself with the interface. Yours may not exactly resemble the layout shown above. For instance, most toolbars and panels are movable, allowing you to set up your workspace as you like. You can always add or remove these elements of the workspace by clicking through `View > Panels or Toolboars` (from the main menu bar). For more information, refer to this [brief description](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/QGIS_InterfaceDescription.md) of the elements of the interface.
 

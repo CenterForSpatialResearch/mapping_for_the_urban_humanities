@@ -319,7 +319,7 @@ Note: These maps are not very good: it's almost impossible to tell how many news
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Michelle McSweeney, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2018 by the [Center for Spatial Research](http://c4sr.columbia.edu) and updated by Eric Glass for Summer 2019. More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
 [readex1]: Images/2019/Geocoding_01.png
 [readex2]: Images/2019/Geocoding_02.png
