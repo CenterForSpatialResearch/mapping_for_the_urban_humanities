@@ -81,6 +81,7 @@ Studio@Butler
 * **Guest session:** Laura Kurgan, Director, Center for Spatial Research, "Conflict Urbanism"
 
 **Monday, June 3**  
+Studio@Butler
 * **Due:**
 * **Topics:**
 * **Tutorial:**
@@ -93,9 +94,9 @@ Studio@Butler
 
 **Wednesday, June 5**  
 300 S Buell Hall
-* Curriculum Development Sessions by Appointment
+* Curriculum Development Sessions by Appointment (11am-6pm)
 
-**Thursday, June 6 | Final Presentations**  
+**Thursday, June 6 | Final Presentations (1pm)**  
 300 S Buell Hall
 
 
