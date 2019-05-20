@@ -70,7 +70,7 @@ is one of the most powerful tools that GIS can deliver - it can identify what pa
 ![spatialjoin]
 ![spatialjoin2]
 
-#### Compare the areas with high density of institutions versus those with high density of residents. Don't forget the visual component of the argument - is side to side more effective, or a layered single map?
+#### Compare the areas with high-frequency institutions (those that have spaces open daily or weekly) versus the areas with high density (speakers / km2) of residents. Don't forget the visual component of the argument - is side to side more effective, or a layered single map?
 ![compare_density]
 
 #### Task 3: Test the 'subway line' hypothesis : buffers
