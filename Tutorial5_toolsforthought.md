@@ -89,7 +89,7 @@ Because we have a small dataset, it's fairly easy to see that a handful of insti
 - Select the features from the institutions (`Russian`), where they intersect  by comparing them to  the `buffer` layer generated in the previous step.
 ![selectlocation]
 ![selectlocation2]
-The institutions that are within 1 km of the D line should be highlighted on your map. You can right-click on the layer and `save selection as` to make them their own layer. You did it! Spurious arguments in analytical maps aren't hard to make: now it's time to apply these tools to your own research and teaching agendas!
+The institutions that are within 1 km of the D line should be highlighted on your map. You can right-click on the layer and `save selection as` to make them their own layer. You did it! Spurious arguments in analytical maps aren't hard to make: now it's time to apply these tools to your own research and teaching agendas.
 
 [endof4]: Images/2019/Tutorial5_endof4.png
 
@@ -115,7 +115,7 @@ The institutions that are within 1 km of the D line should be highlighted on you
 
 [buffer]: Images/2019/Tutorial5_buffer.png
 
-[Dline]: Images/2019/Tutorial5_buffer2.png
+[buffer2]: Images/2019/Tutorial5_buffer2.png
 
 [vectorselection]: Images/2019/Tutorial5_vectorselection.png
 
