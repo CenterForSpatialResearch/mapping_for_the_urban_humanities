@@ -2,28 +2,24 @@
 
 This tutorial outlines how to deploy basic tools in QGIS to tell stories across multiple layers. The goal in this session is to learn approaches to make your maps compelling visual arguments. The final products should make sense at first glance, and convey your desired narrative or analysis. 
 
-### Topics to cover:  
-
+### Topics covered:  
 - Quantitative symbology & classification
-
 - Subsetting data layers
-
 - Querying by attribute
-
 - Layout & exporting map
 
-*Language and the city: where do we speak?*
+#### *Language and the city: where do we speak?
 
 Using the skills listed above, this tutorial examines second language speakers and institutions of practice in New York City. New York has an incredible number and variety of second language speakers, yet how and where they are used - in a spoken format - remains less charted, especially on a spatial level. 
 
 The questions we will be probing include: are there spatial patterns to where speakers of certain languages live within the city? And, drawing on a unique dataset of institutions where a language other than English is expected or formalized, how do these formal and semi-formal spaces map spatially across the city? How do they intersect, if at all, with places of residence? In the next tutorial (5), geoprocessing tools will help formalize these analyses.
 
-*Data:*
+#### Data:
 We will draw on two simple sources of information:
 - The US Census American Community Survey data on languages spoken at home, from 2006-2010
 - A new dataset mapping semi-public institutions for language maintanence in New York City, developed by the CSR.
 
-### Representing people across a city: Where do speakers of non-English languages live in New York?
+### Representing numbers of people across a city: Where do speakers of non-English languages live in New York?
 
 Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
 
