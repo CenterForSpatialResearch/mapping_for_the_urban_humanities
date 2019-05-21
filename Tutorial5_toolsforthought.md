@@ -91,6 +91,8 @@ Because we have a small dataset, it's fairly easy to see that a handful of insti
 ![selectlocation2]
 The institutions that are within 1 km of the D line should be highlighted on your map. You can right-click on the layer and `save selection as` to make them their own layer. You did it! Spurious arguments in analytical maps aren't hard to make: now it's time to apply these tools to your own research and teaching agendas.
 
+Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an intensive summer 2019 workshop from the [Center for Spatial Research](http://c4sr.columbia.edu/) in the Graduate School of Architecture, Planning and Preservation at Columbia University. More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-institute).
+
 [endof4]: Images/2019/Tutorial5_endof4.png
 
 [gear]: Images/2019/Tutorial5_gear.png
