@@ -1,6 +1,6 @@
 ## Tutorial 4 : Telling stories with maps
 
-This tutorial outlines how to deploy basic tools in QGIS to tell stories across multiple layers. The goal in this session is to learn approaches to make your maps compelling visual arguments. The final products should make sense at first glance, and convey your desired narrative or analysis. 
+This tutorial outlines how to deploy basic tools in QGIS to tell stories across multiple layers. The goal in this session is to learn approaches to make your maps compelling visual arguments. The final products should make sense at first glance, and convey your desired narrative or analysis.
 
 ### Topics covered:  
 - Quantitative symbology & classification
@@ -8,9 +8,9 @@ This tutorial outlines how to deploy basic tools in QGIS to tell stories across 
 - Querying by attribute
 - Layout & exporting map
 
-#### *Language and the city: where do we speak?
+#### Language and the city: where do we speak?
 
-Using the skills listed above, this tutorial examines second language speakers and institutions of practice in New York City. New York has an incredible number and variety of second language speakers, yet how and where they are used - in a spoken format - remains less charted, especially on a spatial level. 
+Using the skills listed above, this tutorial examines second language speakers and institutions of practice in New York City. New York has an incredible number and variety of second language speakers, yet how and where they are used - in a spoken format - remains less charted, especially on a spatial level.
 
 The questions we will be probing include: are there spatial patterns to where speakers of certain languages live within the city? And, drawing on a unique dataset of institutions where a language other than English is expected or formalized, how do these formal and semi-formal spaces map spatially across the city? How do they intersect, if at all, with places of residence? In the next tutorial (5), geoprocessing tools will help formalize these analyses.
 
@@ -21,7 +21,7 @@ We will draw on two simple sources of information:
 
 ### Representing numbers of people across a city: Where do speakers of non-English languages live in New York?
 
-Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
+Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)).
 
 The [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html) estimates households that speak [select non-English languages](https://www.census.gov/quickfacts/fact/note/US/POP815217) at home. We will connect this information to [tract-level geography](https://www2.census.gov/geo/pdfs/education/CensusTracts.pdf) at the five-borough level and then tweak ways of displaying and representing to find stories that relate to our spatial research questions outlined above.
 
@@ -36,7 +36,7 @@ Open QGIS and add these shapefiles from the Tutorial 4 folder:
 *Fade out background*
 *The water map will probably load in technicolor; while lovely, we need to fade the background out to better show what we care about -- households speaking other languages.*
 
-Double-click on the small square to the left of 'Water_Tristate' in the layer panel. Then click on the `Single Fill` box and change the color and lines to something suitable for background. 
+Double-click on the small square to the left of 'Water_Tristate' in the layer panel. Then click on the `Single Fill` box and change the color and lines to something suitable for background.
 
 ![single fill box]
 
@@ -54,28 +54,28 @@ Data type consistency - e.g. a column of numbers with one missing field -  is th
 
 ### Cartographic tools: find and show spatial stories better with one variable
 
-QGIS has an immense array of tools to quickly change how your maps look; this will consequently shift the messages they communicate - and the clarity with which they do so. 
+QGIS has an immense array of tools to quickly change how your maps look; this will consequently shift the messages they communicate - and the clarity with which they do so.
 
 Legibility obviously depends on context of [time and place](http://socks-studio.com/2014/03/02/the-three-mawangdui-maps-early-chinese-cartography/): how much do you anticipate that your audience knows and how are they accustomed to reading maps and visuals? (Not to mention how they perceive beauty!)
 
-A general rule is to keep information in the map to a *minimum*: only show exactly what you need to say. At the most basic, this means (a) remove unnecessary elements and (b) make the background a boring color  - in mapper-speak, make sure you have a visual hierarchy that puts your main story at the top. 
+A general rule is to keep information in the map to a *minimum*: only show exactly what you need to say. At the most basic, this means (a) remove unnecessary elements and (b) make the background a boring color  - in mapper-speak, make sure you have a visual hierarchy that puts your main story at the top.
 
 If you have multiple points you want to make, break them up. Just like in writing! You can always make sequences of single-color maps, mixed in with videos or other visualizations to tell larger stories, such as the making visible of the spatial realities of [Rohinga camps](http://fingfx.thomsonreuters.com/gfx/rngs/MYANMAR-ROHINGYA/010051VB46G/index.html), the ['bussings out' of the homeless in the US](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study), or [street names in Germany](https://www.zeit.de/feature/streetdirectory-streetnames-origin-germany-infographic-english)
 
 #### Make your own quantitative representation
 Right-click on the NYC_tract2010... file and navigate to `properties` and the symbology menu.
 
-- Select `graduated` from the top menu, and then drop down to pick the variable (ideally language: in the example we use speakers of French Creole, one of the largest second-language groups in NYC). 
+- Select `graduated` from the top menu, and then drop down to pick the variable (ideally language: in the example we use speakers of French Creole, one of the largest second-language groups in NYC).
 
 ![graduated classification]
 
-- Then: pick a color scheme and a mode by which to cluster your numbers. All of these can completely change how your data communicates to your audience. 
+- Then: pick a color scheme and a mode by which to cluster your numbers. All of these can completely change how your data communicates to your audience.
 
 
 #### *Choices inside colors and classification modes*
 
 #### Color ramps inside shapes, aka 'chloropleth maps'
-- Grayscale or a single color range. Most useful when: you are preparing a map for a journal or in-text in a scholarly book and you want to show a range over a wide area, and care less about showing the differences in smaller categories. Many [effective maps](https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map) have only needed black and white or a [spectrum of a single color.](http://www.radicalcartography.net/index.html?trees) 
+- Grayscale or a single color range. Most useful when: you are preparing a map for a journal or in-text in a scholarly book and you want to show a range over a wide area, and care less about showing the differences in smaller categories. Many [effective maps](https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map) have only needed black and white or a [spectrum of a single color.](http://www.radicalcartography.net/index.html?trees)
 
 - Short spectrum: most frequently used to illustrate intensity and a sharp difference in a single variable, e.g. land plots with some royal ownership share or those without; or the [presence of slavery in the American South.](https://pudding.cool/2017/01/shape-of-slavery/)
 
@@ -87,7 +87,7 @@ Only break your data into the number of clusters that make sense for your story.
 #### Number or percentage?
 Does it make sense to show speakers in absolute numbers or as a percentage of all residents inside a tract? Usually the answer with population data is that percentages are more meaningful, especially for comparisons (note that with tracts and other census geography this matters slightly less, as tracts have relatively similar numbers of residents.) For our question, the actual number of speakers made more sense - it's an easier way to convey how many folks there are to talk with in the immediate area.
 
-#### [*Modes*](https://www.axismaps.com/guide/data/data-classification/) of classification and  clustering perhaps most radically change how the data visualizes. 
+#### [*Modes*](https://www.axismaps.com/guide/data/data-classification/) of classification and  clustering perhaps most radically change how the data visualizes.
 *Try making your map with each of the following.*
 - *Equal interval* means that each group of tracts will be organized according to equivalent numeric ranges of the number of language speakers per tract (e.g. 1-150, 150-300 people). This works best when there are a good number of tracts that fall into each range - not for our language speaker data.
 ![equalinterval]
@@ -97,11 +97,11 @@ Does it make sense to show speakers in absolute numbers or as a percentage of al
 - *'Natural' breaks, aka Jenks.* Minimizes variation inside each cluster, so generally falls along already-existing breaks in data. Often looks good, but harder to explain and the breaks may be at points with little meaning (e.g. a cluster with 21-39 speakers and another for 40-301 speakers).
 ![naturalbreaks]
 ![naturalbreaks_inverse]
-- *'Pretty' breaks* slice along easy-to-remember numbers, e.g. 0-5, 5-25 speakers. 
--  *Custom*: you can define how many classes you want and where the breaks in your data are. This makes the most sense if you have a theory of something meaningful behind different levels- e.g. if we had a study suggesting that more than 700 speakers in a neighborhood is a threshold for children to retain more of their second language. 
+- *'Pretty' breaks* slice along easy-to-remember numbers, e.g. 0-5, 5-25 speakers.
+-  *Custom*: you can define how many classes you want and where the breaks in your data are. This makes the most sense if you have a theory of something meaningful behind different levels- e.g. if we had a study suggesting that more than 700 speakers in a neighborhood is a threshold for children to retain more of their second language.
 
 #### Visual hygiene: cleaning out background noise
-This tutorial referenced the importance of visual heirarchy and minimizing map elements. Sometimes Q maps even a single variable in a 'noisy' way; this is particularly true when our geographic unit is something that isn't particularly meaningful to our story (Who cares or knows about tracts, anyways?!). Some quick tidying can help using the basic display functions, e.g. for the common too-big background lines scenario, as below 
+This tutorial referenced the importance of visual heirarchy and minimizing map elements. Sometimes Q maps even a single variable in a 'noisy' way; this is particularly true when our geographic unit is something that isn't particularly meaningful to our story (Who cares or knows about tracts, anyways?!). Some quick tidying can help using the basic display functions, e.g. for the common too-big background lines scenario, as below
 ![cleanuplines1]
 The fastest way is to click on the square to the left of the zero value in the layer panel -
 ![cleanuplines2]
@@ -116,23 +116,23 @@ In this component, we will map the spaces outside the home that encourage langua
 We've mapped out where residents live who speak languages other than English at home. But language retention also depends significantly on speaking in spaces outside the home. Where are those spaces? The data for this section was hand-collected by research assistants for a Mellon-foundation-funded project in the summer of 2017 at the Center for Spatial Research. It is in no way complete or representative - there are many spaces where meaningful language exchanges regularly take place but that are too hard to map- and other places may be over-represented. What the dataset does do, however, is map the electronically 'visible' institutions where second language usage is publicized and where entry is relatively open to the public.
 
 
-#### Add institutions data and designate reference system 
-Browse to the table `language_institutions_NYC` and add to the map. 
+#### Add institutions data and designate reference system
+Browse to the table `language_institutions_NYC` and add to the map.
 
 ![importinstitutions]
 
 When you are adding, designate the `latitude` (Y) and `longitude` (X) variables and select the option for WGS 1984 coordinate reference system (the points in this table are in a different system; QGIS will convert as long as you flag which one it's coming from!).
- 
+
 ![84]
 
-First, let's look at this layer by itself -as points- and see if anything strikes us, or if we can modify to visualize interesting clusters or relationships (or skewdnesses in our data!). Are all five boroughs covered? Why not? Do some spaces seem to be particular clusters of a single language? 
+First, let's look at this layer by itself -as points- and see if anything strikes us, or if we can modify to visualize interesting clusters or relationships (or skewdnesses in our data!). Are all five boroughs covered? Why not? Do some spaces seem to be particular clusters of a single language?
 
 ![languagepoints1]
 
 ### Filter and subset: hone in to your variable of choice
 
 #### Rule-based symbology - Haitian Creole and French institutions
-We could un-click each of the languages one by one. Or we can quickly build `rule-based` symbology (`properties:symbology:rule-based`) - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example. 
+We could un-click each of the languages one by one. Or we can quickly build `rule-based` symbology (`properties:symbology:rule-based`) - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example.
 
 ![FrenchORCreole]
 
@@ -170,19 +170,19 @@ Using our eyes (and tomorrow we can calculate), where are the 'hotspots' of spea
 
 From the `project` menu, select `print layout`. ![printlayout]. Once that window opens, add your map through the drop-down menu `add:add map` or click on add map icon ![addmaplayout]. Draw a rectangle where you want to place your map. Play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
 
-- #### *Add a legend.* Click on the legend icon and draw a rectangle on top of your map - ideally somewhere without much going on.![addlegend]. The legend items almost always need cleaning - in this case, I went back into the map and edited the percentages so they'd be more readable. 
+- *Add a legend.* Click on the legend icon and draw a rectangle on top of your map - ideally somewhere without much going on.![addlegend]. The legend items almost always need cleaning - in this case, I went back into the map and edited the percentages so they'd be more readable.
 
-- #### *Add a title*
+- *Add a title*
 Click on the add text box, and draw a rectangle where you want your title. Write, then make the font bigger so that it's legible - probably between 18 - 32 - point.![addtitle]
 
-- #### *Add source information*
+- *Add source information*
 Draw another text rectangle and write out the data source and any other notes.
 
-- #### *Add a scale bar*  
+- *Add a scale bar*  
 It's always important to situate maps in space - most people know roughly where New York City is, and how big it is, but it's still important to flag!
 
-- #### *Add north arrow*
-Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. ![northarrow1] 
+- *Add north arrow*
+Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. ![northarrow1]
 
 Click on `search directories` and preset options will open for different styles of north arrows (and other icons).
 
@@ -190,9 +190,11 @@ Click on `search directories` and preset options will open for different styles 
 From the top-left menu (`layout`), select `export as image`. Save in a place you can find. Open and admire your work! Also likely: open, see the changes you'd like to tweak, and return to the layout window to modify and beautify.
 ![exportimage]
 
+
+______________________________________________________________________________________________________________
 Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an intensive summer 2019 workshop from the [Center for Spatial Research](http://c4sr.columbia.edu/) in the Graduate School of Architecture, Planning and Preservation at Columbia University. More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-institute).
 
-...
+
 
 [adding file]:Images/2019/Tutorial4_add.png
 
@@ -201,7 +203,7 @@ Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an int
 [joining table]:Images/2019/Tutorial4_join1.png
 
 [joining table continued]:Images/2019/Tutorial4_join2.png
- 
+
 [graduated classification]:Images/2019/Tutorial4_graduated.png
 
 [equalinterval]:Images/2019/Tutorial4_equalinterval.png
@@ -257,5 +259,3 @@ Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an int
 [northarrow1]:Images/2019/Tutorial4_northarrow1.png
 
 [exportimage]:Images/2019/Tutorial4_exportimage.png
-
-
