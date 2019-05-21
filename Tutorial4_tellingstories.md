@@ -130,7 +130,7 @@ Browse to the table `language_institutions_NYC` and add to the map.
 
 When you are adding, designate the `latitude` (Y) and `longitude` (X) variables and select the option for WGS 1984 coordinate reference system (the points in this table are in a different system; QGIS will convert as long as you flag which one it's coming from!).
  
-[!84]
+![84]
 
 First, let's look at this layer by itself -as points- and see if anything strikes us, or if we can modify to visualize interesting clusters or relationships (or skewdnesses in our data!). Are all five boroughs covered? Why not? Do some spaces seem to be particular clusters of a single language? 
 
@@ -218,7 +218,7 @@ Click on `search directories` and preset options will open for different styles 
 From the top-left menu (`layout`), select `export as image`. Save in a place you can find. Open and admire your work! Also likely: open, see the changes you'd like to tweak, and return to the layout window to modify and beautify.
 ![exportimage]
 
-Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course, Summer 2019.
+Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an intensive summer 2019 workshop from the [Center for Spatial Research]:(http://c4sr.columbia.edu/) in the Graduate School of Architecture, Planning and Preservation at Columbia University. More information about the course is available [here]:(http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-institute).
 
 ...
 
@@ -252,7 +252,7 @@ Prepared by Bernadette Baird-Zars for the CSR Mapping for the Humanities Course,
 
 [84]:Images/2019/Tutorial4_84.png
 
-[language points1]:Images/2019/Tutorial4_languagepoints1.png
+[languagepoints1]:Images/2019/Tutorial4_languagepoints1.png
 
 [FrenchORCreole]:Images/2019/Tutorial4_FrenchORCreole.png
 
