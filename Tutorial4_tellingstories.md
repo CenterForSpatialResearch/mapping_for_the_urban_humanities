@@ -23,7 +23,7 @@ We will draw on two simple sources of information:
 - The US Census American Community Survey data on languages spoken at home, from 2006-2010
 - A new dataset mapping semi-public institutions for language maintanence in New York City, developed by the CSR.
 
-### 1. Mapping people by tract: Where do speakers of non-English languages live in the city?
+### 1. Representing people across a city: Where do speakers of non-English languages live in New York?
 
 Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
 
@@ -56,7 +56,7 @@ Select the name of the table (2010Languages..) and then the field GISJOIN in bot
 #### Troubleshooting
 Data type consistency - e.g. a column of numbers with one missing field -  is the most common problem bedeviling `joins` to a new table of data. Check your data twice before trying to join. QGIS also has some particularities importing quantitative data; if glitches arise, chances are it's not you, it's the program (so answers can be found online!)
 
-### Cartography: finding and showing spatial stories with numbers on maps.
+### Cartographic tools: find and show spatial stories better with one variable
 
 QGIS has an immense array of tools to quickly change how your maps look; this will consequently shift the messages they communicate - and the clarity with which they do so. 
 
@@ -66,7 +66,7 @@ A general rule is to keep information in the map to a *minimum*: only show exact
 
 If you have multiple points you want to make, break them up. Just like in writing! You can always make sequences of single-color maps, mixed in with videos or other visualizations to tell larger stories, such as the making visible of the spatial realities of [Rohinga camps](http://fingfx.thomsonreuters.com/gfx/rngs/MYANMAR-ROHINGYA/010051VB46G/index.html), the ['bussings out' of the homeless in the US](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study), or [street names in Germany](https://www.zeit.de/feature/streetdirectory-streetnames-origin-germany-infographic-english)
 
-#### Start your own!
+#### Make your own quantitative representation
 Right-click on the NYC_tract2010... file and navigate to `properties` and the symbology menu.
 
 - Select `graduated` from the top menu, and then drop down to pick the variable (ideally language: in the example we use speakers of French Creole, one of the largest second-language groups in NYC). 
@@ -76,7 +76,7 @@ Right-click on the NYC_tract2010... file and navigate to `properties` and the sy
 - Then: pick a color scheme and a mode by which to cluster your numbers. All of these can completely change how your data communicates to your audience. 
 
 
-*Choices inside colors and classification modes*
+#### *Choices inside colors and classification modes*
 
 #### Color ramps inside shapes, aka 'chloropleth maps'
 - Grayscale or a single color range. Most useful when: you are preparing a map for a journal or in-text in a scholarly book and you want to show a range over a wide area, and care less about showing the differences in smaller categories. Many [effective maps](https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map) have only needed black and white or a [spectrum of a single color.](http://www.radicalcartography.net/index.html?trees) 
@@ -114,8 +114,8 @@ The fastest way is to click on the square to the left of the zero value in the l
 
 Don't forget: at the end of the day, all of your choices are subjective and reflect what you think makes a better story while still maintaining methodological integrity. Bon voyage!
 
-### 2. Relationships through visual overlays: Can we identify spatial relationships by mapping institutions for a given language over the areas where speakers live?
-*In this section, we will identify where are the spaces outside the home that encourage language maintanence, document spatial patterns, and hypothesize how they relate to where speakers live.
+### Spatial relationships through visual overlays: how to tell stories with two variables.
+In this component, we will map the spaces outside the home that encourage language maintanence, investigate how they relate to where speakers live, and see how we can best make maps that communicate those relationships (or lack thereof).
 
 We've mapped out where residents live who speak languages other than English at home. But language retention also depends significantly on speaking in spaces outside the home. Where are those spaces? The data for this section was hand-collected by research assistants for a Mellon-foundation-funded project in the summer of 2017 at the Center for Spatial Research. It is in no way complete or representative - there are many spaces where meaningful language exchanges regularly take place but that are too hard to map- and other places may be over-represented. What the dataset does do, however, is map the electronically 'visible' institutions where second language usage is publicized and where entry is relatively open to the public.
 
@@ -133,8 +133,10 @@ First, let's look at this layer by itself -as points- and see if anything strike
 
 ![languagepoints1]
 
-### Filter and subset
-We could un-click each of the languages one by one. Or we can quickly build rules - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example. 
+### Filter and subset: hone in to your variable of choice
+
+#### Rule-based symbology - Haitian Creole and French institutions
+We could un-click each of the languages one by one. Or we can quickly build `rule-based` symbology (`properties:symbology:rule-based`) - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example. 
 
 ![FrenchORCreole]
 
@@ -146,7 +148,7 @@ To investigate what each point is, click on the 'information' button, and then c
 
 ![infobutton-haitian]
 
-### Map Russian speakers and institutions
+### Select by values  - Russian institutions
 Here's another way to select and play with a subset of your data.
 Select by values where Language = Russian in the institutions layer.![selectbyvalues] ![selectbyvalues2]
 
