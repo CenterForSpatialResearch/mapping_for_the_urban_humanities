@@ -23,7 +23,7 @@ We will draw on two simple sources of information:
 - The US Census American Community Survey data on languages spoken at home, from 2006-2010
 - A new dataset mapping semi-public institutions for language maintanence in New York City, developed by the CSR.
 
-### First challenge: Where do speakers of non-English languages live in the city?
+### 1. Mapping people by tract: Where do speakers of non-English languages live in the city?
 
 Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
 
@@ -56,7 +56,7 @@ Select the name of the table (2010Languages..) and then the field GISJOIN in bot
 #### Troubleshooting
 Data type consistency - e.g. a column of numbers with one missing field -  is the most common problem bedeviling `joins` to a new table of data. Check your data twice before trying to join. QGIS also has some particularities importing quantitative data; if glitches arise, chances are it's not you, it's the program (so answers can be found online!)
 
-#### The fun part: finding and showing spatial stories with numbers on maps.
+### Cartography: finding and showing spatial stories with numbers on maps.
 
 QGIS has an immense array of tools to quickly change how your maps look; this will consequently shift the messages they communicate - and the clarity with which they do so. 
 
@@ -114,12 +114,13 @@ The fastest way is to click on the square to the left of the zero value in the l
 
 Don't forget: at the end of the day, all of your choices are subjective and reflect what you think makes a better story while still maintaining methodological integrity. Bon voyage!
 
-### Second challenge: where are the spaces outside the home that encourage language maintanence? 
+### 2. Relationships through visual overlays: Can we identify spatial relationships by mapping institutions for a given language over the areas where speakers live?
+*In this section, we will identify where are the spaces outside the home that encourage language maintanence, document spatial patterns, and hypothesize how they relate to where speakers live.
+
 We've mapped out where residents live who speak languages other than English at home. But language retention also depends significantly on speaking in spaces outside the home. Where are those spaces? The data for this section was hand-collected by research assistants for a Mellon-foundation-funded project in the summer of 2017 at the Center for Spatial Research. It is in no way complete or representative - there are many spaces where meaningful language exchanges regularly take place but that are too hard to map- and other places may be over-represented. What the dataset does do, however, is map the electronically 'visible' institutions where second language usage is publicized and where entry is relatively open to the public.
 
-*Can we identify spatial relationships by mapping institutions for a given language over the areas where speakers live? 
 
-#### Add the data. 
+#### Add institutions data and designate reference system 
 Browse to the table `language_institutions_NYC` and add to the map. 
 
 ![importinstitutions]
@@ -132,7 +133,7 @@ First, let's look at this layer by itself -as points- and see if anything strike
 
 ![languagepoints1]
 
-#### Built a filter and subset
+### Filter and subset
 We could un-click each of the languages one by one. Or we can quickly build rules - to show 'Language' points only when they are entities with programming or events in Haitian Creole and French (assuming some overlap), for example. 
 
 ![FrenchORCreole]
@@ -145,19 +146,11 @@ To investigate what each point is, click on the 'information' button, and then c
 
 ![infobutton-haitian]
 
-#### Map Russian speakers and institutions
+### Map Russian speakers and institutions
 Here's another way to select and play with a subset of your data.
-Select by values where Language = Russian in the institutions layer.
+Select by values where Language = Russian in the institutions layer.![selectbyvalues] ![selectbyvalues2]
 
-![selectbyvalues]
-
-![selectbyvalues2]
-
-You can make selections a new shapefile - smaller and sometimes easier to work with. 
-
-![saveselection]
-
-![saveselection2]
+You can make selections a new shapefile - smaller and sometimes easier to work with. ![saveselection] ![saveselection2]
 
 The language dataset coded cultural + educational institutions by their 'scale' of reach; whether they operated mainly for a neighborhood, borough or city-wide audience. We'll use this to learn to show these points by scale, not just different colors.
 
@@ -165,7 +158,8 @@ The language dataset coded cultural + educational institutions by their 'scale' 
 
 ![russiandots1]
 
-Now: imagine that the city council wants to help fund a new Russian storyhour program in certain libraries. Where are the tracts with the highest numbers of Russian-speaking households? In GIS you can query (and select) features by certain values, or characteristics. Navigate to the `select by expression` option, search for "Russian", double-click on the p_russian field (percentage) and then write greater than 0.3 (30 percent). It should read `"2010LanguagesbyTract2010_P_Russian">0.30`
+### Select by expression: where are the critical masses of Russian speakers in the city?
+Imagine that the city council wants to help fund a new Russian storyhour program in certain libraries. Where are the tracts with the highest numbers of Russian-speaking households? In GIS you can query (and select) features by certain values, or characteristics. Navigate to the `select by expression` option, search for "Russian", double-click on the p_russian field (percentage) and then write greater than 0.3 (30 percent). It should read `"2010LanguagesbyTract2010_P_Russian">0.30`
 
 The selected fields should appear highlighted in yellow on our map.
 
