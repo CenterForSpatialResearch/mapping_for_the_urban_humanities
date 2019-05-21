@@ -8,26 +8,22 @@ This tutorial outlines how to deploy basic tools in QGIS to tell stories across 
 
 - Subsetting data layers
 
-- Querying (about pulling out the highpoint of a particular attribute)
+- Querying by attribute
 
 - Layout & exporting map
 
 *Language and the city: where do we speak?*
-We will use the skills listed above to examine second language speakers and institutions of practice in New York City. New York has an incredible number and variety of second language speakers, yet how and where they are used - in a spoken format - remains less charted, especially on a spatial level. 
+
+Using the skills listed above, this tutorial examines second language speakers and institutions of practice in New York City. New York has an incredible number and variety of second language speakers, yet how and where they are used - in a spoken format - remains less charted, especially on a spatial level. 
 
 The questions we will be probing include: are there spatial patterns to where speakers of certain languages live within the city? And, drawing on a unique dataset of institutions where a language other than English is expected or formalized, how do these formal and semi-formal spaces map spatially across the city? How do they intersect, if at all, with places of residence? In the next tutorial (5), geoprocessing tools will help formalize these analyses.
 
-
 *Data:*
+We will draw on two simple sources of information:
+- The US Census American Community Survey data on languages spoken at home, from 2006-2010
+- A new dataset mapping semi-public institutions for language maintanence in New York City, developed by the CSR.
 
-- ACS language groups
-- language institutions
-- dual language programs in NYC public schools (private too?)
-
-One story about each - make three maps
-
-### Where do speakers of non-English languages live in the city?
-
+### First challenge: Where do speakers of non-English languages live in the city?
 
 Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
 
@@ -55,7 +51,7 @@ Double-click on the small square to the left of 'Water_Tristate' in the layer pa
 ![joining table]
 Select the name of the table (2010Languages..) and then the field GISJOIN in both of the other menus. `Apply.`
 ![joining table continued]
--Then open the attribute table of the shape file and check to make sure that all of the new columns are there.
+- Then open the attribute table of the shape file and check to make sure that all of the new columns are there.
 
 #### Troubleshooting
 Data type consistency - e.g. a column of numbers with one missing field -  is the most common problem bedeviling `joins` to a new table of data. Check your data twice before trying to join. QGIS also has some particularities importing quantitative data; if glitches arise, chances are it's not you, it's the program (so answers can be found online!)
@@ -118,12 +114,12 @@ The fastest way is to click on the square to the left of the zero value in the l
 
 Don't forget: at the end of the day, all of your choices are subjective and reflect what you think makes a better story while still maintaining methodological integrity. Bon voyage!
 
-### Language institutions
+### Second challenge: where are the spaces outside the home that encourage language maintanence? 
 We've mapped out where residents live who speak languages other than English at home. But language retention also depends significantly on speaking in spaces outside the home. Where are those spaces? The data for this section was hand-collected by research assistants for a Mellon-foundation-funded project in the summer of 2017 at the Center for Spatial Research. It is in no way complete or representative - there are many spaces where meaningful language exchanges regularly take place but that are too hard to map- and other places may be over-represented. What the dataset does do, however, is map the electronically 'visible' institutions where second language usage is publicized and where entry is relatively open to the public.
 
 *Can we identify spatial relationships by mapping institutions for a given language over the areas where speakers live? 
 
-### Add the data. 
+#### Add the data. 
 Browse to the table `language_institutions_NYC` and add to the map. 
 
 ![importinstitutions]
@@ -149,7 +145,7 @@ To investigate what each point is, click on the 'information' button, and then c
 
 ![infobutton-haitian]
 
-####Map Russian speakers and institutions
+#### Map Russian speakers and institutions
 Here's another way to select and play with a subset of your data.
 Select by values where Language = Russian in the institutions layer.
 
@@ -178,7 +174,7 @@ The selected fields should appear highlighted in yellow on our map.
 Using our eyes (and tomorrow we can calculate), where are the 'hotspots' of speakers that are furthest away from the cultural services we've mapped?
 
 
-### Preparing the map to print
+### Finally: Preparing the map to print
 
 From the `project` menu, select `print layout`. ![printlayout]. Once that window opens, add your map through the drop-down menu `add:add map` or click on add map icon ![addmaplayout]. Draw a rectangle where you want to place your map. Play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
 
