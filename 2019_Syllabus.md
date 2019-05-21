@@ -55,52 +55,52 @@ Our projects generally involve collaborations with researchers and advocates acr
 ### Schedule and Topics
 **Tuesday, May 28**  
 Studio@Butler
-* **Topics:**
-* **Tutorial:**
-* **Workshop:**
+* **Topics:**Introduction to GIS
+* **Tutorial:Getting started
+* **Workshop:Spatial questions 
 
 **Wednesday, May 29**  
 Studio@Butler
-* **Topics:**
-* **Tutorial:**
-* **Workshop:**
+* **Topics: Making spatial data, tabular data
+* **Tutorial:Mapping a table, georeferencing, geocoding, digitizing
+* **Workshop: Data sources - ideas into platforms
 * **Guest session:**
 
 **Thursday, May 30**  
 Studio@Butler
-* **Topics:**
-* **Tutorial:**
-* **Workshop:**
+* **Topics:Cartography (symbology and classification)
+* **Tutorial: Telling visual and spatial stories
+* **Workshop: Spatial questions and stories
 * **Guest session:** Grga Basic & Michael Krisch, "Points Unknown"
 
 **Friday, May 31**  
 300 S Buell Hall
-* **Topics:**
-* **Tutorial:**
-* **Workshop:**
+* **Topics: Geoprocessing
+* **Tutorial:Geoprocessing: calculating and measuring
+* **Workshop: Research and assignment design
 * **Guest session:** Laura Kurgan, Director, Center for Spatial Research, "Conflict Urbanism"
 
 **Monday, June 3**  
 Studio@Butler
-* **Due:**
-* **Topics:**
-* **Tutorial:**
-* **Workshop:**
+* **Due:**Tutorial maps, research/teaching plan drafts
+* **Topics:Making public work with webmaps
+* **Tutorial:**Possible webmapping basics
+* **Workshop: Hard skills into research and assignment plans
 * **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City" [tentative]
 
 **Tuesday, June 4**  
 Studio@Butler
-* Curriculum Development Sessions by Appointment
+* Research/Curriculum Development Sessions by Appointment
 
 **Wednesday, June 5**  
 300 S Buell Hall
-* Curriculum Development Sessions by Appointment (11am-6pm)
+* Research/Curriculum Development Sessions by Appointment (11am-6pm)
 
 **Thursday, June 6 | Final Presentations (1pm)**  
 300 S Buell Hall
 
 
 **By June 21**
-- Please upload your final presentation and required two page reflection on how you will incorporate topics and skills from the workshop into your teaching and/or research via [this form](https://docs.google.com/forms/d/e/1FAIpQLSdTPyUYdNniXsnMi2BtIr4gagNFNUDUZi1w27aL3ZJvoFulFw/viewform?usp=sf_link).
+- Please upload your final presentation, a picture of your final research or teaching plan worksheet, and required two page reflection on how you will incorporate topics and skills from the workshop into your teaching and/or research via [this form](https://docs.google.com/forms/d/e/1FAIpQLSdTPyUYdNniXsnMi2BtIr4gagNFNUDUZi1w27aL3ZJvoFulFw/viewform?usp=sf_link).
 
 - Please complete [this](https://docs.google.com/forms/d/e/1FAIpQLSearZxxg-hdlYquE0gQZ8akofojDCf_1eJrvAzjh3PPLWra_A/viewform?usp=sf_link) brief survey with your feedback on the structure and material of the workshop.
