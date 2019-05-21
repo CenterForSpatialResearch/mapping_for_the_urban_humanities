@@ -180,37 +180,21 @@ Using our eyes (and tomorrow we can calculate), where are the 'hotspots' of spea
 
 ### Preparing the map to print
 
-In the top-left `project` menu, select `print layout`.
+From the `project` menu, select `print layout`. ![printlayout]. Once that window opens, add your map through the drop-down menu `add:add map` or click on add map icon ![addmaplayout]. Draw a rectangle where you want to place your map. Play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
 
-![printlayout]
+- #### *Add a legend.* Click on the legend icon and draw a rectangle on top of your map - ideally somewhere without much going on.![addlegend]. The legend items almost always need cleaning - in this case, I went back into the map and edited the percentages so they'd be more readable. 
 
- Once that window opens, click on the icon on the left to add a map. 
+- #### *Add a title*
+Click on the add text box, and draw a rectangle where you want your title. Write, then make the font bigger so that it's legible - probably between 18 - 32 - point.![addtitle]
 
-![addmaplayout]
-
- You can play around with the size you want your map to be on the page, and the extent - e.g. do you want to focus just on South Brooklyn or the whole city?
-
--*Add a legend.* Click on the legend icon and draw a rectangle on top of your map - ideally somewhere without much going on.
-
-![addlegend]
-
-We almost always have to clean up the legend items - in this case, I went back into the map and edited the percentages so they'd be more readable. 
-
-- *Add a title*
-Click on the add text box, and draw a rectangle where you want your title. Write, then make the font bigger so that it's legible - probably between 18 - 32 - point.
-
-![addtitle]
-
-- *Add source information*
+- #### *Add source information*
 Draw another text rectangle and write out the data source and any other notes.
 
-- *Add a scale bar*  
+- #### *Add a scale bar*  
 It's always important to situate maps in space - most people know roughly where New York City is, and how big it is, but it's still important to flag!
 
-- *Add north arrow*
-Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. 
-
-![northarrow1] 
+- #### *Add north arrow*
+Click on the add image icon on the left, and then navigate (on the right side) to the `item properties` tab. ![northarrow1] 
 
 Click on `search directories` and preset options will open for different styles of north arrows (and other icons).
 
