@@ -23,7 +23,7 @@ We will draw on two simple sources of information:
 - The US Census American Community Survey data on languages spoken at home, from 2006-2010
 - A new dataset mapping semi-public institutions for language maintanence in New York City, developed by the CSR.
 
-### 1. Representing people across a city: Where do speakers of non-English languages live in New York?
+### Representing people across a city: Where do speakers of non-English languages live in New York?
 
 Data on people by census tract is usually easy to access in countries with public data and standardized census processes, such as Mexico and the US. (The quality and accuracy of this data, especially as it relates to immigrants, sits at the middle of current debate in the US [in and out of court](https://www.npr.org/2019/03/31/707899218/what-you-need-to-know-about-the-2020-census)). 
 
