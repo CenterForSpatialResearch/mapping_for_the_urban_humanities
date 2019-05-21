@@ -1,11 +1,8 @@
 ## Mapping for the Urban Humanities
->Center for Spatial Research | Summer 2019
-
->Leah Meisterlin, Eric Glass, Bernadette Baird-Zars
-
->May 28, 2019 – June 6, 2019 | 10:00am-5:30 pm
-
->Studio@Butler & 300 S Buell Hall
+Center for Spatial Research | Summer 2019  
+Leah Meisterlin, Eric Glass, Bernadette Baird-Zars  
+May 28, 2019 – June 6, 2019 | 10:00am-5:30 pm  
+Studio@Butler (208b Butler Library) & 300 S Buell Hall  
 
 ### Description
 
@@ -42,51 +39,50 @@ The course aims to equip participants with a grasp of the methods and methodolog
 
 ### Materials
 * Laptop with QGIS 3.4.7 installed (see instructions [here](/Resources/DownloadingQGIS.md))
-* In addition to printed copies distributed on the first day, all course tutorials are available via Github in this repository
+* In addition to printed copies distributed on the first day, all course tutorials are available via Github through the Center for Spatial Research
 * A three button mouse (optional, though *highly* encouraged)
 * Optional: a 16 GB flash drive to store course data + exercises
 
 ## Background on CSR
 The Center for Spatial Research was established in 2015 as a hub for urban research that links design, architecture, urbanism, the humanities and data science. It sponsors research and curricular activities built around new technologies of mapping, data visualization, data collection, and data analysis. CSR focuses on data literacy as well as interrogating the world of 'big data,' working to open up new areas of urban research and inquiry.
 
-Our projects generally involve collaborations with researchers and advocates across a variety of disciplines and institutions, working with them to communicate information clearly, critically, responsibly, and provocatively. We are committed to rigorous and reliable work with data; to harnessing the most powerful techniques of design and visualization; and to a critical reflection on the limits and ideologies of both data and its representation. Based in the disciplines of design, architecture and urbanism we make links with and bring spatial expertise to the humanities as well as the sciences.
+CSR projects generally involve collaborations with researchers and advocates across a variety of disciplines and institutions, working with them to communicate information clearly, critically, responsibly, and provocatively. We are committed to rigorous and reliable work with data; to harnessing the most powerful techniques of design and visualization; and to a critical reflection on the limits and ideologies of both data and its representation. Based in the disciplines of design, architecture and urbanism we make links with and bring spatial expertise to the humanities as well as the sciences.
 
 
 ### Schedule and Topics
 **Tuesday, May 28**  
 Studio@Butler
-* **Topics:**Introduction to GIS
-* **Tutorial:Getting started
-* **Workshop:Spatial questions 
+* **Topics:** Introduction to GIS
+* **Tutorial:** Getting started
+* **Workshop:** Spatial questions
 
 **Wednesday, May 29**  
 Studio@Butler
-* **Topics: Making spatial data, tabular data
-* **Tutorial:Mapping a table, georeferencing, geocoding, digitizing
-* **Workshop: Data sources - ideas into platforms
-* **Guest session:**
+* **Topics:** Making spatial data, tabular data
+* **Tutorial:** Mapping a table, georeferencing, geocoding, digitizing
+* **Workshop:** Data sources - ideas into platforms
+* **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City"
 
 **Thursday, May 30**  
 Studio@Butler
-* **Topics:Cartography (symbology and classification)
-* **Tutorial: Telling visual and spatial stories
-* **Workshop: Spatial questions and stories
-* **Guest session:** Grga Basic & Michael Krisch, "Points Unknown"
+* **Topics:** Cartography (symbology and classification)
+* **Tutorial:** Telling visual and spatial stories
+* **Workshop:** Spatial questions and stories
+* **Guest session:** Grga Basic, Center for Resilient Cities and Landscapes, & Michael Krisch, Brown Institute for Media Innovation, "Points Unknown"
 
 **Friday, May 31**  
 300 S Buell Hall
-* **Topics: Geoprocessing
-* **Tutorial:Geoprocessing: calculating and measuring
-* **Workshop: Research and assignment design
+* **Topics:** Geoprocessing
+* **Tutorial:** Geoprocessing: calculating and measuring
+* **Workshop:** Research and assignment design
 * **Guest session:** Laura Kurgan, Director, Center for Spatial Research, "Conflict Urbanism"
 
 **Monday, June 3**  
 Studio@Butler
-* **Due:**Tutorial maps, research/teaching plan drafts
-* **Topics:Making public work with webmaps
-* **Tutorial:**Possible webmapping basics
-* **Workshop: Hard skills into research and assignment plans
-* **Guest session:** Dan Miller, Center For Spatial Research, "Mapping Historical New York City" [tentative]
+* **Due:** Tutorial maps, research/teaching plan drafts
+* **Topics:** Making public work with webmaps
+* **Tutorial:** Possible webmapping basics
+* **Workshop:** Hard skills into research and assignment plans
 
 **Tuesday, June 4**  
 Studio@Butler
