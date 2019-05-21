@@ -190,7 +190,7 @@ Click on `search directories` and preset options will open for different styles 
 From the top-left menu (`layout`), select `export as image`. Save in a place you can find. Open and admire your work! Also likely: open, see the changes you'd like to tweak, and return to the layout window to modify and beautify.
 ![exportimage]
 
-Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an intensive summer 2019 workshop from the [Center for Spatial Research]:(http://c4sr.columbia.edu/) in the Graduate School of Architecture, Planning and Preservation at Columbia University. More information about the course is available [here]:(http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-institute).
+Prepared by Bernadette Baird-Zars for *Mapping for the Urban Humanities*, an intensive summer 2019 workshop from the [Center for Spatial Research](http://c4sr.columbia.edu/) in the Graduate School of Architecture, Planning and Preservation at Columbia University. More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-institute).
 
 ...
 
