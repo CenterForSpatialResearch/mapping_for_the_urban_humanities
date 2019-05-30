@@ -68,7 +68,7 @@ Studio@Butler
 * **Topics:** Cartography (symbology and classification)
 * **Tutorial:** Telling visual and spatial stories
 * **Workshop:** Spatial questions and stories
-* **Guest session:** Grga Basic, Center for Resilient Cities and Landscapes, & Michael Krisch, Brown Institute for Media Innovation, "Points Unknown"
+* **Guest session:** Grga Basic, Center for Resilient Cities and Landscapes, & Michael Krisch, Brown Institute for Media Innovation, "Points Unknown". See course syllabus [here](https://brown-institute-assets.s3.amazonaws.com/Objects/PointsUnknown_Spring2019_Syllabus_v190326.pdf).
 
 **Friday, May 31**  
 300 S Buell Hall
