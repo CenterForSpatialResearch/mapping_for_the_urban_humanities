@@ -10,7 +10,7 @@ The purpose of this tutorial is to introduce you to the QGIS interface, explorin
 #### Prep
 Download the GitHub repository for this course. After following [this link](https://github.com/CenterForSpatialResearch/mapping_for_the_urban_humanities), click on the green button on the right side that reads `Clone or Download`, and select `Download ZIP`. Save and decompress the downloaded folder to your preferred working location. (We highly recommend establishing a single folder or directory for all of the work and tutorials associated with the workshop.) The Class_Data folder will then have most of the datasets needed for tutorials.
 
-Additional datasets required for the tutorials (those larger than certain upload limits allow) can be found in [this public google drive folder](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb), including the georectified scanned map image included later in this tutorial. Download, save, and decompress this folder to the same directory as the GitHub repository you saved.
+Additional datasets required for the tutorials (those larger than certain upload limits allow) can be found in [this public google drive folder](https://drive.google.com/drive/u/1/folders/1yJlnKJy1WxAXuox4nmBxrs6xlwPK1HLb) (note: you must be using a @columbia.edu email in order to access), including the georectified scanned map image included later in this tutorial. Download, save, and decompress this folder to the same directory as the GitHub repository you saved.
 
 ### Setting up QGIS
 
